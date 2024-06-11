@@ -1,0 +1,27 @@
+[
+    {
+        "lift": "Squat",
+        "variation": "From Floor",
+        "total": 150,
+        "date": "2024-06-01"
+    },
+    {
+        "lift": "Squat",
+        "variation": "From Hang",
+        "total": 155,
+        "date": "2024-06-05"
+    },
+    {
+        "lift": "Bench Press",
+        "variation": "From Floor",
+        "total": 100,
+        "date": "2024-06-01"
+    },
+    {
+        "lift": "Deadlift",
+        "variation": "From Shin",
+        "total": 180,
+        "date": "2024-06-01"
+    }
+    // Add more records as needed
+]
