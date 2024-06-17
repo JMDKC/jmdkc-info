@@ -1,32 +1,34 @@
-async function viewBestLift() {
-    const selectedLift = document.getElementById("lift").value;
-    const jsonUrl = 'lifts.json'; // Path to the JSON file
+document.getElementById('view-lift-btn').addEventListener('click', () => {
+    const selectedLift = document.getElementById('lift').value.toLowerCase();
+    fetch('lifts.json')
+        .then(response => response.json())
+        .then(data => {
+            const bestLift = findBestLift(data, selectedLift);
+            displayResult(bestLift);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+});
 
-    try {
-        const response = await fetch(jsonUrl);
-        const data = await response.json();
+function findBestLift(data, liftName) {
+    const lifts = data.filter(item => item.lift.toLowerCase() === liftName);
+    if (lifts.length === 0) {
+        return null;
+    }
+    return lifts.reduce((max, lift) => lift.weight > max.weight ? lift : max, lifts[0]);
+}
 
-        // Filter and find the best lift
-        const filteredData = data.filter(lift => lift.lift === selectedLift);
-        filteredData.sort((a, b) => b.total - a.total);
-        const bestLift = filteredData[0];
-
-        // Update the table
-        const table = document.getElementById("liftTable");
-        table.innerHTML = "<tr><th>Date</th><th>Variation</th><th>Total (kg)</th></tr>";
-
-        if (bestLift) {
-            table.innerHTML += `
-                <tr>
-                    <td>${bestLift.date}</td>
-                    <td>${bestLift.variation}</td>
-                    <td>${bestLift.total}</td>
-                </tr>
-            `;
-        } else {
-            table.innerHTML += "<tr><td colspan='3'>No records found</td></tr>";
-        }
-    } catch (error) {
-        console.error('Error fetching data:', error);
+function displayResult(lift) {
+    const resultDiv = document.getElementById('result');
+    if (lift) {
+        resultDiv.innerHTML = `
+            <p><strong>Lift:</strong> ${lift.lift}</p>
+            <p><strong>Weight:</strong> ${lift.weight} kg</p>
+            <p><strong>Date:</strong> ${lift.date}</p>
+            <p><strong>Variation:</strong> ${lift.variation}</p>
+        `;
+    } else {
+        resultDiv.innerHTML = '<p>No records found.</p>';
     }
 }

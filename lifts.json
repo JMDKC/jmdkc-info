@@ -1,1833 +1,1833 @@
 [
   {
-    "Exercise": "jerk dip",
+    "lift": "jerk dip",
     "Reps": 3,
     "Weight": 130,
     "Date": 45077,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 4,
     "Weight": 125,
     "Date": 45280,
     "Variation": "to knee"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 5,
     "Weight": 120,
     "Date": 45213,
     "Variation": "to hip"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 1,
     "Weight": 120,
     "Date": 45289,
     "Variation": "rack"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 1,
     "Weight": 115,
     "Date": 45166,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 5,
     "Weight": 110,
     "Date": 45266,
     "Variation": "to hip"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 1,
     "Weight": 110,
     "Date": 44864,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 5,
     "Weight": 105,
     "Date": 45318,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 4,
     "Weight": 100,
     "Date": 45455,
     "Variation": "rack"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 2,
     "Weight": 100,
     "Date": 44731,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 3,
     "Weight": 100,
     "Date": 45074,
     "Variation": "to knee"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 5,
     "Weight": 100,
     "Date": 45115,
     "Variation": "to hip"
   },
   {
-    "Exercise": "jerk dip",
+    "lift": "jerk dip",
     "Reps": 5,
     "Weight": 100,
     "Date": 45031,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 100,
     "Date": 45308,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 1,
     "Weight": 100,
     "Date": 45021,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 1,
     "Weight": 100,
     "Date": 44773,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 1,
     "Weight": 95,
     "Date": 45451,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 95,
     "Date": 45416,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 3,
     "Weight": 95,
     "Date": 45105,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 3,
     "Weight": 95,
     "Date": 44706,
     "Variation": "to knee"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 95,
     "Date": 45268,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 1,
     "Weight": 95,
     "Date": 44735,
     "Variation": "rack"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 2,
     "Weight": 92.5,
     "Date": 44810,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 92,
     "Date": 45268,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 90,
     "Date": 45448,
     "Variation": "hang"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 5,
     "Weight": 90,
     "Date": 45064,
     "Variation": "rack"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 3,
     "Weight": 90,
     "Date": 45060,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 5,
     "Weight": 90,
     "Date": 44933,
     "Variation": "floor"
   },
   {
-    "Exercise": "jerk dip",
+    "lift": "jerk dip",
     "Reps": 5,
     "Weight": 90,
     "Date": 44742,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 1,
     "Weight": 90,
     "Date": 45310,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 90,
     "Date": 45287,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 1,
     "Weight": 90,
     "Date": 45021,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 90,
     "Date": 45024,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 88,
     "Date": 45024,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 87,
     "Date": 45444,
     "Variation": "thigh"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 87,
     "Date": 45207,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 2,
     "Weight": 86,
     "Date": 45406,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 86,
     "Date": 45156,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 2,
     "Weight": 85,
     "Date": 45448,
     "Variation": "hang"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 85,
     "Date": 45448,
     "Variation": "shin"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 85,
     "Date": 45441,
     "Variation": "thigh"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 4,
     "Weight": 85,
     "Date": 45012,
     "Variation": "rack"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 2,
     "Weight": 85,
     "Date": 44735,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 85,
     "Date": 45115,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 2,
     "Weight": 85,
     "Date": 45297,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 85,
     "Date": 45185,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 3,
     "Weight": 83,
     "Date": 44929,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 83,
     "Date": 45147,
     "Variation": "hang"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 82,
     "Date": 45338,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 82,
     "Date": 44926,
     "Variation": "floor"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 1,
     "Weight": 81,
     "Date": 45034,
     "Variation": "rack"
   },
   {
-    "Exercise": "power jerk",
+    "lift": "power jerk",
     "Reps": 2,
     "Weight": 80,
     "Date": 45444,
     "Variation": "rack"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 10,
     "Weight": 80,
     "Date": 45371,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 2,
     "Weight": 80,
     "Date": 45317,
     "Variation": "rack"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 3,
     "Weight": 80,
     "Date": 44735,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 5,
     "Weight": 80,
     "Date": 44653,
     "Variation": "to knee"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 2,
     "Weight": 80,
     "Date": 44613,
     "Variation": "to knee"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 80,
     "Date": 44862,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 80,
     "Date": 45038,
     "Variation": "floor"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 1,
     "Weight": 80,
     "Date": 45034,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 2,
     "Weight": 80,
     "Date": 45283,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 80,
     "Date": 45273,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 80,
     "Date": 45185,
     "Variation": "hang"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 78,
     "Date": 44990,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 5,
     "Weight": 77.5,
     "Date": 44757,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 1,
     "Weight": 77.5,
     "Date": 44811,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 77,
     "Date": 44923,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 2,
     "Weight": 77,
     "Date": 44971,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 2,
     "Weight": 75,
     "Date": 45451,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 5,
     "Weight": 75,
     "Date": 44750,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 75,
     "Date": 45080,
     "Variation": "hang"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 75,
     "Date": 44834,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 75,
     "Date": 44773,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 5,
     "Weight": 75,
     "Date": 44738,
     "Variation": "floor"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 2,
     "Weight": 75,
     "Date": 45303,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 74,
     "Date": 45437,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 74,
     "Date": 45028,
     "Variation": "hip"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 73,
     "Date": 44948,
     "Variation": "foot"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 2,
     "Weight": 73,
     "Date": 45042,
     "Variation": "rack"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 73,
     "Date": 44948,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 72,
     "Date": 45287,
     "Variation": "floor"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 4,
     "Weight": 70,
     "Date": 45423,
     "Variation": "rack"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 70,
     "Date": 44842,
     "Variation": "foot"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 3,
     "Weight": 70,
     "Date": 44734,
     "Variation": "to knee"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 70,
     "Date": 44834,
     "Variation": "hang"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 70,
     "Date": 44715,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 70,
     "Date": 44674,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 5,
     "Weight": 70,
     "Date": 44579,
     "Variation": "floor"
   },
   {
-    "Exercise": "power jerk",
+    "lift": "power jerk",
     "Reps": 2,
     "Weight": 70,
     "Date": 45063,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 2,
     "Weight": 70,
     "Date": 45000,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 1,
     "Weight": 70,
     "Date": 44797,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 2,
     "Weight": 70,
     "Date": 45273,
     "Variation": "rack"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 2,
     "Weight": 70,
     "Date": 45273,
     "Variation": "floor"
   },
   {
-    "Exercise": "power jerk",
+    "lift": "power jerk",
     "Reps": 2,
     "Weight": 70,
     "Date": 45063,
     "Variation": "rack"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 70,
     "Date": 44842,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 70,
     "Date": 45245,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 1,
     "Weight": 69,
     "Date": 45363,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 69,
     "Date": 45115,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 68,
     "Date": 44979,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 2,
     "Weight": 67.5,
     "Date": 44769,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 67,
     "Date": 45269,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 66,
     "Date": 45149,
     "Variation": "thigh"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 66,
     "Date": 44969,
     "Variation": "floor"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 3,
     "Weight": 65,
     "Date": 45427,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 65,
     "Date": 45399,
     "Variation": "hip"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 65,
     "Date": 45324,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 65,
     "Date": 44769,
     "Variation": "foot"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 5,
     "Weight": 65,
     "Date": 44793,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 3,
     "Weight": 65,
     "Date": 44793,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 65,
     "Date": 44706,
     "Variation": "hang"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 2,
     "Weight": 65,
     "Date": 44744,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 65,
     "Date": 44674,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 2,
     "Weight": 65,
     "Date": 45219,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 1,
     "Weight": 65,
     "Date": 44720,
     "Variation": "rack"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 65,
     "Date": 44769,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 65,
     "Date": 44944,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 1,
     "Weight": 64,
     "Date": 45075,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 1,
     "Weight": 64,
     "Date": 45075,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 64,
     "Date": 45269,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 63,
     "Date": 45338,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 63,
     "Date": 45080,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 63,
     "Date": 44944,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 1,
     "Weight": 62.5,
     "Date": 44765,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 1,
     "Weight": 62.5,
     "Date": 44669,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 62,
     "Date": 44923,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 61,
     "Date": 44758,
     "Variation": "foot"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 61,
     "Date": 45275,
     "Variation": "thigh"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 61,
     "Date": 44758,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 60,
     "Date": 45422,
     "Variation": "thigh"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 2,
     "Weight": 60,
     "Date": 44971,
     "Variation": "foot"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 60,
     "Date": 44613,
     "Variation": "foot"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 1,
     "Weight": 60,
     "Date": 45122,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 2,
     "Weight": 60,
     "Date": 44671,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 6,
     "Weight": 60,
     "Date": 44885,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 2,
     "Weight": 60,
     "Date": 44573,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 1,
     "Weight": 60,
     "Date": 44613,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 2,
     "Weight": 60,
     "Date": 44849,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 60,
     "Date": 44669,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 5,
     "Weight": 60,
     "Date": 44699,
     "Variation": "floor"
   },
   {
-    "Exercise": "power jerk",
+    "lift": "power jerk",
     "Reps": 1,
     "Weight": 60,
     "Date": 44720,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 3,
     "Weight": 60,
     "Date": 45000,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 1,
     "Weight": 60,
     "Date": 44683,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 5,
     "Weight": 60,
     "Date": 45296,
     "Variation": "part of c&j"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 1,
     "Weight": 60,
     "Date": 45283,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 2,
     "Weight": 60,
     "Date": 44755,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 60,
     "Date": 45178,
     "Variation": "shin"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 60,
     "Date": 45003,
     "Variation": "floor"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 60,
     "Date": 45185,
     "Variation": "hang"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 60,
     "Date": 44613,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 60,
     "Date": 45178,
     "Variation": "shin"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 60,
     "Date": 45021,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 60,
     "Date": 45041,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 60,
     "Date": 44862,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 60,
     "Date": 44999,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 1,
     "Weight": 58,
     "Date": 45024,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 58,
     "Date": 45073,
     "Variation": "shin"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 2,
     "Weight": 57.5,
     "Date": 44769,
     "Variation": "foot"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 57.5,
     "Date": 44762,
     "Variation": "foot"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 57.5,
     "Date": 44667,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 57.5,
     "Date": 44762,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 57.5,
     "Date": 44813,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 57.4,
     "Date": 44839,
     "Variation": "shin"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 57,
     "Date": 44918,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 57,
     "Date": 44933,
     "Variation": "hip"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 1,
     "Weight": 56,
     "Date": 44561,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 2,
     "Weight": 55,
     "Date": 44692,
     "Variation": "floor, no foot"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 1,
     "Weight": 55,
     "Date": 44587,
     "Variation": "foot"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 1,
     "Weight": 55,
     "Date": 45045,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 3,
     "Weight": 55,
     "Date": 44636,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 5,
     "Weight": 55,
     "Date": 44601,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 2,
     "Weight": 55,
     "Date": 44580,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 2,
     "Weight": 55,
     "Date": 45024,
     "Variation": "rack"
   },
   {
-    "Exercise": "power jerk",
+    "lift": "power jerk",
     "Reps": 2,
     "Weight": 55,
     "Date": 44720,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 55,
     "Date": 44818,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 3,
     "Weight": 55,
     "Date": 45012,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 55,
     "Date": 44867,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 55,
     "Date": 44759,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 2,
     "Weight": 54,
     "Date": 44964,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 53,
     "Date": 44674,
     "Variation": "floor"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 2,
     "Weight": 52.5,
     "Date": 44769,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 2,
     "Weight": 52.5,
     "Date": 44804,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 52.5,
     "Date": 44784,
     "Variation": "hang"
   },
   {
-    "Exercise": "muscle snatch",
+    "lift": "muscle snatch",
     "Reps": 1,
     "Weight": 52,
     "Date": 45325,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 3,
     "Weight": 52,
     "Date": 44964,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 51,
     "Date": 44902,
     "Variation": "shin"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 51,
     "Date": 44902,
     "Variation": "shin"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 51,
     "Date": 44911,
     "Variation": "floor"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 3,
     "Weight": 50,
     "Date": 45450,
     "Variation": "thigh"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 50,
     "Date": 45434,
     "Variation": "hip, no foot"
   },
   {
-    "Exercise": "muscle snatch",
+    "lift": "muscle snatch",
     "Reps": 2,
     "Weight": 50,
     "Date": 45434,
     "Variation": "thigh"
   },
   {
-    "Exercise": "power clean",
+    "lift": "power clean",
     "Reps": 2,
     "Weight": 50,
     "Date": 44688,
     "Variation": "hang"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 2,
     "Weight": 50,
     "Date": 44867,
     "Variation": "shin"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 50,
     "Date": 44804,
     "Variation": "floor"
   },
   {
-    "Exercise": "muscle snatch",
+    "lift": "muscle snatch",
     "Reps": 1,
     "Weight": 50,
     "Date": 45045,
     "Variation": "floor"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 1,
     "Weight": 50,
     "Date": 44692,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 10,
     "Weight": 50,
     "Date": 44727,
     "Variation": "rack"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 5,
     "Weight": 50,
     "Date": 44650,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean pull",
+    "lift": "clean pull",
     "Reps": 1,
     "Weight": 50,
     "Date": 44587,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean",
+    "lift": "clean",
     "Reps": 3,
     "Weight": 50,
     "Date": 44757,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 2,
     "Weight": 50,
     "Date": 44667,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 3,
     "Weight": 50,
     "Date": 44634,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 2,
     "Weight": 50,
     "Date": 44758,
     "Variation": "rack"
   },
   {
-    "Exercise": "push jerk",
+    "lift": "push jerk",
     "Reps": 2,
     "Weight": 50,
     "Date": 44797,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 4,
     "Weight": 50,
     "Date": 44943,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk",
+    "lift": "jerk",
     "Reps": 2,
     "Weight": 50,
     "Date": 44715,
     "Variation": "rack"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 2,
     "Weight": 50,
     "Date": 45275,
     "Variation": "thigh"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 50,
     "Date": 44709,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 3,
     "Weight": 50,
     "Date": 44905,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 50,
     "Date": 44867,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 50,
     "Date": 44669,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 50,
     "Date": 44765,
     "Variation": "hang, no foot"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 3,
     "Weight": 49,
     "Date": 44929,
     "Variation": "hip"
   },
   {
-    "Exercise": "muscle snatch",
+    "lift": "muscle snatch",
     "Reps": 1,
     "Weight": 49,
     "Date": 45283,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 2,
     "Weight": 48,
     "Date": 44568,
     "Variation": "floor"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 47.5,
     "Date": 44818,
     "Variation": "hang"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 47.5,
     "Date": 44737,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 47.5,
     "Date": 44784,
     "Variation": "hang"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 3,
     "Weight": 47,
     "Date": 44568,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 47,
     "Date": 44699,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 47,
     "Date": 44657,
     "Variation": "floor"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 2,
     "Weight": 46,
     "Date": 44561,
     "Variation": "floor"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 2,
     "Weight": 45,
     "Date": 44784,
     "Variation": "shin"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 2,
     "Weight": 45,
     "Date": 44699,
     "Variation": "floor"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 3,
     "Weight": 45,
     "Date": 44769,
     "Variation": "hang"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 3,
     "Weight": 45,
     "Date": 44678,
     "Variation": "floor"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 2,
     "Weight": 45,
     "Date": 44613,
     "Variation": "floor"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 1,
     "Weight": 45,
     "Date": 44667,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 20,
     "Weight": 45,
     "Date": 44755,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 3,
     "Weight": 45,
     "Date": 44646,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 45,
     "Date": 44828,
     "Variation": "shin"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 45,
     "Date": 44790,
     "Variation": "shin"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 45,
     "Date": 44790,
     "Variation": "shin"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 45,
     "Date": 44731,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 3,
     "Weight": 45,
     "Date": 45012,
     "Variation": "hip"
   },
   {
-    "Exercise": "muscle snatch",
+    "lift": "muscle snatch",
     "Reps": 3,
     "Weight": 43,
     "Date": 44929,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 42.5,
     "Date": 44839,
     "Variation": "shin"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 42.5,
     "Date": 44790,
     "Variation": "hip"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 2,
     "Weight": 42,
     "Date": 44653,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 42,
     "Date": 44744,
     "Variation": "shin"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 42,
     "Date": 44629,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 1,
     "Weight": 42,
     "Date": 44629,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 5,
     "Weight": 40,
     "Date": 45422,
     "Variation": "rack"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 1,
     "Weight": 40,
     "Date": 44608,
     "Variation": "floor"
   },
   {
-    "Exercise": "muscle clean",
+    "lift": "muscle clean",
     "Reps": 6,
     "Weight": 40,
     "Date": 44660,
     "Variation": "floor"
   },
   {
-    "Exercise": "front squat",
+    "lift": "front squat",
     "Reps": 20,
     "Weight": 40,
     "Date": 44723,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch pull",
+    "lift": "snatch pull",
     "Reps": 5,
     "Weight": 40,
     "Date": 44561,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 2,
     "Weight": 40,
     "Date": 44727,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk balance",
+    "lift": "jerk balance",
     "Reps": 3,
     "Weight": 40,
     "Date": 44683,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 40,
     "Date": 44561,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 2,
     "Weight": 40,
     "Date": 44629,
     "Variation": "floor"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 3,
     "Weight": 37.5,
     "Date": 44731,
     "Variation": "hip"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 3,
     "Weight": 37.5,
     "Date": 44688,
     "Variation": "hang"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 3,
     "Weight": 37.5,
     "Date": 44709,
     "Variation": "rack"
   },
   {
-    "Exercise": "clean & jerk",
+    "lift": "clean & jerk",
     "Reps": 3,
     "Weight": 36,
     "Date": 44561,
     "Variation": "floor"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 2,
     "Weight": 35,
     "Date": 44779,
     "Variation": "thigh"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 3,
     "Weight": 35,
     "Date": 44667,
     "Variation": "hang"
   },
   {
-    "Exercise": "power snatch",
+    "lift": "power snatch",
     "Reps": 2,
     "Weight": 35,
     "Date": 44657,
     "Variation": "hang"
   },
   {
-    "Exercise": "muscle snatch",
+    "lift": "muscle snatch",
     "Reps": 3,
     "Weight": 35,
     "Date": 44790,
     "Variation": "floor"
   },
   {
-    "Exercise": "snatch balance",
+    "lift": "snatch balance",
     "Reps": 3,
     "Weight": 35,
     "Date": 44681,
     "Variation": "rack"
   },
   {
-    "Exercise": "jerk balance",
+    "lift": "jerk balance",
     "Reps": 5,
     "Weight": 35,
     "Date": 44720,
     "Variation": "rack"
   },
   {
-    "Exercise": "snatch",
+    "lift": "snatch",
     "Reps": 3,
     "Weight": 35,
     "Date": 44653,
     "Variation": "hang"
   },
   {
-    "Exercise": "muscle snatch",
+    "lift": "muscle snatch",
     "Reps": 2,
     "Weight": 30,
     "Date": 44783,
