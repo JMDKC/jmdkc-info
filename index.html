@@ -2,27 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weightlifting Stats</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Weightlifting Stats</h1>
-    <label for="lift">Select a lift:</label>
+    <label for="lift">Choose a lift:</label>
     <select id="lift">
         <option value="front squat">Front Squat</option>
         <option value="snatch">Snatch</option>
         <option value="clean & jerk">Clean & Jerk</option>
     </select>
-    <button onclick="viewBestLift()">View Best Lift</button>
-    <table id="liftTable">
-        <tr>
-            <th>Date</th>
-            <th>Variation</th>
-            <th>Total (kg)</th>
-        </tr>
-    </table>
-
+    <button id="view-lift-btn">View Best Lift</button>
+    <div id="result"></div>
     <script src="script.js"></script>
 </body>
 </html>
