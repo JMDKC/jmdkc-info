@@ -1,18 +1,112 @@
+/* Body and Overall Page Style */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    background: url('https://www.example.com/background.gif') repeat; /* Use a vibrant, repeating background */
+    color: #0000FF; /* Bright blue text */
+    font-family: 'Comic Sans MS', 'Papyrus', cursive; /* Popular 90s fonts */
+    text-align: center; /* Center-align text */
+    margin: 0;
+    padding: 0;
 }
 
+/* Headers */
+h1, h2, h3 {
+    color: #FF00FF; /* Bright magenta */
+    font-family: 'Impact', 'Comic Sans MS', sans-serif; /* Bold font */
+    text-shadow: 2px 2px #FFD700; /* Gold shadow effect */
+}
+
+/* Paragraphs */
+p {
+    font-size: 14px; /* Smaller font size */
+    line-height: 1.5;
+    margin: 10px;
+}
+
+/* Links */
+a {
+    color: #FF0000; /* Bright red links */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    background-color: #00FF00; /* Neon green background */
+    color: #0000FF; /* Bright blue text */
+    border: 2px solid #FFD700; /* Gold border */
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', 'Papyrus', cursive; /* Consistent font */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #FFFF00; /* Bright yellow on hover */
+}
+
+/* Select Box */
+select {
+    background-color: #FFFF00; /* Bright yellow */
+    color: #0000FF; /* Bright blue text */
+    border: 2px solid #FF00FF; /* Magenta border */
+    padding: 5px;
+    font-family: 'Comic Sans MS', 'Papyrus', cursive;
+    font-size: 16px;
+}
+
+/* Result Box */
+#result {
+    background-color: #FFFFFF; /* White background */
+    border: 5px solid #FF0000; /* Thick red border */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 10px 10px 0 #FFD700; /* Gold shadow effect */
+    font-family: 'Comic Sans MS', 'Papyrus', cursive; /* Consistent font */
+}
+
+/* Add Marquee Text */
+.marquee {
+    font-size: 20px;
+    color: #00FF00; /* Neon green text */
+    font-weight: bold;
+    margin: 20px 0;
+    background-color: #0000FF; /* Bright blue background */
+    padding: 10px;
+    border: 3px dashed #FF00FF; /* Magenta dashed border */
+}
+
+/* Animate elements */
+.blink {
+    animation: blink 1s step-start 0s infinite;
+    color: #FF0000; /* Red text */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Table Styles */
 table {
-    width: 100%;
+    width: 80%;
+    margin: 20px auto;
     border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid black;
+    border: 2px solid #0000FF; /* Bright blue border */
 }
 
 th, td {
+    border: 2px solid #FF0000; /* Bright red cell border */
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    background-color: #FFFF00; /* Bright yellow cell background */
+    color: #0000FF; /* Bright blue text */
+}
+
+/* Borders and Dividers */
+hr {
+    border: 3px dotted #FF00FF; /* Magenta dotted line */
+    width: 80%;
+    margin: 20px auto;
 }
