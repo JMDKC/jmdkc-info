@@ -1,85 +1,78 @@
-/* Body and Overall Page Style */
+/* Existing styles... */
+
 body {
-    background: url('https://www.example.com/background.gif') repeat; /* Use a vibrant, repeating background */
-    color: #0000FF; /* Bright blue text */
-    font-family: 'Comic Sans MS', 'Papyrus', cursive; /* Popular 90s fonts */
-    text-align: center; /* Center-align text */
+    background: url('https://www.example.com/background.gif') repeat;
+    color: #0000FF;
+    font-family: 'Comic Sans MS', 'Papyrus', cursive;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Headers */
 h1, h2, h3 {
-    color: #FF00FF; /* Bright magenta */
-    font-family: 'Impact', 'Comic Sans MS', sans-serif; /* Bold font */
-    text-shadow: 2px 2px #FFD700; /* Gold shadow effect */
+    color: #FF00FF;
+    font-family: 'Impact', 'Comic Sans MS', sans-serif;
+    text-shadow: 2px 2px #FFD700;
 }
 
-/* Paragraphs */
 p {
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
     line-height: 1.5;
     margin: 10px;
 }
 
-/* Links */
 a {
-    color: #FF0000; /* Bright red links */
+    color: #FF0000;
     text-decoration: underline;
     font-weight: bold;
 }
 
-/* Buttons */
 button {
-    background-color: #00FF00; /* Neon green background */
-    color: #0000FF; /* Bright blue text */
-    border: 2px solid #FFD700; /* Gold border */
+    background-color: #00FF00;
+    color: #0000FF;
+    border: 2px solid #FFD700;
     padding: 10px;
     cursor: pointer;
-    font-family: 'Comic Sans MS', 'Papyrus', cursive; /* Consistent font */
+    font-family: 'Comic Sans MS', 'Papyrus', cursive;
     font-size: 16px;
 }
 
 button:hover {
-    background-color: #FFFF00; /* Bright yellow on hover */
+    background-color: #FFFF00;
 }
 
-/* Select Box */
 select {
-    background-color: #FFFF00; /* Bright yellow */
-    color: #0000FF; /* Bright blue text */
-    border: 2px solid #FF00FF; /* Magenta border */
+    background-color: #FFFF00;
+    color: #0000FF;
+    border: 2px solid #FF00FF;
     padding: 5px;
     font-family: 'Comic Sans MS', 'Papyrus', cursive;
     font-size: 16px;
 }
 
-/* Result Box */
 #result {
-    background-color: #FFFFFF; /* White background */
-    border: 5px solid #FF0000; /* Thick red border */
+    background-color: #FFFFFF;
+    border: 5px solid #FF0000;
     padding: 20px;
     margin: 20px auto;
     max-width: 600px;
-    box-shadow: 10px 10px 0 #FFD700; /* Gold shadow effect */
-    font-family: 'Comic Sans MS', 'Papyrus', cursive; /* Consistent font */
+    box-shadow: 10px 10px 0 #FFD700;
+    font-family: 'Comic Sans MS', 'Papyrus', cursive;
 }
 
-/* Add Marquee Text */
 .marquee {
     font-size: 20px;
-    color: #00FF00; /* Neon green text */
+    color: #00FF00;
     font-weight: bold;
     margin: 20px 0;
-    background-color: #0000FF; /* Bright blue background */
+    background-color: #0000FF;
     padding: 10px;
-    border: 3px dashed #FF00FF; /* Magenta dashed border */
+    border: 3px dashed #FF00FF;
 }
 
-/* Animate elements */
 .blink {
     animation: blink 1s step-start 0s infinite;
-    color: #FF0000; /* Red text */
+    color: #FF0000;
 }
 
 @keyframes blink {
@@ -88,25 +81,45 @@ select {
     }
 }
 
-/* Table Styles */
 table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
-    border: 2px solid #0000FF; /* Bright blue border */
+    border: 2px solid #0000FF;
 }
 
 th, td {
-    border: 2px solid #FF0000; /* Bright red cell border */
+    border: 2px solid #FF0000;
     padding: 10px;
     text-align: center;
-    background-color: #FFFF00; /* Bright yellow cell background */
-    color: #0000FF; /* Bright blue text */
+    background-color: #FFFF00;
+    color: #0000FF;
 }
 
-/* Borders and Dividers */
 hr {
-    border: 3px dotted #FF00FF; /* Magenta dotted line */
+    border: 3px dotted #FF00FF;
     width: 80%;
     margin: 20px auto;
+}
+
+/* New styles for clip art */
+.clipart-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.clipart {
+    max-width: 100px;
+    max-height: 100px;
+    border: 3px solid #FFD700; /* Gold border for emphasis */
+    padding: 5px;
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 5px 5px 0 #FF00FF; /* Magenta shadow */
+    transition: transform 0.3s;
+}
+
+.clipart:hover {
+    transform: rotate(360deg); /* 90s-style spinning animation */
 }
