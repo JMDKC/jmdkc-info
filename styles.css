@@ -23,6 +23,15 @@ h1, h2.marquee {
     text-align: center;
 }
 
+.result-box {
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #FF00FF;
+    background-color: #FFF8DC;
+    text-align: center;
+    width: 80%;
+}
+
 table {
     width: 80%;
     margin: 20px auto;
