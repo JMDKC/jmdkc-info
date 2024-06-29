@@ -1,0 +1,23 @@
+[
+    {
+        "Where": "Strength Ambassadors",
+        "Date": "2022-04-12",
+        "Name": "SA Spring Open",
+        "Snatch": 50 53 56x,
+        "Clean & Jerk": 60 65 70,
+        "Total": 123,
+        "My Weight": 75.3,
+        "Sinclair": 162.73
+    },
+    {
+        "Where": "Crystal Palace",
+        "Date": "2024-05-20",
+        "Name": "Crystal Palace Spring Open",
+        "Snatch": 66 70 73x,
+        "Clean & Jerk": 88 92 95,
+        "Total": 165,
+        "My Weight": 74.0,
+        "Sinclair": 220.59
+    }
+    // Add more competition results as needed
+]

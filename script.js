@@ -1,51 +1,28 @@
-document.getElementById('view-lift-btn').addEventListener('click', () => {
-    const selectedLift = document.getElementById('lift').value.toLowerCase();
-    fetch('lifts.json')
+document.addEventListener('DOMContentLoaded', function() {
+    // Load best lifts (existing functionality)
+    document.getElementById('view-lift-btn').addEventListener('click', function() {
+        const lift = document.getElementById('lift').value;
+        document.getElementById('result').innerText = `Selected lift: ${lift}`;
+    });
+
+    // Load competition results
+    fetch('comp-results.json')
         .then(response => response.json())
         .then(data => {
-            const bestLift = findBestLift(data, selectedLift);
-            displayResult(bestLift);
+            const tbody = document.querySelector('#competition-results tbody');
+            tbody.innerHTML = ''; // Clear existing rows
+            
+            data.forEach(result => {
+                const row = document.createElement('tr');
+                
+                Object.keys(result).forEach(key => {
+                    const cell = document.createElement('td');
+                    cell.innerText = result[key];
+                    row.appendChild(cell);
+                });
+
+                tbody.appendChild(row);
+            });
         })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
+        .catch(error => console.error('Error fetching competition results:', error));
 });
-
-function findBestLift(data, liftName) {
-    const lifts = data.filter(item => item.lift.toLowerCase() === liftName);
-    console.log('Filtered lifts:', lifts);  // Debugging log
-    if (lifts.length === 0) {
-        return null;
-    }
-    return lifts.reduce((max, lift) => lift.weight > max.weight ? lift : max, lifts[0]);
-}
-
-function excelDateToJSDate(serial) {
-    const excelEpoch = new Date(Date.UTC(1899, 11, 30));
-    const jsDate = new Date(excelEpoch.getTime() + serial * 86400000);
-    return jsDate;
-}
-
-function formatDate(date) {
-    const year = date.getUTCFullYear();
-    const month = String(date.getUTCMonth() + 1).padStart(2, '0');
-    const day = String(date.getUTCDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-}
-
-function displayResult(lift) {
-    const resultDiv = document.getElementById('result');
-    if (lift) {
-        const dateObj = excelDateToJSDate(lift.date);
-        const formattedDate = formatDate(dateObj);
-
-        resultDiv.innerHTML = `
-            <p><strong>Lift:</strong> ${lift.lift}</p>
-            <p><strong>Weight:</strong> ${lift.weight} kg</p>
-            <p><strong>Date:</strong> ${formattedDate}</p>
-            <p><strong>Variation:</strong> ${lift.variation}</p>
-        `;
-    } else {
-        resultDiv.innerHTML = '<p>No records found.</p>';
-    }
-}

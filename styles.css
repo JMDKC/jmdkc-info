@@ -1,63 +1,15 @@
 /* Existing styles... */
 
 body {
-    background: url('https://www.example.com/background.gif') repeat;
-    color: #0000FF;
+    background-color: #f0f0f0;
     font-family: 'Comic Sans MS', 'Papyrus', cursive;
-    text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2.marquee {
     color: #FF00FF;
+    text-align: center;
     font-family: 'Impact', 'Comic Sans MS', sans-serif;
     text-shadow: 2px 2px #FFD700;
-}
-
-p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 10px;
-}
-
-a {
-    color: #FF0000;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-button {
-    background-color: #00FF00;
-    color: #0000FF;
-    border: 2px solid #FFD700;
-    padding: 10px;
-    cursor: pointer;
-    font-family: 'Comic Sans MS', 'Papyrus', cursive;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #FFFF00;
-}
-
-select {
-    background-color: #FFFF00;
-    color: #0000FF;
-    border: 2px solid #FF00FF;
-    padding: 5px;
-    font-family: 'Comic Sans MS', 'Papyrus', cursive;
-    font-size: 16px;
-}
-
-#result {
-    background-color: #FFFFFF;
-    border: 5px solid #FF0000;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 10px 10px 0 #FFD700;
-    font-family: 'Comic Sans MS', 'Papyrus', cursive;
 }
 
 .marquee {
@@ -68,17 +20,7 @@ select {
     background-color: #0000FF;
     padding: 10px;
     border: 3px dashed #FF00FF;
-}
-
-.blink {
-    animation: blink 1s step-start 0s infinite;
-    color: #FF0000;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    text-align: center;
 }
 
 table {
@@ -102,24 +44,16 @@ hr {
     margin: 20px auto;
 }
 
-/* New styles for clip art */
-.clipart-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    gap: 10px;
-}
-
 .clipart {
     max-width: 100px;
     max-height: 100px;
-    border: 3px solid #FFD700; /* Gold border for emphasis */
+    border: 3px solid #FFD700;
     padding: 5px;
-    background-color: #FFFFFF; /* White background */
-    box-shadow: 5px 5px 0 #FF00FF; /* Magenta shadow */
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 0 #FF00FF;
     transition: transform 0.3s;
 }
 
 .clipart:hover {
-    transform: rotate(360deg); /* 90s-style spinning animation */
+    transform: rotate(360deg);
 }
