@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Best lifts data (simulate JSON fetch for simplicity)
+    // Best lifts data
     const bestLifts = {
         "front squat": { weight: 120, date: "2023-06-12", variation: "from rack" },
         "snatch": { weight: 90, date: "2023-06-14", variation: "from floor" },
@@ -12,10 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (bestLifts[lift]) {
             const { weight, date, variation } = bestLifts[lift];
+            const formattedDate = new Date(date).toLocaleDateString();
             resultDiv.innerHTML = `
                 <p><strong>Lift:</strong> ${lift}</p>
                 <p><strong>Weight:</strong> ${weight} kg</p>
-                <p><strong>Date:</strong> ${new Date(date).toLocaleDateString()}</p>
+                <p><strong>Date:</strong> ${formattedDate}</p>
                 <p><strong>Variation:</strong> ${variation}</p>
             `;
         } else {
@@ -32,13 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
             data.forEach(result => {
                 const row = document.createElement('tr');
-                
+
                 Object.keys(result).forEach(key => {
                     const cell = document.createElement('td');
                     if (key === "Date") {
-                        // Convert date from serial format to readable format
-                        const date = new Date((result[key] - (25567 + 2)) * 86400 * 1000);
-                        cell.innerText = date.toLocaleDateString();
+                        // Use Date.parse for proper parsing and format date
+                        const date = new Date(result[key]);
+                        if (isNaN(date.getTime())) {
+                            cell.innerText = "Invalid Date";
+                        } else {
+                            cell.innerText = date.toLocaleDateString();
+                        }
                     } else {
                         cell.innerText = result[key];
                     }
