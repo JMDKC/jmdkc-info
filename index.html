@@ -10,20 +10,26 @@
     <div class="marquee">Here are the heaviest weights I've lifted so far!</div>
     <hr>
 
-    <!-- Adding clip art for decoration -->
-    <div class="clipart-container">
-        <img src="images/weightlifting-1.jpg" alt="Weightlifting Clip Art 1" class="clipart">
-        <img src="images/weightlifting-2.jpg" alt="Weightlifting Clip Art 2" class="clipart">
+    <!-- Centered container for clip art and combo box -->
+    <div class="center-container">
+        <!-- Adding clip art for decoration -->
+        <div class="clipart-box">
+            <img src="images/weightlifting-1.jpg" alt="Weightlifting Clip Art 1" class="clipart">
+            <img src="images/weightlifting-2.jpg" alt="Weightlifting Clip Art 2" class="clipart">
+        </div>
+
+        <div class="combo-box">
+            <label for="lift">Choose a lift:</label>
+            <select id="lift">
+                <option value="front squat">Front Squat</option>
+                <option value="snatch">Snatch</option>
+                <option value="clean & jerk">Clean & Jerk</option>
+            </select>
+            <button id="view-lift-btn">View Best Lift</button>
+        </div>
     </div>
 
-    <label for="lift">Choose a lift:</label>
-    <select id="lift">
-        <option value="front squat">Front Squat</option>
-        <option value="snatch">Snatch</option>
-        <option value="clean & jerk">Clean & Jerk</option>
-    </select>
-    <button id="view-lift-btn">View Best Lift</button>
-    <div id="result" class="result-box">Please select a lift to see the best result.</div> <!-- Added a class for styling -->
+    <div id="result" class="result-box">Please select a lift to see the best result.</div>
 
     <hr>
 

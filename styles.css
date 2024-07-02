@@ -1,5 +1,4 @@
-/* Existing styles... */
-
+/* General styles */
 body {
     background-color: #f0f0f0;
     font-family: 'Comic Sans MS', 'Papyrus', cursive;
@@ -53,6 +52,29 @@ hr {
     margin: 20px auto;
 }
 
+/* Clip art and combo box styles */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFD700; /* Bright gold background */
+    padding: 20px;
+    border: 3px dashed #FF00FF; /* 90s-style dashed border */
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+}
+
+.clipart-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
 .clipart {
     max-width: 100px;
     max-height: 100px;
@@ -65,4 +87,30 @@ hr {
 
 .clipart:hover {
     transform: rotate(360deg);
+}
+
+.combo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+select, button {
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #FF00FF;
+    background-color: #FFFF00;
+    color: #0000FF;
+    text-shadow: 1px 1px #FF00FF;
+    margin-top: 10px;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FFD700;
 }
