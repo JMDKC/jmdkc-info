@@ -114,3 +114,25 @@ button {
 button:hover {
     background-color: #FFD700;
 }
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    background-color: #0000FF;
+    color: #FFFFFF;
+    padding: 10px;
+    border-top: 3px solid #FF00FF;
+    font-family: 'Comic Sans MS', 'Papyrus', cursive;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #FFFF00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
