@@ -13,11 +13,7 @@
     <!-- Centered container for clip art and combo box -->
     <div class="center-container">
         <!-- Adding clip art for decoration -->
-        <div class="clipart-box">
-            <img src="images/weightlifting-1.jpg" alt="Weightlifting Clip Art 1" class="clipart">
-            <img src="images/weightlifting-2.jpg" alt="Weightlifting Clip Art 2" class="clipart">
-        </div>
-
+        <img src="images/weightlifting-1.jpg" alt="Weightlifting Clip Art 1" class="clipart left-clipart">
         <div class="combo-box">
             <label for="lift">Choose a lift:</label>
             <select id="lift">
@@ -27,6 +23,7 @@
             </select>
             <button id="view-lift-btn">View Best Lift</button>
         </div>
+        <img src="images/weightlifting-2.jpg" alt="Weightlifting Clip Art 2" class="clipart right-clipart">
     </div>
 
     <div id="result" class="result-box">Please select a lift to see the best result.</div>
@@ -54,9 +51,12 @@
     </table>
 
     <hr>
+
+    <!-- Footer Element -->
     <footer class="footer">
         <p>A website built by <a href="https://josephclift.com" target="_blank">Joseph Clift</a></p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
