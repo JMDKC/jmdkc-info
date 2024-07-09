@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Joe's Weightlifting PBs!!</title>
+    <title>Joe's Weightlifting PBs</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Joe's Weightlifting PBs!!</h1>
+    <h1 class="marquee">Joe's Weightlifting PBs!!</h1>
     <div class="marquee">Here are the heaviest weights I've lifted so far!</div>
     <hr>
 
-    <!-- Centered container for clip art and combo box -->
-    <div class="center-container">
-        <!-- Adding clip art for decoration -->
-        <img src="images/weightlifting-1.jpg" alt="Weightlifting Clip Art 1" class="clipart left-clipart">
-        <div class="combo-box">
+    <!-- Adding clip art for decoration -->
+    <div class="box">
+        <img src="images/weightlifting-1.jpg" alt="Weightlifting Clip Art 1" class="clipart">
+        <div>
             <label for="lift">Choose a lift:</label>
             <select id="lift">
                 <option value="clean & jerk">Clean & Jerk</option>
@@ -25,20 +24,15 @@
                 <option value="bench press">Bench Press</option>
                 <option value="back squat">Back Squat</option>
                 <option value="push press">Push Press</option>
-                
             </select>
             <button id="view-lift-btn">View Best Lift</button>
+            <div id="result"></div>
         </div>
-        <img src="images/weightlifting-2.jpg" alt="Weightlifting Clip Art 2" class="clipart right-clipart">
+        <img src="images/weightlifting-2.jpg" alt="Weightlifting Clip Art 2" class="clipart">
     </div>
 
-    <div id="result" class="result-box">Please select a lift to see the best result.</div>
-
-    <hr>
-
-    <!-- New Section for Competition Results -->
     <h2 class="marquee">Here are my competition results</h2>
-    <table id="competition-results">
+    <table id="comp-results">
         <thead>
             <tr>
                 <th>Where</th>
@@ -52,14 +46,12 @@
             </tr>
         </thead>
         <tbody>
-            <!-- JavaScript will populate this -->
+            <!-- Competition results will be inserted here by JavaScript -->
         </tbody>
     </table>
 
     <hr>
-
-    <!-- Footer Element -->
-    <footer class="footer">
+    <footer>
         <p>A website built by <a href="https://josephclift.com" target="_blank">Joseph Clift</a></p>
     </footer>
 
