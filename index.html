@@ -6,30 +6,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="marquee">Joe's Weightlifting PBs!!</h1>
+    <h1 class="main-title">Joe's Weightlifting PBs!!</h1>
     <div class="marquee">Here are the heaviest weights I've lifted so far!</div>
     <hr>
 
-    <!-- Adding clip art for decoration -->
-    <div class="box">
-        <img src="images/weightlifting-1.jpg" alt="Weightlifting Clip Art 1" class="clipart">
-        <div>
+    <!-- Colorful box with clip art and combo box -->
+    <div class="colorful-box">
+        <img src="images/weightlifting-1.jpg" alt="Weightlifting Clip Art 1" class="clipart-left">
+        <div class="combo-box-container">
             <label for="lift">Choose a lift:</label>
             <select id="lift">
                 <option value="clean & jerk">Clean & Jerk</option>
                 <option value="snatch">Snatch</option>
                 <option value="clean">Clean</option>
                 <option value="jerk">Jerk</option>
-                <option value="back squat">Back Squat</option>
-                <option value="bench press">Bench Press</option>
                 <option value="front squat">Front Squat</option>
-                <option value="power snatch">Power Snatch</option>
+                <option value="bench press">Bench Press</option>
+                <option value="back squat">Back Squat</option>
                 <option value="push press">Push Press</option>
             </select>
             <button id="view-lift-btn">View Best Lift</button>
             <div id="result"></div>
         </div>
-        <img src="images/weightlifting-2.jpg" alt="Weightlifting Clip Art 2" class="clipart">
+        <img src="images/weightlifting-2.jpg" alt="Weightlifting Clip Art 2" class="clipart-right">
     </div>
 
     <h2 class="marquee">Here are my competition results</h2>
