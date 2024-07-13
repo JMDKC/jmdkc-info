@@ -20,6 +20,56 @@
         "Sinclair": 172.40
     },
     {
+        "Where": "Blackheath",
+        "Date": "2023-12-03",
+        "Name": "Blackheath Weightlifting Club Open",
+        "Snatch": "58 62 65x",
+        "Clean & Jerk": "73x 73 78",
+        "Total": 135,
+        "My Weight": 74.1,
+        "Sinclair": 180.33
+    },
+    {
+        "Where": "Strength Ambassadors",
+        "Date": "2023-09-30",
+        "Name": "Unity Competition",
+        "Snatch": "62 65 67x",
+        "Clean & Jerk": "80 84 87x",
+        "Total": 149,
+        "My Weight": 75.0,
+        "Sinclair": 197.60
+    },
+    {
+        "Where": "LOWA",
+        "Date": "2023-10-08",
+        "Name": "October Invitational",
+        "Snatch": "62 66 70x",
+        "Clean & Jerk": "80 84 87",
+        "Total": 153,
+        "My Weight": 74.5,
+        "Sinclair": 203.72
+    },
+    {
+        "Where": "LOWA",
+        "Date": "2023-11-27",
+        "Name": "Winter Open",
+        "Snatch": "65 68 71x",
+        "Clean & Jerk": "82 86x 86x",
+        "Total": 150,
+        "My Weight": 75.1,
+        "Sinclair": 198.77
+    },
+    {
+        "Where": "LOWA",
+        "Date": "2024-04-07",
+        "Name": "Spring Open",
+        "Snatch": "65 69 73x",
+        "Clean & Jerk": "85 90 93x",
+        "Total": 159,
+        "My Weight": 74.7,
+        "Sinclair": 211.45
+    },
+    {
         "Where": "Crystal Palace",
         "Date": "2024-05-20",
         "Name": "Crystal Palace Spring Open",
