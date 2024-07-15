@@ -1,51 +1,58 @@
-document.getElementById('view-lift-btn').addEventListener('click', () => {
-    const selectedLift = document.getElementById('lift').value;
+// Function to convert Excel date to JavaScript date
+function excelDateToJSDate(excelDate) {
+    const jsDate = new Date((excelDate - (25567 + 1)) * 86400 * 1000);
+    return jsDate.toISOString().split('T')[0];
+}
 
+// Function to fetch and display the best lift
+document.getElementById('view-lift-btn').addEventListener('click', function() {
     fetch('lifts.json')
         .then(response => response.json())
         .then(data => {
-            const bestLift = data.find(lift => lift.lift.toLowerCase() === selectedLift.toLowerCase());
+            const selectedLift = document.getElementById('lift').value;
+            const bestLift = data.filter(lift => lift.lift === selectedLift)
+                                .reduce((prev, current) => (prev.weight > current.weight) ? prev : current, {});
 
-            const resultDiv = document.getElementById('result');
-            if (bestLift) {
-                const liftDate = new Date((bestLift.date - 25569) * 86400 * 1000).toLocaleDateString(); // Excel date conversion
-                resultDiv.innerHTML = `
-                    <p>Lift: ${bestLift.lift}</p>
-                    <p>Weight: ${bestLift.weight} kg</p>
-                    <p>Date: ${liftDate}</p>
+            if (bestLift && bestLift.weight) {
+                const date = excelDateToJSDate(bestLift.date);
+                document.getElementById('result').innerHTML = `
+                    Best ${bestLift.lift}:<br>
+                    Weight: ${bestLift.weight} kg<br>
+                    Date: ${date}<br>
+                    Reps: ${bestLift.reps}
                 `;
             } else {
-                resultDiv.innerHTML = `<p>No records found for ${selectedLift}.</p>`;
+                document.getElementById('result').innerHTML = 'No records found';
             }
         })
-        .catch(error => {
-            console.error('Error fetching lifts:', error);
-            document.getElementById('result').innerHTML = `<p>Error fetching lifts. Please try again later.</p>`;
-        });
+        .catch(error => console.error('Error fetching best lift data:', error));
 });
 
-// Fetch and display competition results
-fetch('comp-results.json')
-    .then(response => response.json())
-    .then(data => {
-        const compResultsTableBody = document.querySelector('#comp-results tbody');
-        compResultsTableBody.innerHTML = ''; // Clear any existing rows
+// Function to fetch and display competition results
+function fetchCompetitionResults() {
+    fetch('comp-results.json')
+        .then(response => response.json())
+        .then(data => {
+            const tbody = document.querySelector('#comp-results tbody');
+            tbody.innerHTML = ''; // Clear any existing rows
 
-        data.forEach(result => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${result.Where}</td>
-                <td>${new Date(result.Date).toLocaleDateString()}</td>
-                <td>${result.Name}</td>
-                <td>${result.Snatch}</td>
-                <td>${result["Clean & Jerk"]}</td>
-                <td>${result.Total}</td>
-                <td>${result["My Weight"]}</td>
-                <td>${result.Sinclair}</td>
-            `;
-            compResultsTableBody.appendChild(row);
-        });
-    })
-    .catch(error => {
-        console.error('Error fetching competition results:', error);
-    });
+            data.forEach(result => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${result.Where}</td>
+                    <td>${excelDateToJSDate(result.Date)}</td>
+                    <td>${result.Name}</td>
+                    <td>${result.Snatch}</td>
+                    <td>${result['Clean & Jerk']}</td>
+                    <td>${result.Total}</td>
+                    <td>${result['My Weight']}</td>
+                    <td>${result.Sinclair}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error fetching competition results:', error));
+}
+
+// Fetch competition results on page load
+document.addEventListener('DOMContentLoaded', fetchCompetitionResults);

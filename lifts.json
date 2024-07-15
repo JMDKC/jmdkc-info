@@ -3,43 +3,43 @@
     "lift": "clean & jerk",
     "reps": 1,
     "weight": 95,
-    "date": 45289
+    "date": "2023-12-29"
   },
   {
     "lift": "snatch",
     "reps": 1,
     "weight": 74,
-    "date": 45166
+    "date": "2023-12-29"
   },
   {
     "lift": "clean",
     "reps": 1,
     "weight": 100,
-    "date": 45266
+    "date": "2023-12-29"
   },
   {
     "lift": "jerk",
     "reps": 1,
     "weight": 95,
-    "date": 44864
+    "date": "2023-12-29"
   },
   {
     "lift": "front squat",
     "reps": 1,
     "weight": 120,
-    "date": 45318
+    "date": "2023-12-29"
   },
   {
     "lift": "bench press",
     "reps": 1,
     "weight": 90,
-    "date": 45455
+    "date": "2023-12-29"
   },
   {
     "lift": "back squat",
     "reps": 1,
     "weight": 142.5,
-    "date": 44731
+    "date": "2023-12-29"
   },
   {
     "lift": "power snatch",
@@ -51,6 +51,6 @@
     "lift": "push press",
     "reps": 1,
     "weight": 78,
-    "date": 45074
+    "date": "2023-12-29"
   }
 ]
