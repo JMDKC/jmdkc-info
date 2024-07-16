@@ -1,5 +1,9 @@
 // Function to convert Excel date to JavaScript date
 function excelDateToJSDate(excelDate) {
+    if (typeof excelDate !== 'number' || excelDate <= 0) {
+        console.error('Invalid Excel date:', excelDate);
+        return 'Invalid date';
+    }
     const jsDate = new Date((excelDate - (25567 + 1)) * 86400 * 1000);
     return jsDate.toISOString().split('T')[0];
 }
@@ -9,6 +13,7 @@ document.getElementById('view-lift-btn').addEventListener('click', function() {
     fetch('lifts.json')
         .then(response => response.json())
         .then(data => {
+            console.log('Fetched lifts data:', data); // Log fetched data
             const selectedLift = document.getElementById('lift').value;
             const bestLift = data.filter(lift => lift.lift === selectedLift)
                                 .reduce((prev, current) => (prev.weight > current.weight) ? prev : current, {});
@@ -33,14 +38,16 @@ function fetchCompetitionResults() {
     fetch('comp-results.json')
         .then(response => response.json())
         .then(data => {
+            console.log('Fetched competition results data:', data); // Log fetched data
             const tbody = document.querySelector('#comp-results tbody');
             tbody.innerHTML = ''; // Clear any existing rows
 
             data.forEach(result => {
+                const date = excelDateToJSDate(result.Date);
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${result.Where}</td>
-                    <td>${excelDateToJSDate(result.Date)}</td>
+                    <td>${date}</td>
                     <td>${result.Name}</td>
                     <td>${result.Snatch}</td>
                     <td>${result['Clean & Jerk']}</td>
