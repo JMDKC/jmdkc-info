@@ -1,13 +1,3 @@
-// Function to convert Excel date to JavaScript date
-function excelDateToJSDate(excelDate) {
-    if (typeof excelDate !== 'number' || excelDate <= 0) {
-        console.error('Invalid Excel date:', excelDate);
-        return 'Invalid date';
-    }
-    const jsDate = new Date((excelDate - (25567 + 1)) * 86400 * 1000);
-    return jsDate.toISOString().split('T')[0];
-}
-
 // Function to fetch and display the best lift
 document.getElementById('view-lift-btn').addEventListener('click', function() {
     fetch('lifts.json')
@@ -19,12 +9,10 @@ document.getElementById('view-lift-btn').addEventListener('click', function() {
                                 .reduce((prev, current) => (prev.weight > current.weight) ? prev : current, {});
 
             if (bestLift && bestLift.weight) {
-                const date = excelDateToJSDate(bestLift.date);
                 document.getElementById('result').innerHTML = `
                     Best ${bestLift.lift}:<br>
                     Weight: ${bestLift.weight} kg<br>
-                    Date: ${date}<br>
-                    Reps: ${bestLift.reps}
+                    Date: ${bestLift.date}
                 `;
             } else {
                 document.getElementById('result').innerHTML = 'No records found';
@@ -43,11 +31,10 @@ function fetchCompetitionResults() {
             tbody.innerHTML = ''; // Clear any existing rows
 
             data.forEach(result => {
-                const date = excelDateToJSDate(result.Date);
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${result.Where}</td>
-                    <td>${date}</td>
+                    <td>${result.Date}</td>
                     <td>${result.Name}</td>
                     <td>${result.Snatch}</td>
                     <td>${result['Clean & Jerk']}</td>

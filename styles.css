@@ -1,97 +1,59 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f0f0f0;
-    background-image: url('images/90s-background.gif');
-    text-align: center;
-    color: #0000FF;
+    background-color: #FFFFE0; /* light yellow background */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 }
 
 h1.main-title {
-    font-size: 3em;
-    color: #FF1493;
-    background-color: #FFFF00;
-    padding: 10px;
-    border: 5px double #FF69B4;
-    margin-top: 20px;
+    text-align: center;
+    font-size: 36px;
+    color: #ff69b4; /* hot pink */
+    text-shadow: 2px 2px #ff1493; /* deeper pink shadow */
 }
 
 .marquee {
-    font-size: 2em;
-    color: #4682B4;
-    margin: 10px 0;
-    background-color: #00FFFF;
-    padding: 5px;
-    border: 3px dashed #FF4500;
+    text-align: center;
+    font-size: 24px;
+    color: #0000FF; /* blue */
+    text-shadow: 1px 1px #00FFFF; /* cyan shadow */
+    margin-bottom: 20px;
 }
 
 .colorful-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFEB3B;
-    border: 3px dotted #8B0000;
+    border: 5px solid #FFD700; /* gold border */
     padding: 20px;
+    background-color: #00BFFF; /* deep sky blue background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 20px;
-    border-radius: 15px;
-}
-
-.clipart-left,
-.clipart-right {
-    width: 150px;
-    height: auto;
-    margin: 0 20px;
 }
 
 .combo-box-container {
     text-align: center;
-    background-color: #FFFACD;
-    border: 2px solid #8A2BE2;
-    padding: 10px;
+    flex-grow: 1;
 }
 
-#lift, #view-lift-btn {
-    display: block;
-    margin: 10px auto;
-    padding: 5px;
-    font-size: 1em;
+.clipart-left, .clipart-right {
+    width: 150px;
+    height: auto;
 }
 
-#result {
-    margin-top: 10px;
-    font-size: 1.2em;
-}
-
-#comp-results {
-    width: 80%;
-    margin: 20px auto;
+table {
+    width: 100%;
     border-collapse: collapse;
-    background-color: #FFFFFF;
+    margin-top: 20px;
 }
 
-#comp-results th, #comp-results td {
-    border: 2px solid #4682B4;
+th, td {
+    border: 2px solid #ff69b4; /* hot pink borders */
     padding: 10px;
     text-align: center;
-}
-
-#comp-results th {
-    background-color: #FF69B4;
-    color: #FFFFFF;
 }
 
 footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #4682B4;
-    color: #FFFFFF;
     text-align: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer a {
-    color: #FFFF00;
-    text-decoration: none;
+    font-size: 14px;
+    color: #ff69b4; /* hot pink */
+    text-shadow: 1px 1px #ff1493; /* deeper pink shadow */
+    margin-top: 20px;
 }
