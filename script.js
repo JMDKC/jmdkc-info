@@ -1,9 +1,13 @@
 // Function to fetch and display the best lift
 document.getElementById('view-lift-btn').addEventListener('click', function() {
+    console.log('View Best Lift button clicked');
     fetch('lifts.json')
-        .then(response => response.json())
+        .then(response => {
+            console.log('Fetching lifts.json');
+            return response.json();
+        })
         .then(data => {
-            console.log('Fetched lifts data:', data); // Log fetched data
+            console.log('Fetched lifts data:', data);
             const selectedLift = document.getElementById('lift').value;
             const bestLift = data.filter(lift => lift.lift === selectedLift)
                                 .reduce((prev, current) => (prev.weight > current.weight) ? prev : current, {});
@@ -23,10 +27,14 @@ document.getElementById('view-lift-btn').addEventListener('click', function() {
 
 // Function to fetch and display competition results
 function fetchCompetitionResults() {
+    console.log('Fetching competition results');
     fetch('comp-results.json')
-        .then(response => response.json())
+        .then(response => {
+            console.log('Fetching comp-results.json');
+            return response.json();
+        })
         .then(data => {
-            console.log('Fetched competition results data:', data); // Log fetched data
+            console.log('Fetched competition results data:', data);
             const tbody = document.querySelector('#comp-results tbody');
             tbody.innerHTML = ''; // Clear any existing rows
 
