@@ -1,59 +1,93 @@
+/* General styles */
 body {
-    background-color: #FFFFE0; /* light yellow background */
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background-color: #fdfd96;
+    color: #000;
+    text-align: center;
 }
 
-h1.main-title {
-    text-align: center;
+.main-title {
     font-size: 36px;
-    color: #ff69b4; /* hot pink */
-    text-shadow: 2px 2px #ff1493; /* deeper pink shadow */
+    color: #ff69b4;
+    text-shadow: 2px 2px #ff4500;
 }
 
 .marquee {
-    text-align: center;
     font-size: 24px;
-    color: #0000FF; /* blue */
-    text-shadow: 1px 1px #00FFFF; /* cyan shadow */
+    color: #0000ff;
+    background-color: #ff4500;
+    padding: 10px;
+    border: 2px solid #ff69b4;
+    display: inline-block;
     margin-bottom: 20px;
 }
 
+/* Colorful box with combo box and clip art */
 .colorful-box {
-    border: 5px solid #FFD700; /* gold border */
-    padding: 20px;
-    background-color: #00BFFF; /* deep sky blue background */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 20px;
+    border: 5px dotted #ff69b4;
+    background-color: #87ceeb;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    position: relative;
 }
 
-.combo-box-container {
-    text-align: center;
-    flex-grow: 1;
-}
-
-.clipart-left, .clipart-right {
-    width: 150px;
+.clipart-left,
+.clipart-right {
+    width: 100px;
     height: auto;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+.combo-box-container {
+    margin: 0 20px;
+    font-size: 20px;
 }
 
-th, td {
-    border: 2px solid #ff69b4; /* hot pink borders */
+#view-lift-btn {
+    margin-top: 10px;
+    font-size: 18px;
     padding: 10px;
-    text-align: center;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-footer {
-    text-align: center;
-    font-size: 14px;
-    color: #ff69b4; /* hot pink */
-    text-shadow: 1px 1px #ff1493; /* deeper pink shadow */
+#result {
     margin-top: 20px;
+    font-size: 18px;
+    color: #ff4500;
+}
+
+/* Competition results table */
+#comp-results {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+#comp-results th, #comp-results td {
+    border: 2px solid #ff69b4;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#comp-results th {
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ff4500;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
 }
