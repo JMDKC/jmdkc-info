@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-family: 'Courier New', Courier, monospace;
     background-color: #fdfd96;
     color: #000;
     text-align: center;
@@ -37,7 +37,7 @@ body {
 
 .clipart-left,
 .clipart-right {
-    width: 100px;
+    width: 120px;
     height: auto;
 }
 
@@ -46,10 +46,15 @@ body {
     font-size: 20px;
 }
 
+#lift {
+    font-size: 18px;
+    padding: 5px;
+}
+
 #view-lift-btn {
     margin-top: 10px;
-    font-size: 18px;
-    padding: 10px;
+    font-size: 16px;
+    padding: 8px 12px;
     background-color: #ff69b4;
     color: #fff;
     border: none;
@@ -59,7 +64,11 @@ body {
 #result {
     margin-top: 20px;
     font-size: 18px;
-    color: #ff4500;
+    color: #000;
+    background-color: #ff69b4;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 /* Competition results table */
