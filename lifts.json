@@ -3,48 +3,60 @@
     "lift": "clean & jerk",
     "reps": 1,
     "weight": 95,
-    "date": "2024-05-20"
+    "date": "2024-05-04"
   },
   {
     "lift": "snatch",
     "reps": 1,
     "weight": 74,
-    "date": "2023-10-15"
+    "date": "2024-05-25"
   },
   {
     "lift": "clean",
     "reps": 1,
     "weight": 100,
-    "date": "2024-02-01"
+    "date": "2024-01-17"
   },
   {
     "lift": "jerk",
     "reps": 1,
     "weight": 95,
-    "date": "2023-03-30"
+    "date": "2024-06-08"
   },
   {
     "lift": "front squat",
     "reps": 1,
     "weight": 120,
-    "date": "2024-06-01"
+    "date": "2023-12-29"
   },
   {
     "lift": "bench press",
     "reps": 1,
     "weight": 90,
-    "date": "2024-07-01"
+    "date": "2022-12-20"
   },
   {
     "lift": "back squat",
     "reps": 1,
     "weight": 142.5,
-    "date": "2023-01-01"
+    "date": "2023-05-07"
   },
   {
     "lift": "push press",
     "reps": 1,
     "weight": 78,
-    "date": "2023-09-15"
+    "date": "2024-06-27"
+  },
+  {
+    "lift": "power snatch",
+    "reps": 1,
+    "weight": 68,
+    "date": "2024-07-20"
+  },
+  {
+    "lift": "power clean",
+    "reps": 1,
+    "weight": 87,
+    "date": "2024-06-01"
   }
 ]
