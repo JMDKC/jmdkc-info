@@ -1,60 +1,47 @@
-// Function to fetch and display the best lift
-document.getElementById('view-lift-btn').addEventListener('click', function() {
-    console.log('View Best Lift button clicked');
-    fetch('lifts.json')
-        .then(response => {
-            console.log('Fetching lifts.json');
-            return response.json();
-        })
-        .then(data => {
-            console.log('Fetched lifts data:', data);
-            const selectedLift = document.getElementById('lift').value;
-            const bestLift = data.filter(lift => lift.lift === selectedLift)
-                                .reduce((prev, current) => (prev.weight > current.weight) ? prev : current, {});
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('view-lift-btn').addEventListener('click', () => {
+        const selectedLift = document.getElementById('lift').value;
+        fetch('lifts.json')
+            .then(response => response.json())
+            .then(data => {
+                const bestLift = data.filter(lift => lift.lift === selectedLift)
+                    .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
 
-            if (bestLift && bestLift.weight) {
-                document.getElementById('result').innerHTML = `
-                    Best ${bestLift.lift}:<br>
-                    Weight: ${bestLift.weight} kg<br>
-                    Date: ${bestLift.date}
-                `;
-            } else {
-                document.getElementById('result').innerHTML = 'No records found';
-            }
-        })
-        .catch(error => console.error('Error fetching best lift data:', error));
-});
+                if (bestLift.weight > 0) {
+                    document.getElementById('result').innerHTML = `
+                        <p>Lift: ${bestLift.lift}</p>
+                        <p>Weight: ${bestLift.weight} kg</p>
+                        <p>Date: ${bestLift.date}</p>
+                    `;
+                } else {
+                    document.getElementById('result').innerHTML = '<p>No records found</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching best lift data:', error);
+                document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
+            });
+    });
 
-// Function to fetch and display competition results
-function fetchCompetitionResults() {
-    console.log('Fetching competition results');
     fetch('comp-results.json')
-        .then(response => {
-            console.log('Fetching comp-results.json');
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            console.log('Fetched competition results data:', data);
-            const tbody = document.querySelector('#comp-results tbody');
-            tbody.innerHTML = ''; // Clear any existing rows
+            const tableBody = document.getElementById('comp-results').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = ''; // Clear previous content
 
-            data.forEach(result => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${result.Where}</td>
-                    <td>${result.Date}</td>
-                    <td>${result.Name}</td>
-                    <td>${result.Snatch}</td>
-                    <td>${result['Clean & Jerk']}</td>
-                    <td>${result.Total}</td>
-                    <td>${result['My Weight']}</td>
-                    <td>${result.Sinclair}</td>
-                `;
-                tbody.appendChild(row);
+            data.forEach(record => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = record.Where;
+                row.insertCell(1).innerText = record.Date;
+                row.insertCell(2).innerText = record.Name;
+                row.insertCell(3).innerText = record.Snatch;
+                row.insertCell(4).innerText = record['Clean & Jerk'];
+                row.insertCell(5).innerText = record.Total;
+                row.insertCell(6).innerText = record['My Weight'];
+                row.insertCell(7).innerText = record.Sinclair;
             });
         })
-        .catch(error => console.error('Error fetching competition results:', error));
-}
-
-// Fetch competition results on page load
-document.addEventListener('DOMContentLoaded', fetchCompetitionResults);
+        .catch(error => {
+            console.error('Error fetching competition results:', error);
+        });
+});
