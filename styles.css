@@ -1,102 +1,97 @@
-/* General styles */
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #fdfd96;
-    color: #000;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     text-align: center;
 }
 
 .main-title {
-    font-size: 36px;
-    color: #ff69b4;
-    text-shadow: 2px 2px #ff4500;
+    font-size: 3em;
+    color: #3366ff;
 }
 
 .marquee {
-    font-size: 24px;
-    color: #0000ff;
-    background-color: #ff4500;
-    padding: 10px;
-    border: 2px solid #ff69b4;
-    display: inline-block;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ff6600;
+    font-weight: bold;
 }
 
-/* Colorful box with combo box and clip art */
 .colorful-box {
     display: flex;
-    justify-content: center;
     align-items: center;
-    border: 5px dotted #ff69b4;
-    background-color: #87ceeb;
+    justify-content: center;
+    background-color: #ffeb3b;
+    border: 3px dashed #ff5722;
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    position: relative;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .clipart-left,
 .clipart-right {
-    width: 120px;
+    width: 150px;
     height: auto;
 }
 
 .combo-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 20px;
-    font-size: 20px;
 }
 
 #lift {
-    font-size: 18px;
+    font-size: 1.2em;
+    margin: 10px 0;
     padding: 5px;
 }
 
 #view-lift-btn {
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 8px 12px;
-    background-color: #ff69b4;
-    color: #fff;
+    font-size: 1.2em;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
     border: none;
     cursor: pointer;
+    box-shadow: 0 5px #666;
+}
+
+#view-lift-btn:hover {
+    background-color: #45a049;
+}
+
+#view-lift-btn:active {
+    background-color: #45a049;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
 }
 
 #result {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #000;
-    background-color: #ff69b4;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
+    font-size: 1.5em;
+    color: #ff0000;
+    margin: 20px;
 }
 
-/* Competition results table */
-#comp-results {
-    margin: 20px auto;
-    border-collapse: collapse;
+table {
     width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
 }
 
-#comp-results th, #comp-results td {
-    border: 2px solid #ff69b4;
-    padding: 10px;
-    font-size: 18px;
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
-#comp-results th {
-    background-color: #ff69b4;
-    color: #fff;
+th {
+    background-color: #4caf50;
+    color: white;
 }
 
-/* Footer */
 footer {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #ff4500;
-    color: #fff;
+    margin-top: 20px;
 }
 
 footer p {
-    margin: 0;
+    font-size: 1em;
 }
