@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (bestLift.weight > 0) {
                     document.getElementById('result').innerHTML = `
-                        <p>Lift: ${bestLift.lift}</p>
-                        <p>Weight: ${bestLift.weight} kg</p>
-                        <p>Date: ${new Date(bestLift.date).toLocaleDateString()}</p>
+                        <p><strong>Lift:</strong> ${bestLift.lift}</p>
+                        <p><strong>Weight:</strong> ${bestLift.weight} kg</p>
+                        <p><strong>Date:</strong> ${bestLift.date}</p>
                     `;
                 } else {
                     document.getElementById('result').innerHTML = '<p>No records found</p>';
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach(record => {
                 const row = tableBody.insertRow();
                 row.insertCell(0).innerText = record.Where;
-                row.insertCell(1).innerText = new Date(record.Date).toLocaleDateString();
+                row.insertCell(1).innerText = record.Date;
                 row.insertCell(2).innerText = record.Name;
                 row.insertCell(3).innerText = record.Snatch;
                 row.insertCell(4).innerText = record['Clean & Jerk'];

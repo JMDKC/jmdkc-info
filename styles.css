@@ -7,22 +7,25 @@ body {
     padding: 0;
 }
 
+header {
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
 .main-title {
     font-size: 2.5em;
-    color: #007bff;
-    margin-top: 20px;
+    margin: 0;
 }
 
-.subtitle {
-    font-size: 1.2em;
+main {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 1.8em;
     color: #555;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background: #e0e0e0;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .combo-box-container {
@@ -32,6 +35,7 @@ hr {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    text-align: left;
 }
 
 label {
@@ -56,6 +60,7 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    width: 100%;
 }
 
 button:hover {
@@ -63,7 +68,7 @@ button:hover {
 }
 
 #result {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #333;
     margin-top: 20px;
 }
@@ -94,12 +99,16 @@ tr:nth-child(even) {
 }
 
 footer {
-    margin-top: 20px;
     padding: 10px 0;
     background-color: #f1f1f1;
+    color: #777;
 }
 
 footer p {
     font-size: 0.9em;
-    color: #777;
+    margin: 0;
+}
+
+footer a {
+    color: #007bff;
 }
