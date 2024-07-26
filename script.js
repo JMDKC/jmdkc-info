@@ -1,47 +1,114 @@
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('view-lift-btn').addEventListener('click', () => {
-        const selectedLift = document.getElementById('lift').value;
-        fetch('lifts.json')
-            .then(response => response.json())
-            .then(data => {
-                const bestLift = data.filter(lift => lift.lift === selectedLift)
-                    .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-                if (bestLift.weight > 0) {
-                    document.getElementById('result').innerHTML = `
-                        <p><strong>Lift:</strong> ${bestLift.lift}</p>
-                        <p><strong>Weight:</strong> ${bestLift.weight} kg</p>
-                        <p><strong>Date:</strong> ${bestLift.date}</p>
-                    `;
-                } else {
-                    document.getElementById('result').innerHTML = '<p>No records found</p>';
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching best lift data:', error);
-                document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
-            });
-    });
+header {
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
 
-    fetch('comp-results.json')
-        .then(response => response.json())
-        .then(data => {
-            const tableBody = document.getElementById('comp-results').getElementsByTagName('tbody')[0];
-            tableBody.innerHTML = ''; // Clear previous content
+.main-title {
+    font-size: 2.5em;
+    margin: 0;
+}
 
-            data.forEach(record => {
-                const row = tableBody.insertRow();
-                row.insertCell(0).innerText = record.Where;
-                row.insertCell(1).innerText = record.Date;
-                row.insertCell(2).innerText = record.Name;
-                row.insertCell(3).innerText = record.Snatch;
-                row.insertCell(4).innerText = record['Clean & Jerk'];
-                row.insertCell(5).innerText = record.Total;
-                row.insertCell(6).innerText = record['My Weight'];
-                row.insertCell(7).innerText = record.Sinclair;
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching competition results:', error);
-        });
-});
+main {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #555;
+    margin-top: 20px;
+}
+
+.combo-box-container {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+select {
+    font-size: 1.2em;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    color: #777;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+footer a {
+    color: #007bff;
+}
