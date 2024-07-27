@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     background-color: #f8f9fa;
     color: #333;
     text-align: center;
@@ -9,7 +9,7 @@ body {
 
 header {
     padding: 20px;
-    background-color: #007bff;
+    background-color: #0056b3; /* Updated to a nicer blue */
     color: white;
 }
 
@@ -55,7 +55,7 @@ select {
 button {
     font-size: 1.2em;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0056b3;
     color: white;
     border: none;
     cursor: pointer;
@@ -64,7 +64,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #004494;
 }
 
 #result {
@@ -90,7 +90,7 @@ th, td {
 }
 
 th {
-    background-color: #007bff;
+    background-color: #0056b3;
     color: white;
 }
 
@@ -110,5 +110,5 @@ footer p {
 }
 
 footer a {
-    color: #007bff;
+    color: #0056b3;
 }
