@@ -13,13 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p><strong>Weight:</strong> ${bestLift.weight} kg</p>
                         <p><strong>Date:</strong> ${bestLift.date}</p>
                     `;
+                    document.getElementById('result').style.display = 'block'; // Show result
                 } else {
                     document.getElementById('result').innerHTML = '<p>No records found</p>';
+                    document.getElementById('result').style.display = 'block'; // Show message
                 }
             })
             .catch(error => {
                 console.error('Error fetching best lift data:', error);
                 document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
+                document.getElementById('result').style.display = 'block'; // Show error message
             });
     });
 
