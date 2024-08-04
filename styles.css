@@ -70,6 +70,19 @@ button:hover {
     background-color: #c0392b;
 }
 
+.reset-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.reset-link:hover {
+    text-decoration: underline;
+}
+
 #result {
     font-size: 1.2em;
     color: #333;

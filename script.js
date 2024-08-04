@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
+    document.getElementById('reset-btn').addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+        document.getElementById('result').innerHTML = '';
+        document.getElementById('result').style.display = 'none';
+        document.getElementById('lift').selectedIndex = 0;
+    });
+
     fetch('comp-results.json')
         .then(response => response.json())
         .then(data => {
