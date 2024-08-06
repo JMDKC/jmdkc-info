@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('view-lift-btn').addEventListener('click', () => {
-        const selectedLift = document.getElementById('lift').value;
+    const viewLiftBtn = document.getElementById('view-lift-btn');
+    const resetLink = document.getElementById('reset');
+    const resultDiv = document.getElementById('result');
+    const liftSelect = document.getElementById('lift');
+
+    viewLiftBtn.addEventListener('click', () => {
+        const selectedLift = liftSelect.value;
         fetch('lifts.json')
             .then(response => response.json())
             .then(data => {
@@ -8,29 +13,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     .reduce((max, lift) => lift.weight > max.weight ? lift : max, { weight: 0 });
 
                 if (bestLift.weight > 0) {
-                    document.getElementById('result').innerHTML = `
-                        <p><strong>Lift:</strong> ${bestLift.lift}</p>
-                        <p><strong>Weight:</strong> ${bestLift.weight} kg</p>
-                        <p><strong>Date:</strong> ${bestLift.date}</p>
+                    resultDiv.innerHTML = `
+                        <p>Lift: ${bestLift.lift}</p>
+                        <p>Weight: ${bestLift.weight} kg</p>
+                        <p>Date: ${bestLift.date}</p>
                     `;
-                    document.getElementById('result').style.display = 'block'; // Show result
+                    resultDiv.style.display = 'block';
                 } else {
-                    document.getElementById('result').innerHTML = '<p>No records found</p>';
-                    document.getElementById('result').style.display = 'block'; // Show message
+                    resultDiv.innerHTML = '<p>No records found</p>';
+                    resultDiv.style.display = 'block';
                 }
             })
             .catch(error => {
                 console.error('Error fetching best lift data:', error);
-                document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
-                document.getElementById('result').style.display = 'block'; // Show error message
+                resultDiv.innerHTML = '<p>Error fetching data</p>';
+                resultDiv.style.display = 'block';
             });
     });
 
-    document.getElementById('reset-btn').addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the default link behavior
-        document.getElementById('result').innerHTML = '';
-        document.getElementById('result').style.display = 'none';
-        document.getElementById('lift').selectedIndex = 0;
+    resetLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        resultDiv.style.display = 'none';
+        resultDiv.innerHTML = '';
+        liftSelect.selectedIndex = 0;
     });
 
     fetch('comp-results.json')
