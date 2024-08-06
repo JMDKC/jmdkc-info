@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (bestLift.weight > 0) {
                     resultDiv.innerHTML = `
-                        <p>Lift: ${bestLift.lift}</p>
-                        <p>Weight: ${bestLift.weight} kg</p>
-                        <p>Date: ${bestLift.date}</p>
+                        <p>lift: ${bestLift.lift}</p>
+                        <p>weight: ${bestLift.weight} kg</p>
+                        <p>date: ${bestLift.date}</p>
                     `;
                     resultDiv.style.display = 'block';
                 } else {

@@ -1,7 +1,7 @@
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    background-color: #f0f0f5;
-    color: #333;
+    background-color: #1e1e1e; /* Dark background */
+    color: #f0f0f5; /* Light text */
     text-align: center;
     margin: 0;
     padding: 0;
@@ -9,8 +9,8 @@ body {
 
 header {
     padding: 20px;
-    background-color: #3498db; /* Vibrant blue */
-    color: white;
+    background-color: #2e8b57; /* Dark green */
+    color: #f0f0f5; /* Light text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -24,27 +24,29 @@ main {
 }
 
 .section-title {
-    font-size: 1.8em;
-    color: #555;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-size: 2em; /* Larger font size for differentiation */
+    color: #ffeb3b; /* Bright yellow */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-transform: none;
 }
 
 .combo-box-container {
     margin: 20px auto;
     max-width: 600px;
     padding: 20px;
-    background-color: #ffeb3b; /* Bright yellow */
+    background-color: #2e8b57; /* Dark green */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     text-align: left;
+    color: #f0f0f5; /* Light text */
 }
 
 label {
     display: block;
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #333;
+    color: #f0f0f5; /* Light text */
 }
 
 select, button {
@@ -52,29 +54,29 @@ select, button {
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
-    border: 2px solid #3498db;
+    border: 2px solid #f0f0f5; /* Light border */
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: white;
-    color: #333;
+    background-color: #333; /* Dark background */
+    color: #f0f0f5; /* Light text */
 }
 
 button {
-    background-color: #e74c3c; /* Bright red */
-    color: white;
+    background-color: #d9534f; /* Bootstrap danger color */
+    color: #f0f0f5; /* Light text */
     cursor: pointer;
     border: none;
 }
 
 button:hover {
-    background-color: #c0392b;
+    background-color: #c9302c;
 }
 
 .reset-link {
     display: block;
     margin-top: 10px;
     font-size: 1em;
-    color: #3498db;
+    color: #f0f0f5;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -87,9 +89,9 @@ button:hover {
 
 #result {
     font-size: 1.2em;
-    color: #333;
+    color: #f0f0f5; /* Light text */
     margin-top: 20px;
-    background-color: #ecf0f1; /* Light grey */
+    background-color: #444; /* Dark grey */
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -100,32 +102,32 @@ table {
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #ecf0f1;
+    background-color: #444; /* Dark grey */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     overflow: hidden;
+    color: #f0f0f5; /* Light text */
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #666;
     padding: 8px;
     text-align: left;
-    color: #333;
 }
 
 th {
-    background-color: #3498db;
-    color: white;
+    background-color: #2e8b57; /* Dark green */
+    color: #f0f0f5; /* Light text */
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #555;
 }
 
 footer {
     padding: 10px 0;
-    background-color: #f1f1f1;
-    color: #777;
+    background-color: #2e8b57; /* Dark green */
+    color: #f0f0f5; /* Light text */
 }
 
 footer p {
@@ -134,5 +136,5 @@ footer p {
 }
 
 footer a {
-    color: #3498db;
+    color: #ffeb3b; /* Bright yellow */
 }
