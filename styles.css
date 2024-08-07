@@ -46,6 +46,10 @@ section {
     background-color: #565656; /* Lightest dark grey */
 }
 
+#art-section {
+    background-color: #666; /* Grey */
+}
+
 h2 {
     font-size: 1.8em; /* Smaller header for Joe's Weightlifting PBs */
     color: #4caf50; /* Lighter green */
@@ -156,35 +160,25 @@ footer {
     padding: 10px 0;
     background-color: #333; /* Dark grey */
     color: #f0f0f5; /* Light text */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer p {
-    font-size: 0.9em;
-    margin: 0;
-}
-
-footer a {
-    color: #ffeb3b; /* Bright yellow */
-}
-
-/* Styles for the jump links section */
 .contents {
-    list-style: none; /* Remove bullet points */
+    list-style-type: none;
     padding: 0;
-    margin: 20px 0;
-    text-align: left;
-    background-color: #333; /* Dark grey */
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.contents li {
-    margin: 10px 0;
+    text-align: center;
 }
 
 .contents a {
     color: #ffeb3b; /* Bright yellow */
     text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 1.1em;
 }
 
 .contents a:hover {
