@@ -2,55 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Joe's Weightlifting PBs</title>
+    <title>jmdkc.info</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1 class="main-title">Joe's Weightlifting PBs</h1>
+        <h1 class="main-title">jmdkc.info</h1>
+        <nav>
+            <ul class="contents">
+                <li><a href="#intro-section">Introduction</a></li>
+                <li><a href="#weightlifting-pbs-section">Weightlifting PBs</a></li>
+                <li><a href="#comp-results-section">Competition Results</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <main>
-        <div class="section-title">Here are the heaviest weights I've lifted so far!</div>
+        <section id="intro-section">
+            <h2>Joe's Weightlifting PBs</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ex eu quam volutpat, ac pulvinar felis commodo.</p>
+        </section>
         
-        <!-- Colorful box with combo box and results -->
-        <div class="combo-box-container">
-            <label for="lift">Choose a lift:</label>
-            <select id="lift">
-                <option value="clean & jerk">Clean & Jerk</option>
-                <option value="snatch">Snatch</option>
-                <option value="clean">Clean</option>
-                <option value="jerk">Jerk</option>
-                <option value="front squat">Front Squat</option>
-                <option value="bench press">Bench Press</option>
-                <option value="back squat">Back Squat</option>
-                <option value="push press">Push Press</option>
-                <option value="power clean">Power Clean</option>
-                <option value="power snatch">Power Snatch</option>
-            </select>
-            <button id="view-lift-btn">View Best Lift</button>
-            <div id="result"></div>
-            <a class="reset-link" href="#" id="reset">reset</a>
-        </div>
+        <section id="weightlifting-pbs-section">
+            <h3>Here are the heaviest weights I've lifted so far!</h3>
+            <div class="combo-box-container">
+                <label for="lift">Choose a lift:</label>
+                <select id="lift">
+                    <option value="clean & jerk">Clean & Jerk</option>
+                    <option value="snatch">Snatch</option>
+                    <option value="clean">Clean</option>
+                    <option value="jerk">Jerk</option>
+                    <option value="front squat">Front Squat</option>
+                    <option value="bench press">Bench Press</option>
+                    <option value="back squat">Back Squat</option>
+                    <option value="push press">Push Press</option>
+                    <option value="power clean">Power Clean</option>
+                    <option value="power snatch">Power Snatch</option>
+                </select>
+                <button id="view-lift-btn">View Best Lift</button>
+                <div id="result"></div>
+                <a class="reset-link" href="#" id="reset">reset</a>
+            </div>
+        </section>
 
-        <div class="section-title">Here are my competition results</div>
-        <table id="comp-results">
-            <thead>
-                <tr>
-                    <th>Where</th>
-                    <th>Date</th>
-                    <th>Name</th>
-                    <th>Snatch</th>
-                    <th>Clean & Jerk</th>
-                    <th>Total</th>
-                    <th>My Weight</th>
-                    <th>Sinclair</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Competition results will be inserted here by JavaScript -->
-            </tbody>
-        </table>
+        <section id="comp-results-section">
+            <h3>Here are my competition results</h3>
+            <table id="comp-results">
+                <thead>
+                    <tr>
+                        <th>Where</th>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Snatch</th>
+                        <th>Clean & Jerk</th>
+                        <th>Total</th>
+                        <th>My Weight</th>
+                        <th>Sinclair</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Competition results will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="additional-section">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ex eu quam volutpat, ac pulvinar felis commodo.</p>
+        </section>
     </main>
+    
     <footer>
         <p>A website built by <a href="https://josephclift.com" target="_blank">Joseph Clift</a></p>
     </footer>

@@ -9,24 +9,57 @@ body {
 
 header {
     padding: 20px;
-    background-color: #2e8b57; /* Dark green */
+    background-color: #333; /* Dark grey */
     color: #f0f0f5; /* Light text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
 .main-title {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0;
+    color: #4caf50; /* Lighter green */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffeb3b; /* Bright yellow */
+    font-size: 1.2em;
 }
 
 main {
     padding: 20px;
 }
 
-.section-title {
-    font-size: 2em; /* Larger font size for differentiation */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8em; /* Smaller header for Joe's Weightlifting PBs */
+    color: #4caf50; /* Lighter green */
+}
+
+h3 {
+    font-size: 1.5em; /* Smaller headers for sections */
     color: #ffeb3b; /* Bright yellow */
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 15px;
     text-transform: none;
 }
@@ -35,7 +68,7 @@ main {
     margin: 20px auto;
     max-width: 600px;
     padding: 20px;
-    background-color: #2e8b57; /* Dark green */
+    background-color: #444; /* Dark grey */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     text-align: left;
@@ -50,7 +83,7 @@ label {
 }
 
 select, button {
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
@@ -62,21 +95,21 @@ select, button {
 }
 
 button {
-    background-color: #d9534f; /* Bootstrap danger color */
+    background-color: #4caf50; /* Green */
     color: #f0f0f5; /* Light text */
     cursor: pointer;
     border: none;
 }
 
 button:hover {
-    background-color: #c9302c;
+    background-color: #45a049; /* Darker green */
 }
 
 .reset-link {
     display: block;
     margin-top: 10px;
     font-size: 1em;
-    color: #f0f0f5;
+    color: #ffeb3b;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -88,7 +121,7 @@ button:hover {
 }
 
 #result {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #f0f0f5; /* Light text */
     margin-top: 20px;
     background-color: #444; /* Dark grey */
@@ -116,7 +149,7 @@ th, td {
 }
 
 th {
-    background-color: #2e8b57; /* Dark green */
+    background-color: #333; /* Dark grey */
     color: #f0f0f5; /* Light text */
 }
 
@@ -126,7 +159,7 @@ tr:nth-child(even) {
 
 footer {
     padding: 10px 0;
-    background-color: #2e8b57; /* Dark green */
+    background-color: #333; /* Dark grey */
     color: #f0f0f5; /* Light text */
 }
 
