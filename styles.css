@@ -16,7 +16,7 @@ header {
 
 .main-title {
     font-size: 2.5em;
-    color: #4285f4; /* Nice blue color for the header */
+    color: #f0f0f5; /* White color for the header */
 }
 
 nav {
@@ -26,6 +26,8 @@ nav {
 nav .contents {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav .contents li {
@@ -40,6 +42,14 @@ nav .contents li a {
 }
 
 nav .contents li a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #bada55; /* Light green */
+}
+
+a:hover {
     text-decoration: underline;
 }
 
@@ -77,14 +87,14 @@ h3 {
 #result {
     margin-top: 20px;
     font-size: 1em;
-    color: #4285f4; /* Blue color for the result text */
+    color: #bada55; /* Light green */
 }
 
 .reset-link {
     display: block;
     margin-top: 10px;
     font-size: 0.9em;
-    color: #4285f4; /* Blue color for the reset link */
+    color: #bada55; /* Light green */
     text-decoration: none;
 }
 

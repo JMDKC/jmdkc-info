@@ -44,4 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach(record => {
                 const row = tableBody.insertRow();
                 row.insertCell(0).innerText = record.Where;
-                row
+                row.insertCell(1).innerText = record.Date;
+                row.insertCell(2).innerText = record.Name;
+                row.insertCell(3).innerText = record.Snatch;
+                row.insertCell(4).innerText = record.CleanJerk;
+                row.insertCell(5).innerText = record.Total;
+                row.insertCell(6).innerText = record.MyWeight;
+                row.insertCell(7).innerText = record.Sinclair;
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching competition results data:', error);
+        });
+});
