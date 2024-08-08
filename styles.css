@@ -36,7 +36,7 @@ nav .contents li {
 }
 
 nav .contents li a {
-    color: #f0f0f5; /* Light text */
+    color: #bada55; /* Light green */
     text-decoration: none;
     font-weight: bold;
 }
@@ -57,18 +57,36 @@ section {
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
+    max-width: 800px; /* Slightly wider container */
+    text-align: left;
+}
+
+#art-section {
     background-color: #2a2a2a; /* Slightly lighter dark background */
-    max-width: 600px;
+}
+
+#books-section {
+    background-color: #333333; /* Another dark tone */
+}
+
+#concerts-section {
+    background-color: #3a3a3a; /* Yet another dark tone */
+}
+
+#weightlifting-section {
+    background-color: #444444; /* Darker background for differentiation */
 }
 
 h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
+    color: #bada55; /* Light green */
 }
 
 h3 {
     font-size: 1.5em;
     margin-top: 20px;
+    color: #bada55; /* Light green */
 }
 
 .combo-box-container {
@@ -88,11 +106,11 @@ h3 {
 #result {
     margin-top: 20px;
     font-size: 1em;
-    color: #bada55; /* Light green */
+    color: #f0f0f5; /* Light text */
     padding: 10px;
     border: 1px solid #bada55; /* Light green border */
     border-radius: 5px;
-    background-color: #333; /* Darker background for differentiation */
+    background-color: #2a2a2a; /* Dark background for differentiation */
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -115,6 +133,9 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
     color: #f0f0f5; /* Light text */
+    max-width: 800px; /* Ensure table fits nicely */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table, th, td {
@@ -127,7 +148,7 @@ th, td {
 }
 
 th {
-    background-color: #444; /* Darker header background */
+    background-color: #555; /* Darker header background */
 }
 
 tr:nth-child(even) {
