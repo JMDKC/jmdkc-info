@@ -8,7 +8,6 @@
 <body>
     <header>
         <h1 class="main-title">jmdkc.info</h1>
-        <h2>Joe's Weightlifting PBs</h2>
         <nav>
             <ul class="contents">
                 <li><a href="#art-section">Art</a></li>
@@ -19,9 +18,14 @@
         </nav>
     </header>
 
+    <section id="intro-section" style="background-color: #2a2a2a;">
+        <h2>Introduction</h2>
+        <p>Here is a collection of information about me, based on lists I maintain. My main hobbies are going to the opera and seeing art shows, along with weightlifting.</p>
+    </section>
+
     <section id="art-section">
         <h2>Art</h2>
-        <p>Here is a list of all the art exhibitions I've visited. I write about one of these each week on my website <a href="https://artangled.com" target="_blank">Artangled</a>.</p>
+        <p>Here is a list of all the art exhibitions I've visited recently. This is my main hobby outside of work. I feature one of these shows each week on my website <a href="https://artangled.com" target="_blank">Artangled</a>.</p>
         <table id="art-results">
             <thead>
                 <tr>
@@ -39,7 +43,7 @@
 
     <section id="books-section">
         <h2>Books</h2>
-        <p>Here is a list of all the books I've read, plus a short review.</p>
+        <p>Here is a list of all the books I've read over recent years. I don't read as much as I used to, thanks to the internet.</p>
         <table id="books-results">
             <thead>
                 <tr>
@@ -57,7 +61,7 @@
 
     <section id="concerts-section">
         <h2>Concerts & Opera</h2>
-        <p>Here are all the concerts, opera and theatre performances I've been to over the last couple of years. I started tracking these more recently, and don't go to much.</p>
+        <p>Here are all the concerts and opera performances I've been to. I started tracking these more recently, after lockdown ended. I love opera but it's so expensive!</p>
         <table id="concerts-results">
             <thead>
                 <tr>
@@ -77,7 +81,7 @@
     </section>
 
     <section id="weightlifting-section">
-        <h2>Weightlifting PBs</h2>
+        <h2>Weightlifting</h2>
         <p>Here are the heaviest weights I've lifted so far:</p>
         <div class="combo-box-container">
             <label for="lift">Choose a lift:</label>
@@ -95,6 +99,8 @@
             </select>
             <button id="view-lift-btn">View Best Lift</button>
             <div id="result" style="display:none;"></div>
+        </div>
+        <div class="reset-container">
             <a href="#" id="reset" class="reset-link">reset</a>
         </div>
 
