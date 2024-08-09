@@ -36,7 +36,7 @@ nav .contents li {
 }
 
 nav .contents li a {
-    color: #bada55; /* Light green */
+    color: #89CFF0; /* Pale blue */
     text-decoration: none;
     font-weight: bold;
 }
@@ -46,7 +46,7 @@ nav .contents li a:hover {
 }
 
 a {
-    color: #bada55; /* Light green */
+    color: #89CFF0; /* Pale blue */
 }
 
 a:hover {
@@ -80,13 +80,13 @@ section {
 h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #bada55; /* Light green */
+    color: #89CFF0; /* Pale blue */
 }
 
 h3 {
     font-size: 1.5em;
     margin-top: 20px;
-    color: #bada55; /* Light green */
+    color: #89CFF0; /* Pale blue */
 }
 
 .combo-box-container {
@@ -108,7 +108,7 @@ h3 {
     font-size: 1em;
     color: #f0f0f5; /* Light text */
     padding: 10px;
-    border: 1px solid #bada55; /* Light green border */
+    border: 1px solid #89CFF0; /* Pale blue border */
     border-radius: 5px;
     background-color: #2a2a2a; /* Dark background for differentiation */
     max-width: 400px;
@@ -120,7 +120,7 @@ h3 {
     display: block;
     margin-top: 10px;
     font-size: 0.9em;
-    color: #bada55; /* Light green */
+    color: #89CFF0; /* Pale blue */
     text-decoration: none;
 }
 
@@ -139,7 +139,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #bada55; /* Light green border */
+    border: 1px solid #89CFF0; /* Pale blue border */
 }
 
 th, td {

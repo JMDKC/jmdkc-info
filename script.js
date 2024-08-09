@@ -1,12 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to fetch and display best lift
+    // Function to load data into a table
+    function loadTableData(url, tableId) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = ''; // Clear previous content
+
+                data.forEach(record => {
+                    const row = tableBody.insertRow();
+                    Object.values(record).forEach(value => {
+                        const cell = row.insertCell();
+                        cell.innerText = value;
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+
+    // Load data into each table
+    loadTableData('art.json', 'art-results');
+    loadTableData('books.json', 'books-results');
+    loadTableData('concerts.json', 'concerts-results');
+
+    // Load weightlifting data
     document.getElementById('view-lift-btn').addEventListener('click', () => {
         const selectedLift = document.getElementById('lift').value;
         fetch('lifts.json')
             .then(response => response.json())
             .then(data => {
                 const bestLift = data.filter(lift => lift.lift === selectedLift)
-                    .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
+                    .reduce((max, lift) => lift.weight > max.weight ? lift : max, { weight: 0 });
 
                 const resultDiv = document.getElementById('result');
                 if (bestLift.weight > 0) {
@@ -27,33 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    // Function to reset the form and hide the result
-    document.getElementById('reset').addEventListener('click', (event) => {
-        event.preventDefault();
+    // Reset function for lift section
+    document.getElementById('reset').addEventListener('click', (e) => {
+        e.preventDefault();
         document.getElementById('lift').selectedIndex = 0;
         document.getElementById('result').style.display = 'none';
     });
-
-    // Function to fetch and display competition results
-    fetch('comp-results.json')
-        .then(response => response.json())
-        .then(data => {
-            const tableBody = document.getElementById('comp-results').getElementsByTagName('tbody')[0];
-            tableBody.innerHTML = ''; // Clear previous content
-
-            data.forEach(record => {
-                const row = tableBody.insertRow();
-                row.insertCell(0).innerText = record.Where;
-                row.insertCell(1).innerText = record.Date;
-                row.insertCell(2).innerText = record.Name;
-                row.insertCell(3).innerText = record.Snatch;
-                row.insertCell(4).innerText = record['Clean & Jerk'];
-                row.insertCell(5).innerText = record.Total;
-                row.insertCell(6).innerText = record['My Weight'];
-                row.insertCell(7).innerText = record.Sinclair;
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching competition results data:', error);
-        });
 });
