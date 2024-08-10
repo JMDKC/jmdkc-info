@@ -1,62 +1,91 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to load data into a table
-    function loadTableData(url, tableId) {
-        fetch(url)
-            .then(response => response.json())
+
+    // Function to log and test JSON data fetching
+    function testJsonFetching(url) {
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
-                const tableBody = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+                console.log(`Data from ${url}:`, data);  // Debug: Log fetched data
+                return data;
+            })
+            .catch(error => {
+                console.error(`Error fetching data from ${url}:`, error);
+                return null;
+            });
+    }
+
+    // Test fetching the competition results JSON
+    testJsonFetching('comp-results.json')
+        .then(data => {
+            if (data) {
+                const tableBody = document.getElementById('comp-results').getElementsByTagName('tbody')[0];
                 tableBody.innerHTML = ''; // Clear previous content
 
                 data.forEach(record => {
                     const row = tableBody.insertRow();
-                    Object.values(record).forEach(value => {
-                        const cell = row.insertCell();
-                        cell.innerText = value;
-                    });
+                    row.insertCell(0).innerText = record.Where;
+                    row.insertCell(1).innerText = record.Date;
+                    row.insertCell(2).innerText = record.Name;
+                    row.insertCell(3).innerText = record.Snatch;
+                    row.insertCell(4).innerText = record['Clean & Jerk'];
+                    row.insertCell(5).innerText = record.Total;
+                    row.insertCell(6).innerText = record['My Weight'];
+                    row.insertCell(7).innerText = record.Sinclair;
                 });
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }
+            } else {
+                console.warn('No competition results data available.');
+            }
+        });
 
-    // Load data into each table
-    loadTableData('art.json', 'art-results');
-    loadTableData('books.json', 'books-results');
-    loadTableData('concerts.json', 'concerts-results');
-
-    // Load weightlifting data
+    // Test fetching the lifts JSON and processing it
     document.getElementById('view-lift-btn').addEventListener('click', () => {
-        const selectedLift = document.getElementById('lift').value;
-        fetch('lifts.json')
-            .then(response => response.json())
+        testJsonFetching('lifts.json')
             .then(data => {
-                const bestLift = data.filter(lift => lift.lift === selectedLift)
-                    .reduce((max, lift) => lift.weight > max.weight ? lift : max, { weight: 0 });
+                if (data) {
+                    const selectedLift = document.getElementById('lift').value;
+                    const bestLift = data.filter(lift => lift.lift === selectedLift)
+                        .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
 
-                const resultDiv = document.getElementById('result');
-                if (bestLift.weight > 0) {
-                    resultDiv.innerHTML = `
-                        <p>lift: ${bestLift.lift}</p>
-                        <p>weight: ${bestLift.weight} kg</p>
-                        <p>date: ${bestLift.date}</p>
-                    `;
-                    resultDiv.style.display = 'block';
+                    if (bestLift.weight > 0) {
+                        document.getElementById('result').innerHTML = `
+                            <p>lift: ${bestLift.lift}</p>
+                            <p>weight: ${bestLift.weight} kg</p>
+                            <p>date: ${bestLift.date}</p>
+                        `;
+                    } else {
+                        document.getElementById('result').innerHTML = '<p>No records found</p>';
+                    }
                 } else {
-                    resultDiv.innerHTML = '<p>No records found</p>';
-                    resultDiv.style.display = 'block';
+                    document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
                 }
-            })
-            .catch(error => {
-                console.error('Error fetching best lift data:', error);
-                document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
             });
     });
 
-    // Reset function for lift section
-    document.getElementById('reset').addEventListener('click', (e) => {
-        e.preventDefault();
+    // Reset button functionality
+    document.getElementById('reset-btn').addEventListener('click', () => {
         document.getElementById('lift').selectedIndex = 0;
-        document.getElementById('result').style.display = 'none';
+        document.getElementById('result').innerHTML = '';  // Clear the result box
     });
+
+    // Test fetching other JSON data (e.g., art, books, concerts) as needed
+    testJsonFetching('art.json')
+        .then(data => {
+            // Process art data and update the art table
+        });
+
+    testJsonFetching('books.json')
+        .then(data => {
+            // Process books data and update the books table
+        });
+
+    testJsonFetching('concerts.json')
+        .then(data => {
+            // Process concerts data and update the concerts table
+        });
+
 });
