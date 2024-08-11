@@ -42,35 +42,44 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-    // Test fetching the lifts JSON and processing it
-    document.getElementById('view-lift-btn').addEventListener('click', () => {
-        testJsonFetching('lifts.json')
-            .then(data => {
-                if (data) {
-                    const selectedLift = document.getElementById('lift').value;
-                    const bestLift = data.filter(lift => lift.lift === selectedLift)
-                        .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
+    // Check if the elements exist before adding event listeners
+    const viewLiftBtn = document.getElementById('view-lift-btn');
+    const resetBtn = document.getElementById('reset-btn');
 
-                    if (bestLift.weight > 0) {
-                        document.getElementById('result').innerHTML = `
-                            <p>lift: ${bestLift.lift}</p>
-                            <p>weight: ${bestLift.weight} kg</p>
-                            <p>date: ${bestLift.date}</p>
-                        `;
+    if (viewLiftBtn) {
+        // Test fetching the lifts JSON and processing it
+        viewLiftBtn.addEventListener('click', () => {
+            testJsonFetching('lifts.json')
+                .then(data => {
+                    if (data) {
+                        const selectedLift = document.getElementById('lift').value;
+                        const bestLift = data.filter(lift => lift.lift === selectedLift)
+                            .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
+
+                        if (bestLift.weight > 0) {
+                            document.getElementById('result').innerHTML = `
+                                <p>lift: ${bestLift.lift}</p>
+                                <p>weight: ${bestLift.weight} kg</p>
+                                <p>date: ${bestLift.date}</p>
+                            `;
+                        } else {
+                            document.getElementById('result').innerHTML = '<p>No records found</p>';
+                        }
                     } else {
-                        document.getElementById('result').innerHTML = '<p>No records found</p>';
+                        document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
                     }
-                } else {
-                    document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
-                }
-            });
-    });
+                });
+        });
+    }
 
-    // Reset button functionality
-    document.getElementById('reset-btn').addEventListener('click', () => {
-        document.getElementById('lift').selectedIndex = 0;
-        document.getElementById('result').innerHTML = '';  // Clear the result box
-    });
+    if (resetBtn) {
+        // Reset button functionality
+        resetBtn.addEventListener('click', () => {
+            const liftSelect = document.getElementById('lift');
+            if (liftSelect) liftSelect.selectedIndex = 0;
+            document.getElementById('result').innerHTML = '';  // Clear the result box
+        });
+    }
 
     // Test fetching other JSON data (e.g., art, books, concerts) as needed
     testJsonFetching('art.json')
