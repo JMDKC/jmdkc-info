@@ -1,62 +1,132 @@
-<table id="art-table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Gallery</th>
-            <th>Date</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Art data will be populated here -->
-    </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jmdkc.info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title">jmdkc.info</h1>
+        <nav>
+            <ul class="contents">
+                <li><a href="#art-section">Art</a></li>
+                <li><a href="#books-section">Books</a></li>
+                <li><a href="#concerts-section">Concerts & Opera</a></li>
+                <li><a href="#weightlifting-section">Weightlifting</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<table id="books-table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Date</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Books data will be populated here -->
-    </tbody>
-</table>
+    <section id="intro-section" style="background-color: #1a3a5f; color: #ffffff;">
+        <p>Here is a collection of information about me, based on lists I maintain. My main hobbies are going to the opera and seeing art shows, along with weightlifting.</p>
+    </section>
 
-<table id="concerts-table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Composer(s)</th>
-            <th>Conductor</th>
-            <th>Cast/Soloist</th>
-            <th>Venue</th>
-            <th>Date</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Concerts data will be populated here -->
-    </tbody>
-</table>
+    <section id="art-section">
+        <h2>Art</h2>
+        <p>Here is a list of all the art exhibitions I've visited recently. This is my main hobby outside of work. I feature one of these shows each week on my website <a href="https://artangled.com" target="_blank">Artangled</a>.</p>
+        <table id="art-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Gallery</th>
+                    <th>Date</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Art results will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </section>
 
-<table id="comp-results">
-    <thead>
-        <tr>
-            <th>Where</th>
-            <th>Date</th>
-            <th>Name</th>
-            <th>Snatch</th>
-            <th>Clean & Jerk</th>
-            <th>Total</th>
-            <th>My Weight</th>
-            <th>Sinclair</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Competition results will be populated here -->
-    </tbody>
-</table>
+    <section id="books-section">
+        <h2>Books</h2>
+        <p>Here is a list of all the books I've read over recent years. I don't read as much as I used to, thanks to the internet.</p>
+        <table id="books-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Books results will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="concerts-section">
+        <h2>Concerts & Opera</h2>
+        <p>Here are all the concerts and opera performances I've been to. I started tracking these more recently, after lockdown ended. I love opera but it's so expensive!</p>
+        <table id="concerts-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Composer(s)</th>
+                    <th>Conductor</th>
+                    <th>Cast/Soloist</th>
+                    <th>Venue</th>
+                    <th>Date</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Concerts results will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="weightlifting-section">
+        <h2>Weightlifting</h2>
+        <p>Here are the heaviest weights I've lifted so far:</p>
+        <div class="combo-box-container">
+            <label for="lift">Choose a lift:</label>
+            <select id="lift">
+                <option value="clean & jerk">Clean & Jerk</option>
+                <option value="snatch">Snatch</option>
+                <option value="clean">Clean</option>
+                <option value="jerk">Jerk</option>
+                <option value="front squat">Front Squat</option>
+                <option value="bench press">Bench Press</option>
+                <option value="back squat">Back Squat</option>
+                <option value="push press">Push Press</option>
+                <option value="power clean">Power Clean</option>
+                <option value="power snatch">Power Snatch</option>
+            </select>
+            <button id="view-lift-btn">View Best Lift</button>
+            <div id="result" style="display:none;"></div>
+        </div>
+        <div class="reset-container">
+            <a href="#" id="reset" class="reset-link">reset</a>
+        </div>
+
+        <h3>Here are my competition results:</h3>
+        <table id="comp-results">
+            <thead>
+                <tr>
+                    <th>Where</th>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Snatch</th>
+                    <th>Clean & Jerk</th>
+                    <th>Total</th>
+                    <th>My Weight</th>
+                    <th>Sinclair</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Competition results will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>A website built by <a href="https://josephclift.com" target="_blank">Joseph Clift</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
