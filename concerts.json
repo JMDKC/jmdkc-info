@@ -1,20 +1,20 @@
 [
     {
-        "title": "Beethoven's 9th Symphony",
-        "composer": "Beethoven",
-        "conductor": "John Doe",
-        "castSoloist": "Jane Smith",
-        "venue": "Carnegie Hall",
-        "date": "2024-02-20",
-        "notes": "An exhilarating performance."
+        "Title": "Beethoven Symphony No. 9",
+        "Composer(s)": "Ludwig van Beethoven",
+        "Conductor": "Leonard Bernstein",
+        "Cast/Soloist": "Berlin Philharmonic",
+        "Venue": "Berlin Philharmonie",
+        "Date": "2023-06-18",
+        "Notes": "An incredible performance."
     },
     {
-        "title": "Beethoven's 9th Symphony",
-        "composer": "Beethoven",
-        "conductor": "John Doe",
-        "castSoloist": "Jane Smith",
-        "venue": "Carnegie Hall",
-        "date": "2024-02-20",
-        "notes": "An exhilarating performance."
+        "Title": "The Marriage of Figaro",
+        "Composer(s)": "Wolfgang Amadeus Mozart",
+        "Conductor": "Herbert von Karajan",
+        "Cast/Soloist": "Vienna State Opera",
+        "Venue": "Wiener Staatsoper",
+        "Date": "2022-11-25",
+        "Notes": "A delightful opera."
     }
 ]

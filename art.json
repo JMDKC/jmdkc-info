@@ -1,14 +1,14 @@
 [
     {
-        "title": "The Great Exhibition",
-        "gallery": "National Gallery",
-        "date": "2023-05-10",
-        "notes": "Fantastic display of modern art."
+        "Title": "Mona Lisa",
+        "Gallery": "Louvre",
+        "Date": "2022-01-15",
+        "Notes": "Saw it during my trip to Paris."
     },
     {
-        "title": "The Great Exhibition",
-        "gallery": "National Gallery",
-        "date": "2023-05-10",
-        "notes": "Fantastic display of modern art."
+        "Title": "Starry Night",
+        "Gallery": "MoMA",
+        "Date": "2023-03-10",
+        "Notes": "A breathtaking piece by Van Gogh."
     }
 ]

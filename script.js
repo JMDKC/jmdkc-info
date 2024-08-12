@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                const tableBody = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+                const tableBody = document.getElementById(tableId).querySelector('tbody');
                 tableBody.innerHTML = ''; // Clear previous content
 
                 if (data.length === 0) {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for the best lift section
     const viewLiftBtn = document.getElementById('view-lift-btn');
-    const resetBtn = document.getElementById('reset-btn');
+    const resetBtn = document.getElementById('reset');
 
     if (viewLiftBtn) {
         viewLiftBtn.addEventListener('click', () => {
@@ -44,14 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     const bestLift = data.filter(lift => lift.lift === selectedLift)
                         .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
 
+                    const resultDiv = document.getElementById('result');
                     if (bestLift.weight > 0) {
-                        document.getElementById('result').innerHTML = `
+                        resultDiv.innerHTML = `
                             <p>lift: ${bestLift.lift}</p>
                             <p>weight: ${bestLift.weight} kg</p>
                             <p>date: ${bestLift.date}</p>
                         `;
+                        resultDiv.style.display = 'block';
                     } else {
-                        document.getElementById('result').innerHTML = '<p>No records found</p>';
+                        resultDiv.innerHTML = '<p>No records found</p>';
+                        resultDiv.style.display = 'block';
                     }
                 })
                 .catch(error => {
@@ -66,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const liftSelect = document.getElementById('lift');
             if (liftSelect) liftSelect.selectedIndex = 0;
             document.getElementById('result').innerHTML = '';  // Clear the result box
+            document.getElementById('result').style.display = 'none';
         });
     }
 });
