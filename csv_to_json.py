@@ -2,8 +2,8 @@ import csv
 import json
 
 # Define the file paths
-csv_file_path = 'booksload.csv'
-json_file_path = 'booksloaded.json'
+csv_file_path = 'concertsload.csv'
+json_file_path = 'concerts.json'
 
 # Read the CSV and add data to a list
 data = []
