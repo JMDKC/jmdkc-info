@@ -1,163 +1,166 @@
+/* General Styles */
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background-color: #1e1e1e; /* Dark background */
-    color: #f0f0f5; /* Light text */
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-header {
-    padding: 20px;
-    background-color: #333; /* Dark grey */
-    color: #f0f0f5; /* Light text */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.main-title {
-    font-size: 2.5em;
-    color: #f0f0f5; /* White color for the header */
-}
-
-nav {
-    margin: 20px 0;
-}
-
-nav .contents {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav .contents li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav .contents li a {
-    color: #89CFF0; /* Pale blue */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav .contents li a:hover {
-    text-decoration: underline;
-}
-
-a {
-    color: #89CFF0; /* Pale blue */
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 800px; /* Slightly wider container */
-    text-align: left;
-}
-
-#art-section {
-    background-color: #2a2a2a; /* Slightly lighter dark background */
-}
-
-#books-section {
-    background-color: #333333; /* Another dark tone */
-}
-
-#concerts-section {
-    background-color: #3a3a3a; /* Yet another dark tone */
-}
-
-#weightlifting-section {
-    background-color: #444444; /* Darker background for differentiation */
 }
 
 h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #89CFF0; /* Pale blue */
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h3 {
     font-size: 1.5em;
-    margin-top: 20px;
-    color: #89CFF0; /* Pale blue */
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.combo-box-container {
-    margin: 20px 0;
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
 }
 
-.combo-box-container label, .combo-box-container select, .combo-box-container button {
-    font-size: 1em;
-    margin: 5px 0;
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#result {
-    margin-top: 20px;
-    font-size: 1em;
-    color: #f0f0f5; /* Light text */
-    padding: 10px;
-    border: 1px solid #89CFF0; /* Pale blue border */
-    border-radius: 5px;
-    background-color: #2a2a2a; /* Dark background for differentiation */
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+/* Centering the reset link */
+.reset-container {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .reset-link {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #89CFF0; /* Pale blue */
+    text-transform: lowercase;
+    color: #cccccc;
     text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    margin: 10px auto;
 }
 
 .reset-link:hover {
-    text-decoration: underline;
+    color: #ffffff;
 }
 
+/* Enhancing Sections */
+section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 90%;
+    border-radius: 8px;
+}
+
+#intro-section {
+    background-color: #1a3a5f; /* Slightly lighter background for differentiation */
+    color: #ffffff;
+}
+
+#art-section, #books-section, #concerts-section, #weightlifting-section {
+    background-color: #2a2a2a; /* Darker sections */
+    color: #ffffff;
+    border: 1px solid #3a3a3a;
+}
+
+#art-section h2, #books-section h2, #concerts-section h2, #weightlifting-section h2 {
+    font-size: 2.2em;
+    color: #bbbbbb;
+}
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    color: #f0f0f5; /* Light text */
-    max-width: 800px; /* Ensure table fits nicely */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-table, th, td {
-    border: 1px solid #89CFF0; /* Pale blue border */
 }
 
 th, td {
     padding: 10px;
-    text-align: center;
+    border: 1px solid #444444;
+    text-align: left;
 }
 
 th {
-    background-color: #555; /* Darker header background */
+    background-color: #3a3a3a;
+    color: #ffffff;
 }
 
-tr:nth-child(even) {
-    background-color: #2a2a2a; /* Slightly lighter for alternating rows */
+tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
 }
 
-footer {
+tbody tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
     padding: 20px;
-    background-color: #333; /* Dark grey */
-    color: #f0f0f5; /* Light text */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+    font-size: 3em;
+    color: #ffffff;
+}
+
+/* Navigation styles */
+.contents {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contents li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.contents a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.contents a:hover {
+    color: #ffffff;
+}
+
+/* Combo Box Container */
+.combo-box-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#lift {
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+#view-lift-btn {
+    font-size: 1.1em;
+    padding: 5px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+#view-lift-btn:hover {
+    background-color: #555555;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-radius: 8px;
 }
