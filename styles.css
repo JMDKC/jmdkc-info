@@ -7,26 +7,37 @@ body {
     padding: 0;
 }
 
+/* Section Titles */
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00bfff; /* Bright, eye-catching color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00bfff; /* Adds a line under the title */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Subtitle (smaller headers) */
+h3 {
+    font-size: 1.8em;
     text-align: center;
     margin-bottom: 20px;
+    color: #00bfff; /* Matching the section title color */
 }
 
-h3 {
-    font-size: 1.5em;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
+/* Paragraph Styling */
 p {
     font-size: 1.1em;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 20px;
+    text-align: center;
 }
 
-/* Centering the reset link */
+/* Reset Link */
 .reset-container {
     text-align: center;
     margin-top: 10px;
@@ -45,35 +56,31 @@ p {
     color: #ffffff;
 }
 
-/* Enhancing Sections */
+/* Section Containers */
 section {
     margin: 40px auto;
     padding: 20px;
-    max-width: 90%;
+    max-width: 80%; /* Slightly narrower to fit the page better */
     border-radius: 8px;
 }
 
 #intro-section {
-    background-color: #1a3a5f; /* Slightly lighter background for differentiation */
+    background-color: #1a3a5f; /* Differentiated background */
     color: #ffffff;
+    text-align: center;
 }
 
 #art-section, #books-section, #concerts-section, #weightlifting-section {
-    background-color: #2a2a2a; /* Darker sections */
+    background-color: #2a2a2a; /* Darker background for other sections */
     color: #ffffff;
     border: 1px solid #3a3a3a;
 }
 
-#art-section h2, #books-section h2, #concerts-section h2, #weightlifting-section h2 {
-    font-size: 2.2em;
-    color: #bbbbbb;
-}
-
 /* Table Styles */
 table {
-    width: 100%;
+    width: 90%; /* Slightly narrower than the section */
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 th, td {
@@ -95,7 +102,7 @@ tbody tr:nth-child(even) {
     background-color: #3a3a3a;
 }
 
-/* Header styles */
+/* Header Styles */
 .header {
     text-align: center;
     padding: 20px;
@@ -106,7 +113,7 @@ tbody tr:nth-child(even) {
     color: #ffffff;
 }
 
-/* Navigation styles */
+/* Navigation Styles */
 .contents {
     list-style-type: none;
     padding: 0;
