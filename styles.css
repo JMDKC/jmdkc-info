@@ -32,7 +32,7 @@ h3 {
 p {
     font-size: 1.1em;
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 700px; /* Narrower paragraphs */
     margin: 0 auto 20px;
     text-align: center;
 }
@@ -60,7 +60,7 @@ p {
 section {
     margin: 40px auto;
     padding: 20px;
-    max-width: 80%; /* Slightly narrower to fit the page better */
+    max-width: 60%; /* Narrower section width */
     border-radius: 8px;
 }
 
@@ -78,7 +78,7 @@ section {
 
 /* Table Styles */
 table {
-    width: 90%; /* Slightly narrower than the section */
+    width: 100%; /* Tables now occupy full width of the narrower sections */
     border-collapse: collapse;
     margin: 20px auto;
 }
