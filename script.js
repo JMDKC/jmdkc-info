@@ -31,6 +31,33 @@ document.addEventListener('DOMContentLoaded', () => {
     populateTable('concerts.json', 'concerts-table', ['Title', 'Composer(s)', 'Conductor', 'Cast/Soloist', 'Venue', 'Date', 'Notes']);
     populateTable('comp-results.json', 'comp-results', ['Where', 'Date', 'Name', 'Snatch', 'Clean & Jerk', 'Total', 'My Weight', 'Sinclair']);
 
+    // Fetch and populate the Art table
+    fetch('art.json')
+        .then(response => response.json())
+        .then(data => {
+            const artTableBody = document.getElementById('art-table').getElementsByTagName('tbody')[0];
+            artTableBody.innerHTML = ''; // Clear any existing rows
+
+            data.forEach(art => {
+                // First row for title, gallery, date
+                const detailsRow = artTableBody.insertRow();
+                detailsRow.className = 'details-row';
+                detailsRow.insertCell(0).innerText = art.Title;
+                detailsRow.insertCell(1).innerText = art.Gallery;
+                detailsRow.insertCell(2).innerText = art.Date;
+
+                // Second row for notes
+                const notesRow = artTableBody.insertRow();
+                notesRow.className = 'notes-row';
+                const notesCell = notesRow.insertCell(0);
+                notesCell.colSpan = 3; // Span across all columns
+                notesCell.innerText = art.Notes;
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching Art data:', error);
+        });
+
     // Event listener for the best lift section
     const viewLiftBtn = document.getElementById('view-lift-btn');
     const resetBtn = document.getElementById('reset');
