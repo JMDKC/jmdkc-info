@@ -1,37 +1,85 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Fetch and populate the Competition Results table
+    fetch('comp-results.json')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('comp-results').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = ''; // Clear previous content
 
-    function populateTable(url, tableId, columns) {
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                const tableBody = document.getElementById(tableId).querySelector('tbody');
-                tableBody.innerHTML = ''; // Clear previous content
-
-                if (data.length === 0) {
-                    tableBody.innerHTML = '<tr><td colspan="' + columns.length + '">No data available</td></tr>';
-                    return;
-                }
-
-                data.forEach(record => {
-                    const row = tableBody.insertRow();
-                    columns.forEach(column => {
-                        const cell = row.insertCell();
-                        cell.innerText = record[column] || '';  // Fill the cell with data or empty string if undefined
-                    });
-                });
-            })
-            .catch(error => {
-                console.error(`Error fetching data for ${tableId}:`, error);
+            data.forEach(record => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = record.Where;
+                row.insertCell(1).innerText = record.Date;
+                row.insertCell(2).innerText = record.Name;
+                row.insertCell(3).innerText = record.Snatch;
+                row.insertCell(4).innerText = record['Clean & Jerk'];
+                row.insertCell(5).innerText = record.Total;
+                row.insertCell(6).innerText = record['My Weight'];
+                row.insertCell(7).innerText = record.Sinclair;
             });
-    }
+        })
+        .catch(error => {
+            console.error('Error fetching competition results:', error);
+        });
 
-    // Populate the tables with data
-    populateTable('art.json', 'art-table', ['Title', 'Gallery', 'Date', 'Notes']);
-    populateTable('books.json', 'books-table', ['Title', 'Author', 'Date', 'Notes']);
-    populateTable('concerts.json', 'concerts-table', ['Title', 'Composer(s)', 'Conductor', 'Cast/Soloist', 'Venue', 'Date', 'Notes']);
-    populateTable('comp-results.json', 'comp-results', ['Where', 'Date', 'Name', 'Snatch', 'Clean & Jerk', 'Total', 'My Weight', 'Sinclair']);
+    // Fetch and populate the Books table with two-row structure
+    fetch('books.json')
+        .then(response => response.json())
+        .then(data => {
+            const booksTableBody = document.getElementById('books-table').getElementsByTagName('tbody')[0];
+            booksTableBody.innerHTML = ''; // Clear any existing rows
 
-    // Fetch and populate the Art table
+            data.forEach(book => {
+                // First row for title, author, date
+                const detailsRow = booksTableBody.insertRow();
+                detailsRow.className = 'details-row';
+                detailsRow.insertCell(0).innerText = book.Title;
+                detailsRow.insertCell(1).innerText = book.Author;
+                detailsRow.insertCell(2).innerText = book.Date;
+
+                // Second row for notes
+                const notesRow = booksTableBody.insertRow();
+                notesRow.className = 'notes-row';
+                const notesCell = notesRow.insertCell(0);
+                notesCell.colSpan = 3; // Span across all columns
+                notesCell.innerText = book.Notes;
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching books data:', error);
+        });
+
+    // Fetch and populate the Concerts & Opera table with two-row structure
+    fetch('concerts.json')
+        .then(response => response.json())
+        .then(data => {
+            const concertsTableBody = document.getElementById('concerts-table').getElementsByTagName('tbody')[0];
+            concertsTableBody.innerHTML = ''; // Clear any existing rows
+
+            data.forEach(concert => {
+                // First row for title, composer(s), conductor, cast/soloist, venue, date
+                const detailsRow = concertsTableBody.insertRow();
+                detailsRow.className = 'details-row';
+                detailsRow.insertCell(0).innerText = concert.Title;
+                detailsRow.insertCell(1).innerText = concert.Composer;
+                detailsRow.insertCell(2).innerText = concert.Conductor;
+                detailsRow.insertCell(3).innerText = concert.Cast;
+                detailsRow.insertCell(4).innerText = concert.Venue;
+                detailsRow.insertCell(5).innerText = concert.Date;
+
+                // Second row for notes
+                const notesRow = concertsTableBody.insertRow();
+                notesRow.className = 'notes-row';
+                const notesCell = notesRow.insertCell(0);
+                notesCell.colSpan = 6; // Span across all columns
+                notesCell.innerText = concert.Notes;
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching concerts data:', error);
+        });
+
+    // Fetch and populate the Art table with two-row structure
     fetch('art.json')
         .then(response => response.json())
         .then(data => {
@@ -57,46 +105,4 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error fetching Art data:', error);
         });
-
-    // Event listener for the best lift section
-    const viewLiftBtn = document.getElementById('view-lift-btn');
-    const resetBtn = document.getElementById('reset');
-
-    if (viewLiftBtn) {
-        viewLiftBtn.addEventListener('click', () => {
-            fetch('lifts.json')
-                .then(response => response.json())
-                .then(data => {
-                    const selectedLift = document.getElementById('lift').value;
-                    const bestLift = data.filter(lift => lift.lift === selectedLift)
-                        .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
-
-                    const resultDiv = document.getElementById('result');
-                    if (bestLift.weight > 0) {
-                        resultDiv.innerHTML = `
-                            <p>lift: ${bestLift.lift}</p>
-                            <p>weight: ${bestLift.weight} kg</p>
-                            <p>date: ${bestLift.date}</p>
-                        `;
-                        resultDiv.style.display = 'block';
-                    } else {
-                        resultDiv.innerHTML = '<p>No records found</p>';
-                        resultDiv.style.display = 'block';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching best lift data:', error);
-                    document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
-                });
-        });
-    }
-
-    if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-            const liftSelect = document.getElementById('lift');
-            if (liftSelect) liftSelect.selectedIndex = 0;
-            document.getElementById('result').innerHTML = '';  // Clear the result box
-            document.getElementById('result').style.display = 'none';
-        });
-    }
 });
