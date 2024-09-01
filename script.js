@@ -1,5 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch and populate the Competition Results table
+    // Handling "View Best Lift" button
+    document.getElementById('view-lift-btn').addEventListener('click', () => {
+        const selectedLift = document.getElementById('lift').value;
+        fetch('lifts.json')
+            .then(response => response.json())
+            .then(data => {
+                const bestLift = data.filter(lift => lift.lift === selectedLift)
+                    .reduce((max, lift) => lift.weight > max.weight ? lift : max, {weight: 0});
+
+                if (bestLift.weight > 0) {
+                    document.getElementById('result').style.display = 'block';
+                    document.getElementById('result').innerHTML = `
+                        <p>Lift: ${bestLift.lift}</p>
+                        <p>Weight: ${bestLift.weight} kg</p>
+                        <p>Date: ${bestLift.date}</p>
+                    `;
+                } else {
+                    document.getElementById('result').style.display = 'block';
+                    document.getElementById('result').innerHTML = '<p>No records found</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching best lift data:', error);
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
+            });
+    });
+
+    // Reset functionality
+    document.getElementById('reset').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('lift').selectedIndex = 0;
+        document.getElementById('result').style.display = 'none';
+    });
+
+    // Fetch and display competition results
     fetch('comp-results.json')
         .then(response => response.json())
         .then(data => {
@@ -22,87 +57,78 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching competition results:', error);
         });
 
-    // Fetch and populate the Books table with two-row structure
+    // Fetch and display Art data
+    fetch('art.json')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('art-table').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = ''; // Clear previous content
+
+            data.forEach(record => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = record.Title;
+                row.insertCell(1).innerText = record.Gallery;
+                row.insertCell(2).innerText = record.Date;
+
+                const notesRow = tableBody.insertRow();
+                const notesCell = notesRow.insertCell(0);
+                notesCell.colSpan = 3;
+                notesCell.innerText = record.Notes;
+                notesCell.className = "notes-cell";
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching art data:', error);
+        });
+
+    // Fetch and display Books data
     fetch('books.json')
         .then(response => response.json())
         .then(data => {
-            const booksTableBody = document.getElementById('books-table').getElementsByTagName('tbody')[0];
-            booksTableBody.innerHTML = ''; // Clear any existing rows
+            const tableBody = document.getElementById('books-table').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = ''; // Clear previous content
 
-            data.forEach(book => {
-                // First row for title, author, date
-                const detailsRow = booksTableBody.insertRow();
-                detailsRow.className = 'details-row';
-                detailsRow.insertCell(0).innerText = book.Title;
-                detailsRow.insertCell(1).innerText = book.Author;
-                detailsRow.insertCell(2).innerText = book.Date;
+            data.forEach(record => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = record.Title;
+                row.insertCell(1).innerText = record.Author;
+                row.insertCell(2).innerText = record.Date;
 
-                // Second row for notes
-                const notesRow = booksTableBody.insertRow();
-                notesRow.className = 'notes-row';
+                const notesRow = tableBody.insertRow();
                 const notesCell = notesRow.insertCell(0);
-                notesCell.colSpan = 3; // Span across all columns
-                notesCell.innerText = book.Notes;
+                notesCell.colSpan = 3;
+                notesCell.innerText = record.Notes;
+                notesCell.className = "notes-cell";
             });
         })
         .catch(error => {
             console.error('Error fetching books data:', error);
         });
 
-    // Fetch and populate the Concerts & Opera table with two-row structure
+    // Fetch and display Concerts & Opera data
     fetch('concerts.json')
         .then(response => response.json())
         .then(data => {
-            const concertsTableBody = document.getElementById('concerts-table').getElementsByTagName('tbody')[0];
-            concertsTableBody.innerHTML = ''; // Clear any existing rows
+            const tableBody = document.getElementById('concerts-table').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = ''; // Clear previous content
 
-            data.forEach(concert => {
-                // First row for title, composer(s), conductor, cast/soloist, venue, date
-                const detailsRow = concertsTableBody.insertRow();
-                detailsRow.className = 'details-row';
-                detailsRow.insertCell(0).innerText = concert.Title;
-                detailsRow.insertCell(1).innerText = concert.Composer;
-                detailsRow.insertCell(2).innerText = concert.Conductor;
-                detailsRow.insertCell(3).innerText = concert.Cast;
-                detailsRow.insertCell(4).innerText = concert.Venue;
-                detailsRow.insertCell(5).innerText = concert.Date;
+            data.forEach(record => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = record.Title;
+                row.insertCell(1).innerText = record.Composers || ''; // Handle undefined
+                row.insertCell(2).innerText = record.Conductor || ''; // Handle undefined
+                row.insertCell(3).innerText = record.CastSoloist || ''; // Handle undefined
+                row.insertCell(4).innerText = record.Venue;
+                row.insertCell(5).innerText = record.Date;
 
-                // Second row for notes
-                const notesRow = concertsTableBody.insertRow();
-                notesRow.className = 'notes-row';
+                const notesRow = tableBody.insertRow();
                 const notesCell = notesRow.insertCell(0);
-                notesCell.colSpan = 6; // Span across all columns
-                notesCell.innerText = concert.Notes;
+                notesCell.colSpan = 6;
+                notesCell.innerText = record.Notes;
+                notesCell.className = "notes-cell";
             });
         })
         .catch(error => {
             console.error('Error fetching concerts data:', error);
-        });
-
-    // Fetch and populate the Art table with two-row structure
-    fetch('art.json')
-        .then(response => response.json())
-        .then(data => {
-            const artTableBody = document.getElementById('art-table').getElementsByTagName('tbody')[0];
-            artTableBody.innerHTML = ''; // Clear any existing rows
-
-            data.forEach(art => {
-                // First row for title, gallery, date
-                const detailsRow = artTableBody.insertRow();
-                detailsRow.className = 'details-row';
-                detailsRow.insertCell(0).innerText = art.Title;
-                detailsRow.insertCell(1).innerText = art.Gallery;
-                detailsRow.insertCell(2).innerText = art.Date;
-
-                // Second row for notes
-                const notesRow = artTableBody.insertRow();
-                notesRow.className = 'notes-row';
-                const notesCell = notesRow.insertCell(0);
-                notesCell.colSpan = 3; // Span across all columns
-                notesCell.innerText = art.Notes;
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching Art data:', error);
         });
 });
