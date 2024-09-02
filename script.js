@@ -115,9 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach(record => {
                 const row = tableBody.insertRow();
                 row.insertCell(0).innerText = record.Title;
-                row.insertCell(1).innerText = record.Composers || ''; // Handle undefined
+                row.insertCell(1).innerText = record['Composer(s)'] || ''; // Handle undefined
                 row.insertCell(2).innerText = record.Conductor || ''; // Handle undefined
-                row.insertCell(3).innerText = record.CastSoloist || ''; // Handle undefined
+                row.insertCell(3).innerText = record['Cast/Soloist'] || ''; // Handle undefined
                 row.insertCell(4).innerText = record.Venue;
                 row.insertCell(5).innerText = record.Date;
 
