@@ -218,3 +218,14 @@ tbody tr:nth-child(even) {
     color: #ffffff;
     border-radius: 8px;
 }
+
+.see-more-cell {
+    text-align: center;
+    padding: 10px;
+}
+
+.see-more-link {
+    color: #1e90ff; /* You can adjust this color as needed */
+    text-decoration: underline;
+    cursor: pointer;
+}
