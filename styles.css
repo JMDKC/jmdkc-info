@@ -229,3 +229,20 @@ tbody tr:nth-child(even) {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.notes-cell {
+    background-color: #f4f4f4;
+    font-style: italic;
+    padding: 10px;
+}
+
+.see-more-cell {
+    text-align: center;
+    padding: 10px;
+}
+
+.see-more-link {
+    color: #1e90ff; /* Adjust color as needed */
+    text-decoration: underline;
+    cursor: pointer;
+}

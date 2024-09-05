@@ -2,9 +2,9 @@ function populateTable(tableId, data, columns) {
     const tableBody = document.getElementById(tableId).getElementsByTagName('tbody')[0];
     tableBody.innerHTML = ''; // Clear previous content
 
-    // Show only the first 10 rows initially
-    const initialRows = data.slice(0, 10);
+    const initialRows = data.slice(0, 10); // Show only the first 10 rows initially
 
+    // Add initial rows
     initialRows.forEach(record => {
         const row = tableBody.insertRow();
         columns.forEach(col => {
@@ -28,7 +28,7 @@ function populateTable(tableId, data, columns) {
         seeMoreCell.innerHTML = `<a href="#" class="see-more-link">See More</a>`;
         seeMoreCell.className = "see-more-cell";
 
-        seeMoreCell.addEventListener('click', (event) => {
+        seeMoreCell.querySelector('a').addEventListener('click', (event) => {
             event.preventDefault();
             displayAllRows(tableId, data, columns);
         });
@@ -39,6 +39,7 @@ function displayAllRows(tableId, data, columns) {
     const tableBody = document.getElementById(tableId).getElementsByTagName('tbody')[0];
     tableBody.innerHTML = ''; // Clear previous content
 
+    // Add all rows
     data.forEach(record => {
         const row = tableBody.insertRow();
         columns.forEach(col => {
