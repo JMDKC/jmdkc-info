@@ -3,22 +3,7 @@ function populateTable(tableId, data, columns) {
     tableBody.innerHTML = ''; // Clear previous content
 
     const initialRows = data.slice(0, 10); // Show only the first 10 rows initially
-
-    // Add initial rows
-    initialRows.forEach(record => {
-        const row = tableBody.insertRow();
-        columns.forEach(col => {
-            row.insertCell().innerText = record[col] || '';
-        });
-
-        if (record.Notes) {
-            const notesRow = tableBody.insertRow();
-            const notesCell = notesRow.insertCell(0);
-            notesCell.colSpan = columns.length;
-            notesCell.innerText = record.Notes;
-            notesCell.className = "notes-cell";
-        }
-    });
+    addRowsToTable(tableBody, initialRows, columns);
 
     // Add the "See More" link if there are more than 10 rows
     if (data.length > 10) {
@@ -40,6 +25,22 @@ function displayAllRows(tableId, data, columns) {
     tableBody.innerHTML = ''; // Clear previous content
 
     // Add all rows
+    addRowsToTable(tableBody, data, columns);
+
+    // Add the "See Less" link to shrink the table
+    const seeLessRow = tableBody.insertRow();
+    const seeLessCell = seeLessRow.insertCell(0);
+    seeLessCell.colSpan = columns.length;
+    seeLessCell.innerHTML = `<a href="#" class="see-less-link">See Less</a>`;
+    seeLessCell.className = "see-less-cell";
+
+    seeLessCell.querySelector('a').addEventListener('click', (event) => {
+        event.preventDefault();
+        populateTable(tableId, data, columns); // Shrink back to initial rows
+    });
+}
+
+function addRowsToTable(tableBody, data, columns) {
     data.forEach(record => {
         const row = tableBody.insertRow();
         columns.forEach(col => {
