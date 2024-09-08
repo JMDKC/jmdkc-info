@@ -1,25 +1,198 @@
+/* General page styling */
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* Light text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0d3b66; /* Dark blue header */
+}
+
+header h1.main-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+nav ul.contents {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul.contents li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul.contents li a {
+    color: #87cefa; /* Light blue for jump links */
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav ul.contents li a:hover {
+    text-decoration: underline;
+}
+
+/* Section headers and spacing */
+section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+#intro-section {
+    padding: 40px;
+    background-color: #1a3a5f; /* Different background for intro */
+}
+
+#art-section, #books-section, #concerts-section, #weightlifting-section {
+    padding: 30px;
+    margin: 20px 0;
+}
+
+#art-section {
+    background-color: #243447;
+}
+
+#books-section {
+    background-color: #2a4d69;
+}
+
+#concerts-section {
+    background-color: #3c7a89;
+}
+
+#weightlifting-section {
+    background-color: #4d99c6;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+table thead th {
+    padding: 10px;
+    background-color: #0d3b66;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+    vertical-align: top;
+}
+
 .notes-cell {
-    background-color: transparent; /* Match table background to avoid white blocks */
-    color: #ffffff; /* Ensure notes are legible with light text */
+    background-color: transparent; /* Match table background */
+    color: #b0c4de; /* Light color for the notes text */
     font-style: italic;
     padding: 10px;
 }
 
+/* Styling for the See More/See Less links */
 .see-more-cell, .see-less-cell {
     text-align: center;
     padding: 10px;
 }
 
 .see-more-link, .see-less-link {
-    color: #1e90ff; /* You can adjust this color for links */
+    color: #87cefa;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.table-section {
-    background-color: #1a1a1a; /* Dark background for contrast */
+.combo-box-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#view-lift-btn {
+    padding: 10px 20px;
+    background-color: #0d3b66;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+#view-lift-btn:hover {
+    background-color: #87cefa;
+}
+
+#reset {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #87cefa;
+    text-decoration: none;
+}
+
+#reset:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
     padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    margin: auto;
+    background-color: #0d3b66;
+}
+
+footer a {
+    color: #87cefa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    nav ul.contents li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    table tbody td {
+        padding: 8px;
+    }
 }
