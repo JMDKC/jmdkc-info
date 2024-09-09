@@ -57,13 +57,17 @@ section p {
 }
 
 #intro-section {
-    padding: 40px;
-    background-color: #1a3a5f; /* Different background for intro */
+    padding: 20px 0; /* Reduced vertical padding */
+    margin-bottom: 30px; /* Space between header and intro section */
+    background-color: #345678; /* Different color for intro section */
 }
 
 #art-section, #books-section, #concerts-section, #weightlifting-section {
     padding: 30px;
     margin: 20px 0;
+    width: 60%; /* Narrower sections */
+    margin-left: auto;
+    margin-right: auto; /* Center align sections */
 }
 
 #art-section {
@@ -83,10 +87,8 @@ section p {
 }
 
 section {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
 /* Table styling */
