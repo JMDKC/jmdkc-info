@@ -14,15 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (bestLift.weight > 0) {
                     resultDiv.innerHTML = `
-                        <p>lift: ${bestLift.lift}</p>
-                        <p>weight: ${bestLift.weight} kg</p>
-                        <p>date: ${bestLift.date}</p>
+                        <p>Lift: ${bestLift.lift}</p>
+                        <p>Weight: ${bestLift.weight} kg</p>
+                        <p>Date: ${bestLift.date}</p>
                     `;
                     resultDiv.style.display = 'block'; // Show the result box
                 } else {
                     resultDiv.innerHTML = '<p>No records found</p>';
                     resultDiv.style.display = 'block'; // Show the result box even for "no records"
                 }
+
+                // Change background color of the result box
+                resultDiv.style.backgroundColor = '#4c566a'; // A distinct color to differentiate it
+                resultDiv.style.padding = '10px';
+                resultDiv.style.borderRadius = '5px';
+                resultDiv.style.marginTop = '10px';
             })
             .catch(error => {
                 console.error('Error fetching best lift data:', error);
@@ -41,16 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to fetch and populate the Art, Books, and Concerts tables
     function populateTable(tableId, data, columns) {
         const tableBody = document.getElementById(tableId).getElementsByTagName('tbody')[0];
-        const maxRowsToShow = 5; // Maximum number of rows to show initially
+        const maxRowsToShow = 10; // Maximum number of rows to show initially
         const seeMoreLink = document.createElement('a');
         seeMoreLink.href = '#';
         seeMoreLink.innerText = 'See More';
         seeMoreLink.classList.add('see-more-link');
-        
+        seeMoreLink.style.textAlign = 'center'; // Center-align the link
+        seeMoreLink.style.margin = '20px 0'; // Add some space around the link
+
         const seeLessLink = document.createElement('a');
         seeLessLink.href = '#';
         seeLessLink.innerText = 'See Less';
         seeLessLink.classList.add('see-less-link');
+        seeLessLink.style.textAlign = 'center'; // Center-align the link
+        seeLessLink.style.margin = '20px 0'; // Add some space around the link
         seeLessLink.style.display = 'none'; // Initially hidden
 
         let showingAllRows = false;
