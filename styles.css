@@ -1,200 +1,84 @@
-/* General page styling */
+/* General Styles */
 body {
-    background-color: #1a1a1a; /* Dark background */
-    color: #ffffff; /* Light text */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #2E3440;
+    color: #ECEFF4;
+    font-family: Arial, sans-serif;
 }
 
 header {
     text-align: center;
-    padding: 20px 0;
-    background-color: #0d3b66; /* Dark blue header */
+    padding: 20px;
+    background-color: #3B4252;
 }
 
-header h1.main-title {
+h1.main-title {
     font-size: 2.5rem;
-    color: #ffffff;
+    color: white;
 }
 
 nav ul.contents {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul.contents li {
     display: inline-block;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul.contents li a {
-    color: #87cefa; /* Light blue for jump links */
+    color: #81A1C1;
     text-decoration: none;
-    font-size: 1.2rem;
-    text-transform: uppercase;
 }
 
 nav ul.contents li a:hover {
-    text-decoration: underline;
-}
-
-/* Section headers and spacing */
-section h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-section p {
-    text-align: center;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-}
-
-#intro-section {
-    padding: 20px 0; /* Reduced vertical padding */
-    margin-bottom: 30px; /* Space between header and intro section */
-    background-color: #345678; /* Different color for intro section */
-}
-
-#art-section, #books-section, #concerts-section, #weightlifting-section {
-    padding: 30px;
-    margin: 20px 0;
-    width: 60%; /* Narrower sections */
-    margin-left: auto;
-    margin-right: auto; /* Center align sections */
-}
-
-#art-section {
-    background-color: #243447;
-}
-
-#books-section {
-    background-color: #2a4d69;
-}
-
-#concerts-section {
-    background-color: #3c7a89;
-}
-
-#weightlifting-section {
-    background-color: #4d99c6;
+    color: #88C0D0;
 }
 
 section {
-    border-radius: 10px;
-    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #434C5E;
 }
 
-/* Table styling */
+h2 {
+    color: #D8DEE9;
+    margin-bottom: 10px;
+}
+
+/* See More/See Less Links */
+.see-more-link, .see-less-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    color: #81A1C1;
+    cursor: pointer;
+}
+
+.see-more-link:hover, .see-less-link:hover {
+    color: #88C0D0;
+}
+
+/* Reset Link */
+.reset-link {
+    text-align: center;
+    color: #81A1C1;
+    display: block;
+    margin: 10px auto;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 30px;
-    text-align: left;
-    font-size: 1rem;
+    margin: 20px 0;
 }
 
-table thead th {
-    padding: 10px;
-    background-color: #0d3b66;
-    color: #ffffff;
-    text-transform: uppercase;
-}
-
-table tbody td {
-    padding: 10px;
-    border-bottom: 1px solid #ffffff;
-    vertical-align: top;
-}
-
-.notes-cell {
-    background-color: transparent; /* Match table background */
-    color: #b0c4de; /* Light color for the notes text */
-    font-style: italic;
-    padding: 10px;
-}
-
-/* Styling for the See More/See Less links */
-.see-more-cell, .see-less-cell {
-    text-align: center;
-    padding: 10px;
-}
-
-.see-more-link, .see-less-link {
-    color: #87cefa;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.combo-box-container {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-#view-lift-btn {
-    padding: 10px 20px;
-    background-color: #0d3b66;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-left: 10px;
-}
-
-#view-lift-btn:hover {
-    background-color: #87cefa;
-}
-
-#reset {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    color: #87cefa;
-    text-decoration: none;
-}
-
-#reset:hover {
-    text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0d3b66;
-}
-
-footer a {
-    color: #87cefa;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    section {
-        width: 90%;
-    }
-
-    nav ul.contents li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    table {
-        font-size: 0.9rem;
-    }
-
-    table tbody td {
-        padding: 8px;
-    }
-}
+thead th {
+    background-color: #4C566A;
+    color:

@@ -52,16 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
         seeMoreLink.href = '#';
         seeMoreLink.innerText = 'See More';
         seeMoreLink.classList.add('see-more-link');
-        seeMoreLink.style.textAlign = 'center'; // Center-align the link
-        seeMoreLink.style.margin = '20px 0'; // Add some space around the link
+        seeMoreLink.style.display = 'block'; // Center the "See More" link
+        seeMoreLink.style.margin = '20px auto'; // Add space around the link
 
         const seeLessLink = document.createElement('a');
         seeLessLink.href = '#';
         seeLessLink.innerText = 'See Less';
         seeLessLink.classList.add('see-less-link');
-        seeLessLink.style.textAlign = 'center'; // Center-align the link
-        seeLessLink.style.margin = '20px 0'; // Add some space around the link
         seeLessLink.style.display = 'none'; // Initially hidden
+        seeLessLink.style.margin = '20px auto';
 
         let showingAllRows = false;
 
