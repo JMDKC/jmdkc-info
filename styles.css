@@ -81,4 +81,47 @@ table {
 
 thead th {
     background-color: #4C566A;
-    color:
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px;
+    background-color: #3B4252;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #434C5E;
+}
+
+/* Notes styling for full-width rows */
+.notes-cell {
+    background-color: #3B4252;
+    color: #ECEFF4;
+    font-style: italic;
+    padding: 10px;
+}
+
+/* Competition Results Container */
+.competition-results-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #4C566A;
+}
+
+#comp-results {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Style for Best Lift Result Box */
+#result {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4C566A;
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+}
