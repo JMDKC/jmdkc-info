@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    // Handle resetting the form
+    // Handle resetting the form (Ensure "Reset" is properly capitalized)
     document.getElementById('reset').addEventListener('click', (e) => {
         e.preventDefault(); // Prevent default link behavior
         document.getElementById('lift').selectedIndex = 0; // Reset dropdown to the first option
@@ -52,15 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
         seeMoreLink.href = '#';
         seeMoreLink.innerText = 'See More';
         seeMoreLink.classList.add('see-more-link');
-        seeMoreLink.style.display = 'block'; // Center the "See More" link
-        seeMoreLink.style.margin = '20px auto'; // Add space around the link
 
         const seeLessLink = document.createElement('a');
         seeLessLink.href = '#';
         seeLessLink.innerText = 'See Less';
         seeLessLink.classList.add('see-less-link');
         seeLessLink.style.display = 'none'; // Initially hidden
-        seeLessLink.style.margin = '20px auto';
 
         let showingAllRows = false;
 
@@ -132,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching concerts data:', error));
 
-    // Fetch data for Competition Results
+    // Fetch data for Competition Results and ensure it's inside the section
     fetch('comp-results.json')
         .then(response => response.json())
         .then(data => {

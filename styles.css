@@ -42,11 +42,13 @@ section {
     padding: 20px;
     border-radius: 8px;
     background-color: #434C5E;
+    text-align: center; /* Center-align sections */
 }
 
 h2 {
     color: #D8DEE9;
     margin-bottom: 10px;
+    text-align: center; /* Center-align section titles */
 }
 
 /* See More/See Less Links */
@@ -68,7 +70,7 @@ h2 {
     color: #81A1C1;
     display: block;
     margin: 10px auto;
-    text-transform: uppercase;
+    text-transform: capitalize; /* Capitalize the word "Reset" */
     cursor: pointer;
 }
 
