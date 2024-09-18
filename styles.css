@@ -53,7 +53,7 @@ h2 {
 
 /* See More/See Less Links */
 .see-more-link, .see-less-link {
-    display: block;
+    display: inline-block; /* Make them inline-block elements */
     text-align: center;
     margin: 20px auto;
     color: #81A1C1;
@@ -62,6 +62,11 @@ h2 {
 
 .see-more-link:hover, .see-less-link:hover {
     color: #88C0D0;
+}
+
+/* Ensure the links are centered inside their section */
+section {
+    text-align: center;
 }
 
 /* Reset Link */
