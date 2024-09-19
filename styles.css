@@ -1,134 +1,119 @@
-/* General Styles */
+/* General page styling */
 body {
     background-color: #2E3440;
-    color: #ECEFF4;
+    color: #D8DEE9;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
     background-color: #3B4252;
+    padding: 20px;
+    text-align: center;
 }
 
-h1.main-title {
-    font-size: 2.5rem;
-    color: white;
+.main-title {
+    color: #D8DEE9;
+    font-size: 2.5em;
 }
 
-nav ul.contents {
+nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
-nav ul.contents li {
-    display: inline-block;
-    margin: 0 15px;
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-nav ul.contents li a {
+nav ul li a {
     color: #81A1C1;
     text-decoration: none;
 }
 
-nav ul.contents li a:hover {
-    color: #88C0D0;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#intro-section {
+    background-color: #1a3a5f;
+    padding: 15px;
+    text-align: center;
+    color: #ffffff;
 }
 
 section {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 20px;
+    background-color: #3B4252;
     border-radius: 8px;
-    background-color: #434C5E;
-    text-align: center; /* Center-align sections */
 }
 
 h2 {
-    color: #D8DEE9;
-    margin-bottom: 10px;
-    text-align: center; /* Center-align section titles */
+    font-size: 1.8em;
+    color: #88C0D0;
+    text-align: center;
 }
 
-/* See More/See Less Links */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table th, table td {
+    border: 1px solid #4C566A;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #4C566A;
+    color: #D8DEE9;
+}
+
 .see-more-link, .see-less-link {
-    display: inline-block; /* Make them inline-block elements */
-    text-align: center;
+    display: inline-block;
     margin: 20px auto;
+    text-align: center;
     color: #81A1C1;
     cursor: pointer;
+    font-size: 1.2em;
+}
+
+.see-more-container, .see-less-container {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .see-more-link:hover, .see-less-link:hover {
     color: #88C0D0;
 }
 
-/* Ensure the links are centered inside their section */
-section {
+.combo-box-container {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Reset Link */
+.reset-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
 .reset-link {
-    text-align: center;
     color: #81A1C1;
-    display: block;
-    margin: 10px auto;
-    text-transform: capitalize; /* Capitalize the word "Reset" */
-    cursor: pointer;
+    text-decoration: none;
 }
 
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.reset-link:hover {
+    text-decoration: underline;
 }
 
-thead th {
+.competition-container {
     background-color: #4C566A;
-    color: white;
-    padding: 10px;
-    text-align: left;
-}
-
-tbody td {
-    padding: 10px;
-    background-color: #3B4252;
-}
-
-tbody tr:nth-child(even) td {
-    background-color: #434C5E;
-}
-
-/* Notes styling for full-width rows */
-.notes-cell {
-    background-color: #3B4252;
-    color: #ECEFF4;
-    font-style: italic;
-    padding: 10px;
-}
-
-/* Competition Results Container */
-.competition-results-container {
-    max-width: 800px;
-    margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    background-color: #4C566A;
-}
-
-#comp-results {
-    width: 100%;
-    margin-top: 20px;
-}
-
-/* Style for Best Lift Result Box */
-#result {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #4C566A;
-    border-radius: 8px;
-    display: none; /* Initially hidden */
 }
