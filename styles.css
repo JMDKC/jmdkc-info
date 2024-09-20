@@ -52,6 +52,15 @@ section {
     border-radius: 8px;
 }
 
+/* Add spacing to the paragraph between section titles and tables */
+section p {
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 1.1em;
+    color: #D8DEE9;
+    text-align: center;
+}
+
 h2 {
     font-size: 1.8em;
     color: #88C0D0;
