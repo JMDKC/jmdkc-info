@@ -126,3 +126,36 @@ table th {
     padding: 20px;
     border-radius: 8px;
 }
+
+/* Container style for the competition results table */
+.table-container {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #2E3440;
+    border-radius: 8px;
+    max-width: 800px;
+    color: #D8DEE9;
+    text-align: center;
+}
+
+/* Style the competition results table */
+#comp-results {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#comp-results th, #comp-results td {
+    padding: 10px;
+    border: 1px solid #4C566A;
+    text-align: center;
+}
+
+#comp-results th {
+    background-color: #434C5E;
+    color: #ECEFF4;
+}
+
+#comp-results tr:nth-child(even) {
+    background-color: #3B4252;
+}
