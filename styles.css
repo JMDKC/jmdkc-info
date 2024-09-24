@@ -38,15 +38,18 @@ nav ul li a:hover {
 }
 
 #intro-section {
-    background-color: #1a3a5f;
-    padding: 15px;
-    text-align: center;
+    padding: 20px;
+    background-color: #1a3a5f; /* Blue background to differentiate */
     color: #ffffff;
+    margin-bottom: 30px; /* Separate it from the next section */
+    text-align: center; /* Optional: Center-align the intro text */
+    max-width: 800px; /* To limit the width of the text */
+    margin: 30px auto; /* Center the section horizontally */
 }
 
 section {
     max-width: 800px;
-    margin: 30px auto;
+    margin: 0 auto;
     padding: 20px;
     background-color: #3B4252;
     border-radius: 8px;
@@ -159,3 +162,15 @@ table th {
 #comp-results tr:nth-child(even) {
     background-color: #3B4252;
 }
+
+/* Fix for the Artangled link to prevent it from turning purple after being clicked */
+a:link, a:visited {
+    color: #88C0D0; /* Set a color for both link and visited states */
+    text-decoration: underline;
+}
+
+a:hover, a:focus {
+    color: #81A1C1; /* Slightly darker for hover/focus */
+    text-decoration: none; /* Optional: removes underline on hover */
+}
+
