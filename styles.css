@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: #3B4252;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -50,7 +50,8 @@ nav ul li a:hover {
 section {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    margin-bottom: 40px;
+    padding: 20px 0;
     background-color: #3B4252;
     border-radius: 8px;
 }
@@ -58,6 +59,7 @@ section {
 /* Add spacing to the paragraph between section titles and tables */
 section p {
     margin: 20px 0;
+    margin-bottom: 20px;
     padding: 10px 0;
     font-size: 1.1em;
     color: #D8DEE9;
@@ -68,6 +70,7 @@ h2 {
     font-size: 1.8em;
     color: #88C0D0;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 table {
@@ -85,6 +88,14 @@ table th, table td {
 table th {
     background-color: #4C566A;
     color: #D8DEE9;
+}
+
+.see-more {
+    display: block; /* Makes the link a block-level element for centering */
+    text-align: center;
+    margin: 20px auto; /* Center horizontally and add some space around */
+    color: #88C0D0; /* Matches the link color scheme */
+    text-decoration: underline;
 }
 
 .see-more-link, .see-less-link {
@@ -174,3 +185,23 @@ a:hover, a:focus {
     text-decoration: none; /* Optional: removes underline on hover */
 }
 
+/* Footer styling */
+footer {
+    background-color: #1a3a5f; /* Matches the header background */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Separate it from the content above */
+    width: 100%;
+}
+
+/* Center the footer content */
+footer a {
+    color: #88C0D0;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #81A1C1;
+    text-decoration: none;
+}
