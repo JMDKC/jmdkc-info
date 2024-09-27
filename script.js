@@ -1,150 +1,95 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Handle viewing the best lift
-    document.getElementById('view-lift-btn').addEventListener('click', () => {
-        const selectedLift = document.getElementById('lift').value;
+document.addEventListener('DOMContentLoaded', function () {
+    const artTable = document.getElementById('art-table').getElementsByTagName('tbody')[0];
+    const booksTable = document.getElementById('books-table').getElementsByTagName('tbody')[0];
+    const concertsTable = document.getElementById('concerts-table').getElementsByTagName('tbody')[0];
 
-        // Fetch the best lift data
-        fetch('lifts.json')
-            .then(response => response.json())
-            .then(data => {
-                const bestLift = data.filter(lift => lift.lift === selectedLift)
-                    .reduce((max, lift) => lift.weight > max.weight ? lift : max, { weight: 0 });
+    const artSeeMore = document.getElementById('art-see-more');
+    const booksSeeMore = document.getElementById('books-see-more');
+    const concertsSeeMore = document.getElementById('concerts-see-more');
 
-                const resultDiv = document.getElementById('result');
+    let artExpanded = false;
+    let booksExpanded = false;
+    let concertsExpanded = false;
 
-                if (bestLift.weight > 0) {
-                    resultDiv.innerHTML = `
-                        <p>Lift: ${bestLift.lift}</p>
-                        <p>Weight: ${bestLift.weight} kg</p>
-                        <p>Date: ${bestLift.date}</p>
-                    `;
-                    resultDiv.style.display = 'block'; // Show the result box
-                } else {
-                    resultDiv.innerHTML = '<p>No records found</p>';
-                    resultDiv.style.display = 'block'; // Show the result box even for "no records"
-                }
-
-                // Change background color of the result box
-                resultDiv.style.backgroundColor = '#4c566a'; // A distinct color to differentiate it
-                resultDiv.style.padding = '10px';
-                resultDiv.style.borderRadius = '5px';
-                resultDiv.style.marginTop = '10px';
-            })
-            .catch(error => {
-                console.error('Error fetching best lift data:', error);
-                document.getElementById('result').innerHTML = '<p>Error fetching data</p>';
-                resultDiv.style.display = 'block'; // Show the result box in case of error
-            });
-    });
-
-    // Handle resetting the form (Ensure "Reset" is properly capitalized)
-    document.getElementById('reset').addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default link behavior
-        document.getElementById('lift').selectedIndex = 0; // Reset dropdown to the first option
-        document.getElementById('result').style.display = 'none'; // Hide the result box
-    });
-
-    // Function to fetch and populate the Art, Books, and Concerts tables
-    function populateTable(tableId, data, columns) {
-        const tableBody = document.getElementById(tableId).getElementsByTagName('tbody')[0];
-        const maxRowsToShow = 10; // Maximum number of rows to show initially
-        const seeMoreLink = document.createElement('a');
-        seeMoreLink.href = '#';
-        seeMoreLink.innerText = 'See More';
-        seeMoreLink.classList.add('see-more-link');
-
-        const seeLessLink = document.createElement('a');
-        seeLessLink.href = '#';
-        seeLessLink.innerText = 'See Less';
-        seeLessLink.classList.add('see-less-link');
-        seeLessLink.style.display = 'none'; // Initially hidden
-
-        let showingAllRows = false;
-
-        // Insert rows into the table
-        function renderTableRows(showAll = false) {
-            tableBody.innerHTML = ''; // Clear current table content
-            const rowsToShow = showAll ? data.length : Math.min(data.length, maxRowsToShow);
-
-            for (let i = 0; i < rowsToShow; i++) {
-                const item = data[i];
-                const row1 = tableBody.insertRow();
-                columns.forEach(col => {
-                    const cell = row1.insertCell();
-                    cell.innerText = item[col] || 'N/A'; // Fallback to 'N/A' if data is missing
-                });
-                const row2 = tableBody.insertRow();
-                const cell = row2.insertCell();
-                cell.colSpan = columns.length; // Span across all columns for the "Notes"
-                cell.innerText = item.Notes || ''; // Add the notes here
-                cell.classList.add('notes-cell'); // Class for visual differentiation
-            }
-
-            if (showAll && data.length > maxRowsToShow) {
-                tableBody.appendChild(seeLessLink);
-            } else if (!showAll && data.length > maxRowsToShow) {
-                tableBody.appendChild(seeMoreLink);
-            }
+    // Function to show or hide additional rows
+    function toggleRows(table, rows, expanded) {
+        for (let i = 10; i < rows.length; i++) {
+            rows[i].style.display = expanded ? 'none' : 'table-row';
         }
-
-        renderTableRows(false); // Show initial rows
-
-        // Add event listeners for "See More" and "See Less"
-        seeMoreLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            showingAllRows = true;
-            renderTableRows(true);
-            seeMoreLink.style.display = 'none'; // Hide "See More" link
-            seeLessLink.style.display = 'block'; // Show "See Less" link
-        });
-
-        seeLessLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            showingAllRows = false;
-            renderTableRows(false);
-            seeMoreLink.style.display = 'block'; // Show "See More" link
-            seeLessLink.style.display = 'none'; // Hide "See Less" link
-        });
     }
 
-    // Fetch data for Art, Books, and Concerts
-    fetch('art.json')
-        .then(response => response.json())
-        .then(data => {
-            populateTable('art-table', data, ['Title', 'Gallery', 'Date']);
-        })
-        .catch(error => console.error('Error fetching art data:', error));
+    // Initial setup: hide rows beyond the first 10
+    function initializeTable(table) {
+        const rows = table.getElementsByTagName('tr');
+        if (rows.length > 10) {
+            toggleRows(table, rows, true); // Hide additional rows
+        }
+    }
 
-    fetch('books.json')
-        .then(response => response.json())
-        .then(data => {
-            populateTable('books-table', data, ['Title', 'Author', 'Date']);
-        })
-        .catch(error => console.error('Error fetching books data:', error));
+    // Initialize all tables
+    initializeTable(artTable);
+    initializeTable(booksTable);
+    initializeTable(concertsTable);
 
-    fetch('concerts.json')
-        .then(response => response.json())
-        .then(data => {
-            populateTable('concerts-table', data, ['Title', 'Composer(s)', 'Conductor', 'Cast/Soloist', 'Venue', 'Date']);
-        })
-        .catch(error => console.error('Error fetching concerts data:', error));
+    // Handle the "See More" for Art
+    artSeeMore.addEventListener('click', function (e) {
+        e.preventDefault();
+        artExpanded = !artExpanded;
+        toggleRows(artTable, artTable.getElementsByTagName('tr'), !artExpanded);
+        artSeeMore.textContent = artExpanded ? 'See Less' : 'See More';
+    });
 
-    // Fetch data for Competition Results and ensure it's inside the section
-    fetch('comp-results.json')
+    // Handle the "See More" for Books
+    booksSeeMore.addEventListener('click', function (e) {
+        e.preventDefault();
+        booksExpanded = !booksExpanded;
+        toggleRows(booksTable, booksTable.getElementsByTagName('tr'), !booksExpanded);
+        booksSeeMore.textContent = booksExpanded ? 'See Less' : 'See More';
+    });
+
+    // Handle the "See More" for Concerts
+    concertsSeeMore.addEventListener('click', function (e) {
+        e.preventDefault();
+        concertsExpanded = !concertsExpanded;
+        toggleRows(concertsTable, concertsTable.getElementsByTagName('tr'), !concertsExpanded);
+        concertsSeeMore.textContent = concertsExpanded ? 'See Less' : 'See More';
+    });
+
+    // Weightlifting section - dynamic fetching of best lifts
+    const viewLiftBtn = document.getElementById('view-lift-btn');
+    const resetLink = document.getElementById('reset');
+    const liftSelect = document.getElementById('lift');
+    const resultDiv = document.getElementById('result');
+
+    let bestLifts = {}; // Empty object to hold best lifts data
+
+    // Fetch best lifts from JSON file
+    fetch('best_lifts.json')
         .then(response => response.json())
         .then(data => {
-            const tableBody = document.getElementById('comp-results').getElementsByTagName('tbody')[0];
-            data.forEach(record => {
-                const row = tableBody.insertRow();
-                row.insertCell(0).innerText = record.Where;
-                row.insertCell(1).innerText = record.Date;
-                row.insertCell(2).innerText = record.Name;
-                row.insertCell(3).innerText = record.Snatch;
-                row.insertCell(4).innerText = record['Clean & Jerk'];
-                row.insertCell(5).innerText = record.Total;
-                row.insertCell(6).innerText = record['My Weight'];
-                row.insertCell(7).innerText = record.Sinclair;
-            });
+            bestLifts = data.lifts.reduce((acc, lift) => {
+                acc[lift.name] = lift.best;
+                return acc;
+            }, {});
         })
-        .catch(error => console.error('Error fetching competition results:', error));
+        .catch(error => console.error('Error fetching best lifts:', error));
+
+    // Show best lift result when button is clicked
+    viewLiftBtn.addEventListener('click', function () {
+        const selectedLift = liftSelect.value.toLowerCase();
+        if (bestLifts[selectedLift]) {
+            resultDiv.textContent = `Your best ${selectedLift} is ${bestLifts[selectedLift]}.`;
+            resultDiv.style.display = 'block';
+        } else {
+            resultDiv.textContent = 'No data available for this lift.';
+            resultDiv.style.display = 'block';
+        }
+    });
+
+    // Reset the result and hide the result box
+    resetLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        resultDiv.style.display = 'none';
+        liftSelect.selectedIndex = 0;
+    });
 });

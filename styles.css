@@ -91,12 +91,18 @@ table th {
     color: #D8DEE9;
 }
 
-.see-more {
-    display: block; /* Makes the link a block-level element for centering */
+.see-more-container {
     text-align: center;
-    margin: 20px auto; /* Center horizontally and add some space around */
-    color: #88C0D0; /* Matches the link color scheme */
-    text-decoration: underline;
+    margin: 20px 0;
+}
+
+.see-more {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #4C566A;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 .see-more-link, .see-less-link {
@@ -106,11 +112,6 @@ table th {
     color: #81A1C1;
     cursor: pointer;
     font-size: 1.2em;
-}
-
-.see-more-container, .see-less-container {
-    text-align: center;
-    margin-top: 10px;
 }
 
 .see-more-link:hover, .see-less-link:hover {
