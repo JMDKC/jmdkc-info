@@ -2,94 +2,96 @@ document.addEventListener('DOMContentLoaded', function () {
     const artTable = document.getElementById('art-table').getElementsByTagName('tbody')[0];
     const booksTable = document.getElementById('books-table').getElementsByTagName('tbody')[0];
     const concertsTable = document.getElementById('concerts-table').getElementsByTagName('tbody')[0];
+    const compResultsTable = document.getElementById('comp-results').getElementsByTagName('tbody')[0];
 
     const artSeeMore = document.getElementById('art-see-more');
     const booksSeeMore = document.getElementById('books-see-more');
     const concertsSeeMore = document.getElementById('concerts-see-more');
 
-    let artExpanded = false;
-    let booksExpanded = false;
-    let concertsExpanded = false;
+    const limit = 10;
 
-    // Function to show or hide additional rows
-    function toggleRows(table, rows, expanded) {
-        for (let i = 10; i < rows.length; i++) {
-            rows[i].style.display = expanded ? 'none' : 'table-row';
-        }
+    // Fetch data from JSON (replace with real JSON fetching)
+    const artData = [
+        { "Title": "Exhibition 1", "Gallery": "Gallery 1", "Date": "2022-01-01", "Notes": "Notes 1" },
+        // More art data here
+    ];
+
+    const booksData = [
+        { "Title": "Book 1", "Author": "Author 1", "Date": "2022-01-01", "Notes": "Notes 1" },
+        // More books data here
+    ];
+
+    const concertsData = [
+        { "Title": "Concert 1", "Composer(s)": "Composer 1", "Conductor": "Conductor 1", "Cast/Soloist": "Soloist 1", "Venue": "Venue 1", "Date": "2022-01-01", "Notes": "Notes 1" },
+        // More concerts data here
+    ];
+
+    const compResultsData = [
+        { "Where": "Location 1", "Date": "2022-01-01", "Name": "Event 1", "Snatch": "80", "Clean & Jerk": "100", "Total": "180", "My Weight": "85", "Sinclair": "300" },
+        // More competition results here
+    ];
+
+    // Function to load a limited set of rows into a table
+    function loadTableData(data, table, limit) {
+        table.innerHTML = '';
+        const slicedData = data.slice(0, limit);
+        slicedData.forEach(row => {
+            const tr = document.createElement('tr');
+            Object.values(row).forEach(value => {
+                const td = document.createElement('td');
+                td.textContent = value;
+                tr.appendChild(td);
+            });
+            table.appendChild(tr);
+        });
     }
 
-    // Initial setup: hide rows beyond the first 10
-    function initializeTable(table) {
-        const rows = table.getElementsByTagName('tr');
-        if (rows.length > 10) {
-            toggleRows(table, rows, true); // Hide additional rows
-        }
+    // Load initial data (limited to 10 rows)
+    loadTableData(artData, artTable, limit);
+    loadTableData(booksData, booksTable, limit);
+    loadTableData(concertsData, concertsTable, limit);
+    loadTableData(compResultsData, compResultsTable, limit);
+
+    // "See More" click event for each table
+    function handleSeeMoreClick(data, table, seeMoreLink) {
+        let showingMore = false;
+        seeMoreLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (showingMore) {
+                loadTableData(data, table, limit);
+                seeMoreLink.textContent = 'See More';
+            } else {
+                loadTableData(data, table, data.length);
+                seeMoreLink.textContent = 'See Less';
+            }
+            showingMore = !showingMore;
+        });
     }
 
-    // Initialize all tables
-    initializeTable(artTable);
-    initializeTable(booksTable);
-    initializeTable(concertsTable);
+    // Attach "See More" functionality to each table
+    handleSeeMoreClick(artData, artTable, artSeeMore);
+    handleSeeMoreClick(booksData, booksTable, booksSeeMore);
+    handleSeeMoreClick(concertsData, concertsTable, concertsSeeMore);
 
-    // Handle the "See More" for Art
-    artSeeMore.addEventListener('click', function (e) {
-        e.preventDefault();
-        artExpanded = !artExpanded;
-        toggleRows(artTable, artTable.getElementsByTagName('tr'), !artExpanded);
-        artSeeMore.textContent = artExpanded ? 'See Less' : 'See More';
+    // Handle Best Lift button click
+    document.getElementById('view-lift-btn').addEventListener('click', function () {
+        const selectedLift = document.getElementById('lift').value;
+        const resultDiv = document.getElementById('result');
+
+        // Example data (replace with actual JSON data fetching logic)
+        const bestLifts = {
+            "clean & jerk": "100kg",
+            "snatch": "80kg",
+            // More lift data here
+        };
+
+        resultDiv.textContent = `Best ${selectedLift}: ${bestLifts[selectedLift]}`;
+        resultDiv.style.display = 'block';
     });
 
-    // Handle the "See More" for Books
-    booksSeeMore.addEventListener('click', function (e) {
+    // Handle reset click
+    document.getElementById('reset').addEventListener('click', function (e) {
         e.preventDefault();
-        booksExpanded = !booksExpanded;
-        toggleRows(booksTable, booksTable.getElementsByTagName('tr'), !booksExpanded);
-        booksSeeMore.textContent = booksExpanded ? 'See Less' : 'See More';
-    });
-
-    // Handle the "See More" for Concerts
-    concertsSeeMore.addEventListener('click', function (e) {
-        e.preventDefault();
-        concertsExpanded = !concertsExpanded;
-        toggleRows(concertsTable, concertsTable.getElementsByTagName('tr'), !concertsExpanded);
-        concertsSeeMore.textContent = concertsExpanded ? 'See Less' : 'See More';
-    });
-
-    // Weightlifting section - dynamic fetching of best lifts
-    const viewLiftBtn = document.getElementById('view-lift-btn');
-    const resetLink = document.getElementById('reset');
-    const liftSelect = document.getElementById('lift');
-    const resultDiv = document.getElementById('result');
-
-    let bestLifts = {}; // Empty object to hold best lifts data
-
-    // Fetch best lifts from JSON file
-    fetch('best_lifts.json')
-        .then(response => response.json())
-        .then(data => {
-            bestLifts = data.lifts.reduce((acc, lift) => {
-                acc[lift.name] = lift.best;
-                return acc;
-            }, {});
-        })
-        .catch(error => console.error('Error fetching best lifts:', error));
-
-    // Show best lift result when button is clicked
-    viewLiftBtn.addEventListener('click', function () {
-        const selectedLift = liftSelect.value.toLowerCase();
-        if (bestLifts[selectedLift]) {
-            resultDiv.textContent = `Your best ${selectedLift} is ${bestLifts[selectedLift]}.`;
-            resultDiv.style.display = 'block';
-        } else {
-            resultDiv.textContent = 'No data available for this lift.';
-            resultDiv.style.display = 'block';
-        }
-    });
-
-    // Reset the result and hide the result box
-    resetLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        resultDiv.style.display = 'none';
-        liftSelect.selectedIndex = 0;
+        document.getElementById('result').style.display = 'none';
     });
 });

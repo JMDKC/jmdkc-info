@@ -1,126 +1,122 @@
-/* General page styling */
+/* General Styles */
 body {
-    background-color: #2E3440;
-    color: #D8DEE9;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #3B4252;
-    padding: 20px 0;
+    background-color: #34495e;
+    padding: 20px;
     text-align: center;
 }
 
-.main-title {
-    color: #D8DEE9;
-    font-size: 2.5em;
+header .main-title {
+    color: #ffffff;
+    margin: 0;
 }
 
-nav ul {
+nav ul.contents {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+nav ul.contents li {
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #81A1C1;
+nav ul.contents li a {
+    color: #ecf0f1;
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-#intro-section {
-    padding: 20px;
-    background-color: #1a3a5f; /* Blue background to differentiate */
-    color: #ffffff;
-    margin-bottom: 30px; /* Separate it from the next section */
-    text-align: center; /* Optional: Center-align the intro text */
-    max-width: 800px; /* To limit the width of the text */
-    margin: 30px auto; /* Center the section horizontally */
-}
-
+/* Sections */
 section {
+    margin: 20px auto;
+    padding: 20px;
     max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    padding: 20px 0;
-    background-color: #3B4252;
+    background-color: #34495e;
     border-radius: 8px;
 }
 
-/* Add spacing to the paragraph between section titles and tables */
-section p {
-    margin: 20px 0;
-    margin-bottom: 20px;
-    padding: 10px 0;
-    font-size: 1.1em;
-    color: #D8DEE9;
+#intro-section {
+    background-color: #1a3a5f;
+    padding: 10px 20px;
     text-align: center;
 }
 
 h2 {
-    font-size: 1.8em;
-    color: #88C0D0;
-    text-align: center;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
+p {
+    margin-bottom: 15px;
+}
+
+/* Tables */
 table {
     width: 100%;
-    border-collapse: collapse;
     margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #3b4b5a;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-table th, table td {
-    border: 1px solid #4C566A; /* Border to clearly define cells */
+table thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
     padding: 10px;
     text-align: left;
-    color: #ffffff;
 }
 
-table th {
-    background-color: #3B4252;
-    color: #D8DEE9;
+table tbody tr {
+    border-bottom: 1px solid #555;
 }
 
-.see-more-container {
-    text-align: center;
-    margin: 20px 0;
+table tbody td {
+    padding: 10px;
+    color: #ecf0f1;
 }
 
 .see-more {
-    color: #ffffff;
+    display: block;
+    text-align: center;
+    color: #3498db;
     text-decoration: none;
-    background-color: #4C566A;
-    padding: 10px 15px;
-    border-radius: 5px;
-    display: inline-block;
+    margin-top: 10px;
 }
 
-.see-more-link, .see-less-link {
-    display: inline-block;
-    margin: 20px auto;
-    text-align: center;
-    color: #81A1C1;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-.see-more-link:hover, .see-less-link:hover {
-    color: #88C0D0;
-}
-
+/* Best Lift Button */
 .combo-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#view-lift-btn {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.result-box {
+    background-color: #3b4b5a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .reset-container {
@@ -129,82 +125,15 @@ table th {
 }
 
 .reset-link {
-    color: #81A1C1;
+    color: #3498db;
     text-decoration: none;
 }
 
-.reset-link:hover {
-    text-decoration: underline;
-}
-
-.competition-container {
-    background-color: #4C566A;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Container style for the competition results table */
-.table-container {
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #2E3440;
-    border-radius: 8px;
-    max-width: 800px;
-    color: #D8DEE9;
-    text-align: center;
-}
-
-/* Style the competition results table */
-#comp-results {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    background-color: #3B4252; /* Give the table a background color */
-}
-
-#comp-results th, #comp-results td {
-    padding: 10px;
-    border: 1px solid #4C566A;
-    text-align: center;
-}
-
-#comp-results th {
-    background-color: #434C5E;
-    color: #ECEFF4;
-}
-
-#comp-results tr:nth-child(even) {
-    background-color: #3B4252;
-}
-
-/* Fix for the Artangled link to prevent it from turning purple after being clicked */
-a:link, a:visited {
-    color: #88C0D0; /* Set a color for both link and visited states */
-    text-decoration: underline;
-}
-
-a:hover, a:focus {
-    color: #81A1C1; /* Slightly darker for hover/focus */
-    text-decoration: none; /* Optional: removes underline on hover */
-}
-
-/* Footer styling */
+/* Footer */
 footer {
-    background-color: #1a3a5f;
-    color: #ffffff;
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 10px;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    width: 100%;
-}
-
-/* Center the footer content */
-footer a {
-    color: #88C0D0;
-    text-decoration: underline;
-}
-
-footer a:hover {
-    color: #81A1C1;
-    text-decoration: none;
+    margin-top: 20px;
 }
