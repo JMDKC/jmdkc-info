@@ -10,68 +10,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const limit = 10;
 
-    // Fetch data from JSON (replace with real JSON fetching)
-    const artData = [
-        { "Title": "Exhibition 1", "Gallery": "Gallery 1", "Date": "2022-01-01", "Notes": "Notes 1" },
-        // More art data here
-    ];
-
-    const booksData = [
-        { "Title": "Book 1", "Author": "Author 1", "Date": "2022-01-01", "Notes": "Notes 1" },
-        // More books data here
-    ];
-
-    const concertsData = [
-        { "Title": "Concert 1", "Composer(s)": "Composer 1", "Conductor": "Conductor 1", "Cast/Soloist": "Soloist 1", "Venue": "Venue 1", "Date": "2022-01-01", "Notes": "Notes 1" },
-        // More concerts data here
-    ];
-
-    const compResultsData = [
-        { "Where": "Location 1", "Date": "2022-01-01", "Name": "Event 1", "Snatch": "80", "Clean & Jerk": "100", "Total": "180", "My Weight": "85", "Sinclair": "300" },
-        // More competition results here
-    ];
-
     // Function to load a limited set of rows into a table
     function loadTableData(data, table, limit) {
         table.innerHTML = '';
         const slicedData = data.slice(0, limit);
         slicedData.forEach(row => {
             const tr = document.createElement('tr');
-            Object.values(row).forEach(value => {
+            Object.keys(row).forEach(key => {
                 const td = document.createElement('td');
-                td.textContent = value;
+                td.textContent = row[key];
                 tr.appendChild(td);
             });
             table.appendChild(tr);
         });
     }
 
-    // Load initial data (limited to 10 rows)
-    loadTableData(artData, artTable, limit);
-    loadTableData(booksData, booksTable, limit);
-    loadTableData(concertsData, concertsTable, limit);
-    loadTableData(compResultsData, compResultsTable, limit);
-
-    // "See More" click event for each table
-    function handleSeeMoreClick(data, table, seeMoreLink) {
-        let showingMore = false;
-        seeMoreLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            if (showingMore) {
-                loadTableData(data, table, limit);
-                seeMoreLink.textContent = 'See More';
-            } else {
-                loadTableData(data, table, data.length);
-                seeMoreLink.textContent = 'See Less';
-            }
-            showingMore = !showingMore;
+    // Function to load full table data
+    function loadFullTableData(data, table) {
+        table.innerHTML = '';
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            Object.keys(row).forEach(key => {
+                const td = document.createElement('td');
+                td.textContent = row[key];
+                tr.appendChild(td);
+            });
+            table.appendChild(tr);
         });
     }
 
-    // Attach "See More" functionality to each table
-    handleSeeMoreClick(artData, artTable, artSeeMore);
-    handleSeeMoreClick(booksData, booksTable, booksSeeMore);
-    handleSeeMoreClick(concertsData, concertsTable, concertsSeeMore);
+    // Fetch and load JSON data for each table
+    function fetchAndLoadTable(jsonUrl, table, seeMoreLink) {
+        fetch(jsonUrl)
+            .then(response => response.json())
+            .then(data => {
+                loadTableData(data, table, limit); // Load initial limited data
+
+                let showingMore = false;
+                seeMoreLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (showingMore) {
+                        loadTableData(data, table, limit); // Show limited rows again
+                        seeMoreLink.textContent = 'See More';
+                    } else {
+                        loadFullTableData(data, table); // Show full table
+                        seeMoreLink.textContent = 'See Less';
+                    }
+                    showingMore = !showingMore;
+                });
+            })
+            .catch(error => console.error('Error fetching table data:', error));
+    }
+
+    // Attach JSON data sources and set up table loading
+    fetchAndLoadTable('art.json', artTable, artSeeMore);
+    fetchAndLoadTable('books.json', booksTable, booksSeeMore);
+    fetchAndLoadTable('concerts.json', concertsTable, concertsSeeMore);
+    fetchAndLoadTable('competitions.json', compResultsTable, null); // No 'See More' for competition results
 
     // Handle Best Lift button click
     document.getElementById('view-lift-btn').addEventListener('click', function () {
@@ -79,14 +74,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultDiv = document.getElementById('result');
 
         // Example data (replace with actual JSON data fetching logic)
-        const bestLifts = {
-            "clean & jerk": "100kg",
-            "snatch": "80kg",
-            // More lift data here
-        };
-
-        resultDiv.textContent = `Best ${selectedLift}: ${bestLifts[selectedLift]}`;
-        resultDiv.style.display = 'block';
+        fetch('bestLifts.json')
+            .then(response => response.json())
+            .then(bestLifts => {
+                resultDiv.textContent = `Best ${selectedLift}: ${bestLifts[selectedLift] || 'No data available'}`;
+                resultDiv.style.display = 'block';
+            })
+            .catch(error => console.error('Error fetching best lifts data:', error));
     });
 
     // Handle reset click
