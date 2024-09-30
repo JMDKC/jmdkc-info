@@ -10,18 +10,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const limit = 10;
 
-    // Function to load a limited set of rows into a table
+    // Function to load a limited set of rows into a table with notes on a new row
     function loadTableData(data, table, limit) {
         table.innerHTML = '';
         const slicedData = data.slice(0, limit);
         slicedData.forEach(row => {
-            const tr = document.createElement('tr');
-            Object.keys(row).forEach(key => {
-                const td = document.createElement('td');
-                td.textContent = row[key];
-                tr.appendChild(td);
-            });
-            table.appendChild(tr);
+            // Main row for title, gallery, date, etc.
+            const mainRow = document.createElement('tr');
+            for (let key in row) {
+                if (key !== 'Notes') {
+                    const td = document.createElement('td');
+                    td.textContent = row[key];
+                    mainRow.appendChild(td);
+                }
+            }
+            table.appendChild(mainRow);
+
+            // Second row for notes spanning all columns
+            if (row['Notes']) {
+                const notesRow = document.createElement('tr');
+                const notesTd = document.createElement('td');
+                notesTd.setAttribute('colspan', Object.keys(row).length - 1); // Spans all columns except 'Notes'
+                notesTd.textContent = row['Notes'];
+                notesRow.appendChild(notesTd);
+                table.appendChild(notesRow);
+            }
         });
     }
 
@@ -29,13 +42,26 @@ document.addEventListener('DOMContentLoaded', function () {
     function loadFullTableData(data, table) {
         table.innerHTML = '';
         data.forEach(row => {
-            const tr = document.createElement('tr');
-            Object.keys(row).forEach(key => {
-                const td = document.createElement('td');
-                td.textContent = row[key];
-                tr.appendChild(td);
-            });
-            table.appendChild(tr);
+            // Main row for title, gallery, date, etc.
+            const mainRow = document.createElement('tr');
+            for (let key in row) {
+                if (key !== 'Notes') {
+                    const td = document.createElement('td');
+                    td.textContent = row[key];
+                    mainRow.appendChild(td);
+                }
+            }
+            table.appendChild(mainRow);
+
+            // Second row for notes spanning all columns
+            if (row['Notes']) {
+                const notesRow = document.createElement('tr');
+                const notesTd = document.createElement('td');
+                notesTd.setAttribute('colspan', Object.keys(row).length - 1); // Spans all columns except 'Notes'
+                notesTd.textContent = row['Notes'];
+                notesRow.appendChild(notesTd);
+                table.appendChild(notesRow);
+            }
         });
     }
 
@@ -73,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const selectedLift = document.getElementById('lift').value;
         const resultDiv = document.getElementById('result');
 
-        // Example data (replace with actual JSON data fetching logic)
         fetch('bestLifts.json')
             .then(response => response.json())
             .then(bestLifts => {
