@@ -12,6 +12,9 @@ header {
     color: white;
     padding: 10px 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .main-title {
@@ -62,8 +65,8 @@ section {
 #intro-section {
     background-color: #1a3a5f;
     color: #ffffff;
-    padding: 15px 20px;
-    margin-bottom: 20px;
+    padding: 40px 20px; /* Added more padding */
+    margin: 20px auto;   /* More spacing around the section */
     border-radius: 8px;
     text-align: center;
     max-width: 960px;
@@ -124,7 +127,7 @@ table tbody tr td[colspan] {
 }
 
 #view-lift-btn {
-    background-color: #4caf50;
+    background-color: #4ca1d9; /* Changed to blue */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -135,7 +138,7 @@ table tbody tr td[colspan] {
 }
 
 #view-lift-btn:hover {
-    background-color: #45a049;
+    background-color: #3b8dbd; /* Hover effect with blue */
 }
 
 /* Result display styling */
@@ -156,7 +159,7 @@ table tbody tr td[colspan] {
 }
 
 .reset-link {
-    color: #4caf50;
+    color: #4ca1d9; /* Changed to blue */
     text-decoration: none;
     font-weight: bold;
 }
@@ -172,7 +175,7 @@ table tbody tr td[colspan] {
     margin: 20px auto;
     padding: 10px;
     width: fit-content;
-    background-color: #4caf50;
+    background-color: #4ca1d9; /* Changed to blue */
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -180,7 +183,7 @@ table tbody tr td[colspan] {
 }
 
 .see-more-link:hover {
-    background-color: #45a049;
+    background-color: #3b8dbd; /* Hover effect with blue */
 }
 
 /* Adjust spacing around descriptions in sections */
@@ -222,7 +225,7 @@ footer {
 
 /* Artangled link fix */
 a:visited {
-    color: #4caf50; /* Change this color to match the color scheme */
+    color: #4ca1d9; /* Change this color to match the color scheme */
 }
 
 /* Centered containers */
