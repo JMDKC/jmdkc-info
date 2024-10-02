@@ -127,18 +127,17 @@ table tbody tr td[colspan] {
 }
 
 #view-lift-btn {
-    background-color: #4ca1d9; /* Changed to blue */
+    background-color: #4ca1d9;
     border: none;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px;  /* Smaller padding */
+    font-size: 14px;    /* Smaller font size */
     cursor: pointer;
     border-radius: 4px;
-    margin-left: 10px;
 }
 
 #view-lift-btn:hover {
-    background-color: #3b8dbd; /* Hover effect with blue */
+    background-color: #3b8dbd;
 }
 
 /* Result display styling */
