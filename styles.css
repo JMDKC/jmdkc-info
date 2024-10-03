@@ -39,99 +39,13 @@ nav ul li a {
     font-weight: bold;
 }
 
-footer {
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 8px;
-}
-
-/* Intro section */
-#intro-section {
-    background-color: #1a3a5f;
-    color: #ffffff;
-    padding: 40px 20px; /* Added more padding */
-    margin: 20px auto;   /* More spacing around the section */
-    border-radius: 8px;
-    text-align: center;
-    max-width: 960px;
-}
-
-#intro-section p {
-    margin: 10px 0;
-}
-
-/* Section title styles */
-section h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #f5f5f5;
-    text-align: center;
-}
-
-/* Table styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 10px;
-}
-
-table thead {
-    background-color: #444;
-    color: white;
-}
-
-table thead th {
-    padding: 10px;
-    text-align: left;
-}
-
-table tbody tr {
-    background-color: #3c3c3c;
-}
-
-table tbody tr:nth-child(2n) {
-    background-color: #2e2e2e; /* Alternate color */
-}
-
-table tbody td {
-    padding: 10px;
-    border-top: 1px solid #444;
-}
-
-table tbody tr td[colspan] {
-    background-color: #4d4d4d; /* Different color for notes */
-    padding: 10px;
-    font-style: italic;
-}
-
-/* View Best Lift button and dropdown */
-.combo-box-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
+/* Styling for the View Best Lift button */
 #view-lift-btn {
     background-color: #4ca1d9;
     border: none;
     color: white;
-    padding: 8px 16px;  /* Smaller padding */
-    font-size: 14px;    /* Smaller font size */
+    padding: 6px 12px;  /* Smaller padding */
+    font-size: 12px;    /* Adjusted font size */
     cursor: pointer;
     border-radius: 4px;
 }
@@ -140,96 +54,38 @@ table tbody tr td[colspan] {
     background-color: #3b8dbd;
 }
 
-/* Result display styling */
-#result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #1a3a5f;
-    border-radius: 8px;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-}
-
-/* Reset link */
-.reset-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.reset-link {
-    color: #4ca1d9; /* Changed to blue */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.reset-link:hover {
-    text-decoration: underline;
-}
-
-/* See More link */
-.see-more-link {
-    display: block;
-    text-align: center;
-    margin: 20px auto;
-    padding: 10px;
-    width: fit-content;
-    background-color: #4ca1d9; /* Changed to blue */
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.see-more-link:hover {
-    background-color: #3b8dbd; /* Hover effect with blue */
-}
-
-/* Adjust spacing around descriptions in sections */
-section p {
-    margin-top: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Competition results styling similar to other tables */
-#comp-results-container {
-    background-color: #333;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
+/* Competition results table styling */
 #comp-results {
     width: 100%;
     border-collapse: collapse;
-}
-
-#comp-results thead {
-    background-color: #444;
-    color: white;
+    margin: 20px auto;
+    background-color: #333;
 }
 
 #comp-results th, #comp-results td {
     padding: 10px;
-    border-top: 1px solid #444;
+    text-align: left;
+    border: 1px solid #555;
 }
 
-/* Footer */
-footer {
-    background-color: #1a1a1a;
-    padding: 15px 0;
-    text-align: center;
+#comp-results th {
+    background-color: #555;
 }
 
-/* Artangled link fix */
-a:visited {
-    color: #4ca1d9; /* Change this color to match the color scheme */
-}
-
-/* Centered containers */
+/* Container for sections */
 section {
-    max-width: 960px;
-    margin: 0 auto 40px auto;
+    width: 80%;  /* Adjusted width */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
 }
- 
+
+/* Other general styles */
+footer {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+}

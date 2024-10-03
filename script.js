@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Fetch the data for lifts and competition results
-    const liftDataUrl = "path/to/lifts.json";  // Replace with correct URL or path
-    const compDataUrl = "path/to/competitions.json";  // Replace with correct URL or path
+    const liftDataUrl = "path/to/lifts.json";  // Correct path for your lift data
+    const compDataUrl = "path/to/competitions.json";  // Correct path for your competition data
 
     let liftData = {};
     let compData = [];
@@ -24,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error fetching competition data:", error));
 
-    // Populate dropdown with lift options
+    // Populate dropdown with all lift options
     function populateLiftDropdown() {
         const liftDropdown = document.getElementById("lift");
-        liftDropdown.innerHTML = "";  // Clear the dropdown first
+        liftDropdown.innerHTML = "";  // Clear dropdown
         Object.keys(liftData).forEach(lift => {
             const option = document.createElement("option");
             option.value = lift;
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Handle view best lift button
+    // Handle View Best Lift button
     const viewLiftButton = document.getElementById("view-lift-btn");
     const resultDiv = document.getElementById("result");
 
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Populate competition results table
     function populateCompetitionTable() {
         const compTableBody = document.querySelector("#comp-results tbody");
-        compTableBody.innerHTML = "";  // Clear table before populating
+        compTableBody.innerHTML = "";  // Clear table
 
         if (compData.length === 0) {
             compTableBody.innerHTML = "<tr><td colspan='8'>No competition results available.</td></tr>";
@@ -79,11 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Reset functionality
+    // Reset functionality for the lifts
     const resetLink = document.getElementById("reset");
     resetLink.addEventListener("click", (e) => {
         e.preventDefault();
         resultDiv.style.display = "none";
-        document.getElementById("lift").value = "clean & jerk";  // Reset to default
+        document.getElementById("lift").value = "clean & jerk";  // Reset dropdown to default
     });
 });
