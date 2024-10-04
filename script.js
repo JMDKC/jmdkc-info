@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     const liftDataUrl = "path/to/lifts.json";  // Correct path for your lift data
     const compDataUrl = "path/to/competitions.json";  // Correct path for your competition data
+    const artDataUrl = "path/to/art.json";
+    const booksDataUrl = "path/to/books.json";
+    const concertsDataUrl = "path/to/concerts.json";
 
     let liftData = {};
     let compData = [];
+    let artData = [];
+    let booksData = [];
+    let concertsData = [];
 
     // Fetch lift data
     fetch(liftDataUrl)
@@ -23,66 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error fetching competition data:", error));
 
-    // Populate dropdown with all lift options
-    function populateLiftDropdown() {
-        const liftDropdown = document.getElementById("lift");
-        liftDropdown.innerHTML = "";  // Clear dropdown
-        Object.keys(liftData).forEach(lift => {
-            const option = document.createElement("option");
-            option.value = lift;
-            option.textContent = lift;
-            liftDropdown.appendChild(option);
-        });
-    }
+    // Fetch art data
+    fetch(artDataUrl)
+        .then(response => response.json())
+        .then(data => {
+            artData = data;
+            populateArtTable();
+        })
+        .catch(error => console.error("Error fetching art data:", error));
 
-    // Handle View Best Lift button
-    const viewLiftButton = document.getElementById("view-lift-btn");
-    const resultDiv = document.getElementById("result");
-
-    viewLiftButton.addEventListener("click", () => {
-        const selectedLift = document.getElementById("lift").value;
-        const bestLift = liftData[selectedLift];
-
-        if (bestLift) {
-            resultDiv.style.display = "block";
-            resultDiv.innerHTML = `<strong>Best ${selectedLift}:</strong> ${bestLift} kg`;
-        } else {
-            resultDiv.style.display = "block";
-            resultDiv.innerHTML = `<strong>No data available for ${selectedLift}.</strong>`;
-        }
-    });
-
-    // Populate competition results table
-    function populateCompetitionTable() {
-        const compTableBody = document.querySelector("#comp-results tbody");
-        compTableBody.innerHTML = "";  // Clear table
-
-        if (compData.length === 0) {
-            compTableBody.innerHTML = "<tr><td colspan='8'>No competition results available.</td></tr>";
-        } else {
-            compData.forEach((competition) => {
-                const row = `
-                    <tr>
-                        <td>${competition.Where}</td>
-                        <td>${competition.Date}</td>
-                        <td>${competition.Name}</td>
-                        <td>${competition.Snatch}</td>
-                        <td>${competition["Clean & Jerk"]}</td>
-                        <td>${competition.Total}</td>
-                        <td>${competition["My Weight"]}</td>
-                        <td>${competition.Sinclair}</td>
-                    </tr>
-                `;
-                compTableBody.innerHTML += row;
-            });
-        }
-    }
-
-    // Reset functionality for the lifts
-    const resetLink = document.getElementById("reset");
-    resetLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        resultDiv.style.display = "none";
-        document.getElementById("lift").value = "clean & jerk";  // Reset dropdown to default
-    });
-});
+    // Fetch books data
+    fetch(booksDataUrl)
+        .then(response => response.json())
+        .then(data => {
+            booksData = data

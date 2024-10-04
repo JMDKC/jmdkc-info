@@ -39,49 +39,78 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Styling for the View Best Lift button */
-#view-lift-btn {
-    background-color: #4ca1d9;
-    border: none;
+#intro-section {
+    background-color: #1a3a5f;
     color: white;
-    padding: 6px 12px;  /* Smaller padding */
-    font-size: 12px;    /* Adjusted font size */
-    cursor: pointer;
-    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#view-lift-btn:hover {
-    background-color: #3b8dbd;
-}
-
-/* Competition results table styling */
-#comp-results {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    background-color: #333;
-}
-
-#comp-results th, #comp-results td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #555;
-}
-
-#comp-results th {
-    background-color: #555;
-}
-
-/* Container for sections */
+/* Section styling */
 section {
-    width: 80%;  /* Adjusted width */
+    width: 80%;
     margin: 20px auto;
     padding: 20px;
     background-color: #333;
     border-radius: 8px;
 }
 
-/* Other general styles */
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+a.see-more {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4ca1d9;
+    text-decoration: none;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: left;
+}
+
+th {
+    background-color: #444;
+    color: #fff;
+}
+
+td {
+    background-color: #555;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.reset-link {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    color: #4ca1d9;
+    text-decoration: none;
+}
+
 footer {
     text-align: center;
     background-color: #1a1a1a;
