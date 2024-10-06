@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const liftDataUrl = "path/to/lifts.json";  // Correct path for your lift data
-    const compDataUrl = "path/to/competitions.json";  // Correct path for your competition data
-    const artDataUrl = "path/to/art.json";
-    const booksDataUrl = "path/to/books.json";
-    const concertsDataUrl = "path/to/concerts.json";
+    const liftDataUrl = "/lifts.json";  // Correct path for your lift data
+    const compDataUrl = "/competitions.json";  // Correct path for your competition data
+    const artDataUrl = "/art.json";
+    const booksDataUrl = "/books.json";
+    const concertsDataUrl = "/concerts.json";
 
     let liftData = {};
     let compData = [];
