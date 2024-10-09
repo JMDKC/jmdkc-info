@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const liftDataUrl = "/lifts.json";  // Correct path for your lift data
-    const compDataUrl = "/competitions.json";  // Correct path for your competition data
-    const artDataUrl = "/art.json";
-    const booksDataUrl = "/books.json";
-    const concertsDataUrl = "/concerts.json";
+    // Define the paths to the JSON files
+    const liftDataUrl = "/lifts.json"; // Path to the lifts JSON
+    const compDataUrl = "/comp-results.json"; // Path to competitions JSON
+    const artDataUrl = "/art.json"; // Path to art JSON
+    const booksDataUrl = "/books.json"; // Path to books JSON
+    const concertsDataUrl = "/concerts.json"; // Path to concerts JSON
 
     let liftData = {};
     let compData = [];
     let artData = [];
     let booksData = [];
     let concertsData = [];
-    const rowsToShow = 10;
 
     // Fetch lift data
     fetch(liftDataUrl)
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             compData = data;
-            populateCompetitionTable();
+            populateCompTable();
         })
         .catch(error => console.error("Error fetching competition data:", error));
 
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error fetching concerts data:", error));
 
-    // Populate the dropdown for weightlifting
+    // Populate the dropdown for lifts
     function populateLiftDropdown() {
         const liftDropdown = document.getElementById("lift");
         Object.keys(liftData).forEach(lift => {
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Handle the View Best Lift button
+    // Event listener for the "View Best Lift" button
     document.getElementById("view-lift-btn").addEventListener("click", () => {
         const selectedLift = document.getElementById("lift").value;
         const resultDiv = document.getElementById("result");
@@ -83,117 +83,105 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Populate competition results table
-    function populateCompetitionTable() {
-        const compResultsTableBody = document.querySelector("#comp-results tbody");
-        compData.forEach(result => {
+    function populateCompTable() {
+        const compTableBody = document.querySelector("#comp-results tbody");
+        compData.forEach(item => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${result.Where}</td>
-                <td>${result.Date}</td>
-                <td>${result.Name}</td>
-                <td>${result.Snatch}</td>
-                <td>${result["Clean & Jerk"]}</td>
-                <td>${result.Total}</td>
-                <td>${result["My Weight"]}</td>
-                <td>${result.Sinclair}</td>
+                <td>${item.Where}</td>
+                <td>${item.Date}</td>
+                <td>${item.Name}</td>
+                <td>${item.Snatch}</td>
+                <td>${item['Clean & Jerk']}</td>
+                <td>${item.Total}</td>
+                <td>${item['My Weight']}</td>
+                <td>${item.Sinclair}</td>
             `;
-            compResultsTableBody.appendChild(row);
+            compTableBody.appendChild(row);
         });
     }
 
-    // Populate art table with See More functionality
+    // Populate the art table
     function populateArtTable() {
         const artTableBody = document.querySelector("#art-table tbody");
-        let isExpanded = false;
-
-        function renderArtTable(artList) {
-            artTableBody.innerHTML = "";
-            artList.forEach((item, index) => {
-                const row1 = document.createElement("tr");
-                row1.innerHTML = `<td>${item.Title}</td><td>${item.Gallery}</td><td>${item.Date}</td>`;
-                const row2 = document.createElement("tr");
-                row2.innerHTML = `<td colspan="3">${item.Notes}</td>`;
-                artTableBody.appendChild(row1);
-                artTableBody.appendChild(row2);
-            });
-        }
-
-        document.querySelector(".see-more[data-section='art']").addEventListener("click", (e) => {
-            e.preventDefault();
-            if (isExpanded) {
-                renderArtTable(artData.slice(0, rowsToShow));
-                e.target.textContent = "See More";
-            } else {
-                renderArtTable(artData);
-                e.target.textContent = "See Less";
-            }
-            isExpanded = !isExpanded;
+        artData.forEach(item => {
+            const row1 = document.createElement("tr");
+            row1.innerHTML = `
+                <td>${item.Title}</td>
+                <td>${item.Gallery}</td>
+                <td>${item.Date}</td>
+            `;
+            const row2 = document.createElement("tr");
+            row2.innerHTML = `<td colspan="3">${item.Notes}</td>`;
+            artTableBody.appendChild(row1);
+            artTableBody.appendChild(row2);
         });
-
-        renderArtTable(artData.slice(0, rowsToShow));
     }
 
-    // Populate books table with See More functionality
+    // Populate the books table
     function populateBooksTable() {
         const booksTableBody = document.querySelector("#books-table tbody");
-        let isExpanded = false;
-
-        function renderBooksTable(bookList) {
-            booksTableBody.innerHTML = "";
-            bookList.forEach((item, index) => {
-                const row1 = document.createElement("tr");
-                row1.innerHTML = `<td>${item.Title}</td><td>${item.Author}</td><td>${item.Date}</td>`;
-                const row2 = document.createElement("tr");
-                row2.innerHTML = `<td colspan="3">${item.Notes}</td>`;
-                booksTableBody.appendChild(row1);
-                booksTableBody.appendChild(row2);
-            });
-        }
-
-        document.querySelector(".see-more[data-section='books']").addEventListener("click", (e) => {
-            e.preventDefault();
-            if (isExpanded) {
-                renderBooksTable(booksData.slice(0, rowsToShow));
-                e.target.textContent = "See More";
-            } else {
-                renderBooksTable(booksData);
-                e.target.textContent = "See Less";
-            }
-            isExpanded = !isExpanded;
+        booksData.forEach(item => {
+            const row1 = document.createElement("tr");
+            row1.innerHTML = `
+                <td>${item.Title}</td>
+                <td>${item.Author}</td>
+                <td>${item.Date}</td>
+            `;
+            const row2 = document.createElement("tr");
+            row2.innerHTML = `<td colspan="3">${item.Notes}</td>`;
+            booksTableBody.appendChild(row1);
+            booksTableBody.appendChild(row2);
         });
-
-        renderBooksTable(booksData.slice(0, rowsToShow));
     }
 
-    // Populate concerts table with See More functionality
+    // Populate the concerts table
     function populateConcertsTable() {
         const concertsTableBody = document.querySelector("#concerts-table tbody");
-        let isExpanded = false;
+        concertsData.forEach(item => {
+            const row1 = document.createElement("tr");
+            row1.innerHTML = `
+                <td>${item.Title}</td>
+                <td>${item["Composer(s)"]}</td>
+                <td>${item.Conductor}</td>
+                <td>${item["Cast/Soloist"]}</td>
+                <td>${item.Venue}</td>
+                <td>${item.Date}</td>
+            `;
+            const row2 = document.createElement("tr");
+            row2.innerHTML = `<td colspan="6">${item.Notes}</td>`;
+            concertsTableBody.appendChild(row1);
+            concertsTableBody.appendChild(row2);
+        });
+    }
 
-        function renderConcertsTable(concertList) {
-            concertsTableBody.innerHTML = "";
-            concertList.forEach((item, index) => {
-                const row1 = document.createElement("tr");
-                row1.innerHTML = `<td>${item.Title}</td><td>${item["Composer(s)"]}</td><td>${item.Conductor}</td><td>${item["Cast/Soloist"]}</td><td>${item.Venue}</td><td>${item.Date}</td>`;
-                const row2 = document.createElement("tr");
-                row2.innerHTML = `<td colspan="6">${item.Notes}</td>`;
-                concertsTableBody.appendChild(row1);
-                concertsTableBody.appendChild(row2);
+    // Add functionality to limit table rows initially (show first 10 rows)
+    function limitTableRows(tableId, data, populateFunction) {
+        const tableBody = document.querySelector(`${tableId} tbody`);
+        const seeMoreLink = document.createElement('a');
+        seeMoreLink.href = "#";
+        seeMoreLink.textContent = "See More";
+        seeMoreLink.classList.add("see-more-link");
+
+        // Initially populate only the first 10 items
+        const limitedData = data.slice(0, 10);
+        populateFunction(limitedData);
+
+        // Append "See More" link if there are more than 10 items
+        if (data.length > 10) {
+            tableBody.parentElement.appendChild(seeMoreLink);
+            seeMoreLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                // Clear existing data and populate with full data
+                tableBody.innerHTML = "";
+                populateFunction(data);
+                seeMoreLink.remove();
             });
         }
-
-        document.querySelector(".see-more[data-section='concerts']").addEventListener("click", (e) => {
-            e.preventDefault();
-            if (isExpanded) {
-                renderConcertsTable(concertsData.slice(0, rowsToShow));
-                e.target.textContent = "See More";
-            } else {
-                renderConcertsTable(concertsData);
-                e.target.textContent = "See Less";
-            }
-            isExpanded = !isExpanded;
-        });
-
-        renderConcertsTable(concertsData.slice(0, rowsToShow));
     }
+
+    // Apply row limiting to all relevant tables
+    limitTableRows("#art-table", artData, populateArtTable);
+    limitTableRows("#books-table", booksData, populateBooksTable);
+    limitTableRows("#concerts-table", concertsData, populateConcertsTable);
 });
