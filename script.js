@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Define the paths to the JSON files
-    const liftDataUrl = "/lifts.json"; // Path to the lifts JSON
-    const compDataUrl = "/comp-results.json"; // Path to competitions JSON
-    const artDataUrl = "/art.json"; // Path to art JSON
-    const booksDataUrl = "/books.json"; // Path to books JSON
-    const concertsDataUrl = "/concerts.json"; // Path to concerts JSON
+    const liftDataUrl = "lifts.json"; // Path to the lifts JSON
+    const compDataUrl = "comp-results.json"; // Path to competitions JSON
+    const artDataUrl = "art.json"; // Path to art JSON
+    const booksDataUrl = "books.json"; // Path to books JSON
+    const concertsDataUrl = "concerts.json"; // Path to concerts JSON
 
     let liftData = {};
     let compData = [];
@@ -14,12 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch lift data
     fetch(liftDataUrl)
-        .then(response => response.json())
-        .then(data => {
-            liftData = data;
-            populateLiftDropdown();
-        })
-        .catch(error => console.error("Error fetching lift data:", error));
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();  // Use text() to inspect the full response
+    })
+    .then(data => {
+        console.log("Fetched data:", data);  // Log the raw response for inspection
+        liftData = JSON.parse(data);
+        populateLiftDropdown();
+    })
+    .catch(error => console.error("Error fetching lift data:", error));
 
     // Fetch competition data
     fetch(compDataUrl)
@@ -32,12 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch art data
     fetch(artDataUrl)
-        .then(response => response.json())
-        .then(data => {
-            artData = data;
-            populateArtTable();
-        })
-        .catch(error => console.error("Error fetching art data:", error));
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();  // Use text() to inspect the full response
+    })
+    .then(data => {
+        console.log("Fetched Art data:", data);  // Log the raw response for inspection
+        artData = JSON.parse(data);  // Parse it as JSON
+        populateArtTable();  // Call the function to populate the table
+    })
+    .catch(error => console.error("Error fetching Art data:", error));
 
     // Fetch books data
     fetch(booksDataUrl)
