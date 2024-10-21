@@ -1,20 +1,21 @@
-/* General styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #2a2a2a;
-    color: #e0e0e0;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
+/* Header */
 header {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 10px 0;
+    background-color: #1a3a5f; /* Dark Blue */
+    color: #fff;
+    padding: 20px;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .main-title {
@@ -23,98 +24,186 @@ header {
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Intro Section */
 #intro-section {
-    background-color: #1a3a5f;
+    background-color: #1a5b8f; /* Lighter Blue */
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    width: 80%; /* Match width of other sections */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
 }
 
-/* Section styling */
+#intro-section p {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+/* Section styles */
 section {
-    width: 80%;
-    margin: 20px auto;
+    width: 80%; /* Wider sections */
+    margin: 0 auto 30px;
     padding: 20px;
-    background-color: #333;
+    background-color: #ffffff;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     font-size: 28px;
     margin-bottom: 10px;
+    color: #1a3a5f;
 }
 
 p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-a.see-more {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    color: #4ca1d9;
-    text-decoration: none;
-}
-
-/* Table Styling */
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    font-size: 16px;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #555;
-    text-align: left;
-}
-
-th {
-    background-color: #444;
+/* Header row styling */
+table thead th {
+    background-color: #2a4d69; /* Darker blue */
     color: #fff;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ccc;
 }
 
-td {
-    background-color: #555;
+/* Even rows */
+table tbody tr:nth-child(even) {
+    background-color: #f0f8ff; /* Light blue */
+}
+
+/* Odd rows */
+table tbody tr:nth-child(odd) {
+    background-color: #e0efff; /* Slightly darker light blue */
+}
+
+/* Notes row */
+table tbody tr.notes-row td {
+    background-color: #cce7ff; /* Light blue shade for full-width Notes row */
+    padding: 15px;
+    border-top: 1px solid #ccc;
+}
+
+/* Table cell styling */
+table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Hover effect for rows */
+table tbody tr:hover {
+    background-color: #b0d8ff; /* Slightly darker shade on hover */
+}
+
+/* Center the See More link */
+.see-more-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.see-more {
+    color: #1a3a5f;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+/* Combo-box and button for weightlifting section */
+.combo-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1a3a5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a4d69;
 }
 
 #result {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: #d0e7ff;
+    border: 1px solid #2a4d69;
+    border-radius: 5px;
+    color: #1a3a5f;
 }
 
-.reset-link {
+/* Footer */
+footer {
+    background-color: #1a3a5f;
+    color: white;
     text-align: center;
-    display: block;
-    margin-top: 10px;
-    color: #4ca1d9;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #fff;
     text-decoration: none;
 }
 
-footer {
-    text-align: center;
-    background-color: #1a1a1a;
-    padding: 10px;
-    color: white;
-    margin-top: 20px;
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Sticky navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
