@@ -74,26 +74,41 @@ a.see-more {
     text-decoration: none;
 }
 
-/* Table Styling */
+/* Base styling for all tables */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-th, td {
+/* Header row styling */
+table thead th {
+    background-color: #2a4d69; /* Darker blue */
+    color: #fff;
     padding: 10px;
-    border: 1px solid #555;
     text-align: left;
 }
 
-th {
-    background-color: #444;
-    color: #fff;
+/* Even rows */
+table tbody tr:nth-child(even) {
+    background-color: #f0f8ff; /* Light blue */
 }
 
-td {
-    background-color: #555;
+/* Odd rows */
+table tbody tr:nth-child(odd) {
+    background-color: #e0efff; /* Slightly darker light blue */
+}
+
+/* Styling for cells */
+table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Full-width Notes row */
+table tbody tr.notes-row td {
+    background-color: #cce7ff; /* Light blue shade for full-width Notes row */
+    padding: 15px;
 }
 
 #result {
