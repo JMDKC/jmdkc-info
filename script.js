@@ -1,199 +1,103 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Define the paths to the JSON files
-    const liftDataUrl = "lifts.json"; // Path to the lifts JSON
-    const compDataUrl = "comp-results.json"; // Path to competitions JSON
-    const artDataUrl = "art.json"; // Path to art JSON
-    const booksDataUrl = "books.json"; // Path to books JSON
-    const concertsDataUrl = "concerts.json"; // Path to concerts JSON
+document.addEventListener('DOMContentLoaded', () => {
+    const artTable = document.getElementById('art-table');
+    const booksTable = document.getElementById('books-table');
+    const concertsTable = document.getElementById('concerts-table');
+    const compResultsTable = document.getElementById('comp-results');
 
-    let liftData = {};
-    let compData = [];
-    let artData = [];
-    let booksData = [];
-    let concertsData = [];
+    const maxRows = 10; // Limit the initial number of rows displayed
 
-    // Fetch lift data
-    fetch(liftDataUrl)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.text();  // Use text() to inspect the full response
-    })
-    .then(data => {
-        console.log("Fetched data:", data);  // Log the raw response for inspection
-        liftData = JSON.parse(data);
-        populateLiftDropdown();
-    })
-    .catch(error => console.error("Error fetching lift data:", error));
+    // Function to initialize the table with a 'See More' link
+    function initTable(table, data) {
+        const tbody = table.querySelector('tbody');
+        const seeMoreContainer = document.createElement('div');
+        seeMoreContainer.style.textAlign = 'center';
+        seeMoreContainer.style.marginTop = '10px';
 
-    // Fetch competition data
-    fetch(compDataUrl)
-        .then(response => response.json())
-        .then(data => {
-            compData = data;
-            populateCompTable();
-        })
-        .catch(error => console.error("Error fetching competition data:", error));
+        let expanded = false;
 
-    // Fetch art data
-    fetch(artDataUrl)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.text();  // Use text() to inspect the full response
-    })
-    .then(data => {
-        console.log("Fetched Art data:", data);  // Log the raw response for inspection
-        artData = JSON.parse(data);  // Parse it as JSON
-        populateArtTable();  // Call the function to populate the table
-    })
-    .catch(error => console.error("Error fetching Art data:", error));
+        const renderTable = (rowsToShow) => {
+            tbody.innerHTML = '';
+            data.slice(0, rowsToShow).forEach((item) => {
+                let row = `
+                    <tr>
+                        <td>${item.Title || item['Composer(s)'] || item.Where || ''}</td>
+                        <td>${item.Gallery || item.Conductor || item.Date || ''}</td>
+                        <td>${item.Date || item.Venue || item['Name'] || ''}</td>
+                    </tr>
+                    <tr class="notes-row">
+                        <td colspan="3">${item.Notes || ''}</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        };
 
-    // Fetch books data
-    fetch(booksDataUrl)
-        .then(response => response.json())
-        .then(data => {
-            booksData = data;
-            populateBooksTable();
-        })
-        .catch(error => console.error("Error fetching books data:", error));
+        renderTable(maxRows); // Display the initial set of rows
 
-    // Fetch concerts data
-    fetch(concertsDataUrl)
-        .then(response => response.json())
-        .then(data => {
-            concertsData = data;
-            populateConcertsTable();
-        })
-        .catch(error => console.error("Error fetching concerts data:", error));
+        // Create and append the 'See More' link
+        seeMoreContainer.innerHTML = `<a href="#" class="see-more">See More</a>`;
+        table.parentNode.appendChild(seeMoreContainer);
 
-    // Populate the dropdown for lifts
-    function populateLiftDropdown() {
-        const liftDropdown = document.getElementById("lift");
-        Object.keys(liftData).forEach(lift => {
-            const option = document.createElement("option");
-            option.value = lift;
-            option.textContent = lift;
-            liftDropdown.appendChild(option);
+        // Event listener for the 'See More' link
+        seeMoreContainer.querySelector('.see-more').addEventListener('click', (event) => {
+            event.preventDefault();
+            expanded = !expanded;
+
+            if (expanded) {
+                renderTable(data.length); // Show all rows
+                seeMoreContainer.innerHTML = `<a href="#" class="see-more">See Less</a>`;
+            } else {
+                renderTable(maxRows); // Show only the limited rows
+                seeMoreContainer.innerHTML = `<a href="#" class="see-more">See More</a>`;
+            }
+
+            // Smooth expansion effect
+            tbody.style.transition = 'max-height 0.5s ease-in-out';
+            tbody.style.maxHeight = expanded ? '1000px' : '300px';
         });
     }
 
-    // Event listener for the "View Best Lift" button
-    document.getElementById("view-lift-btn").addEventListener("click", () => {
-        const selectedLift = document.getElementById("lift").value;
-        const resultDiv = document.getElementById("result");
+    // Fetching data and initializing each table
+    const fetchData = async (url, table) => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const data = await response.json();
+            initTable(table, data);
+        } catch (error) {
+            console.error(`Error fetching data from ${url}: ${error}`);
+        }
+    };
 
-        if (liftData[selectedLift]) {
-            resultDiv.textContent = `Best ${selectedLift}: ${liftData[selectedLift]} kg`;
-            resultDiv.style.display = "block";
-        } else {
-            resultDiv.textContent = `No data available for ${selectedLift}.`;
-            resultDiv.style.display = "block";
+    // Fetching data for all the tables
+    fetchData('art.json', artTable);
+    fetchData('books.json', booksTable);
+    fetchData('concerts.json', concertsTable);
+    fetchData('comp-results.json', compResultsTable);
+
+    // Function to fetch and display best lift data
+    const liftDropdown = document.getElementById('lift');
+    const viewLiftBtn = document.getElementById('view-lift-btn');
+    const resultDiv = document.getElementById('result');
+
+    viewLiftBtn.addEventListener('click', async () => {
+        const selectedLift = liftDropdown.value;
+
+        try {
+            const response = await fetch('lifts.json');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const liftsData = await response.json();
+
+            const bestLift = liftsData[selectedLift];
+            if (bestLift) {
+                resultDiv.textContent = `Best ${selectedLift}: ${bestLift.weight} kg (${bestLift.date})`;
+                resultDiv.style.display = 'block';
+            } else {
+                resultDiv.textContent = `No data available for ${selectedLift}.`;
+                resultDiv.style.display = 'block';
+            }
+        } catch (error) {
+            console.error(`Error fetching lift data: ${error}`);
         }
     });
-
-    // Populate competition results table
-    function populateCompTable() {
-        const compTableBody = document.querySelector("#comp-results tbody");
-        compData.forEach(item => {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${item.Where}</td>
-                <td>${item.Date}</td>
-                <td>${item.Name}</td>
-                <td>${item.Snatch}</td>
-                <td>${item['Clean & Jerk']}</td>
-                <td>${item.Total}</td>
-                <td>${item['My Weight']}</td>
-                <td>${item.Sinclair}</td>
-            `;
-            compTableBody.appendChild(row);
-        });
-    }
-
-    // Populate the art table
-    function populateArtTable() {
-        const artTableBody = document.querySelector("#art-table tbody");
-        artData.forEach(item => {
-            const row1 = document.createElement("tr");
-            row1.innerHTML = `
-                <td>${item.Title}</td>
-                <td>${item.Gallery}</td>
-                <td>${item.Date}</td>
-            `;
-            const row2 = document.createElement("tr");
-            row2.innerHTML = `<td colspan="3">${item.Notes}</td>`;
-            artTableBody.appendChild(row1);
-            artTableBody.appendChild(row2);
-        });
-    }
-
-    // Populate the books table
-    function populateBooksTable() {
-        const booksTableBody = document.querySelector("#books-table tbody");
-        booksData.forEach(item => {
-            const row1 = document.createElement("tr");
-            row1.innerHTML = `
-                <td>${item.Title}</td>
-                <td>${item.Author}</td>
-                <td>${item.Date}</td>
-            `;
-            const row2 = document.createElement("tr");
-            row2.innerHTML = `<td colspan="3">${item.Notes}</td>`;
-            booksTableBody.appendChild(row1);
-            booksTableBody.appendChild(row2);
-        });
-    }
-
-    // Populate the concerts table
-    function populateConcertsTable() {
-        const concertsTableBody = document.querySelector("#concerts-table tbody");
-        concertsData.forEach(item => {
-            const row1 = document.createElement("tr");
-            row1.innerHTML = `
-                <td>${item.Title}</td>
-                <td>${item["Composer(s)"]}</td>
-                <td>${item.Conductor}</td>
-                <td>${item["Cast/Soloist"]}</td>
-                <td>${item.Venue}</td>
-                <td>${item.Date}</td>
-            `;
-            const row2 = document.createElement("tr");
-            row2.innerHTML = `<td colspan="6">${item.Notes}</td>`;
-            concertsTableBody.appendChild(row1);
-            concertsTableBody.appendChild(row2);
-        });
-    }
-
-    // Add functionality to limit table rows initially (show first 10 rows)
-    function limitTableRows(tableId, data, populateFunction) {
-        const tableBody = document.querySelector(`${tableId} tbody`);
-        const seeMoreLink = document.createElement('a');
-        seeMoreLink.href = "#";
-        seeMoreLink.textContent = "See More";
-        seeMoreLink.classList.add("see-more-link");
-
-        // Initially populate only the first 10 items
-        const limitedData = data.slice(0, 10);
-        populateFunction(limitedData);
-
-        // Append "See More" link if there are more than 10 items
-        if (data.length > 10) {
-            tableBody.parentElement.appendChild(seeMoreLink);
-            seeMoreLink.addEventListener("click", (e) => {
-                e.preventDefault();
-                // Clear existing data and populate with full data
-                tableBody.innerHTML = "";
-                populateFunction(data);
-                seeMoreLink.remove();
-            });
-        }
-    }
-
-    // Apply row limiting to all relevant tables
-    limitTableRows("#art-table", artData, populateArtTable);
-    limitTableRows("#books-table", booksData, populateBooksTable);
-    limitTableRows("#concerts-table", concertsData, populateConcertsTable);
 });

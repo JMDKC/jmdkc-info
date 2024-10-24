@@ -69,9 +69,11 @@ p {
 a.see-more {
     display: block;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #4ca1d9;
     text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* Base styling for all tables */
@@ -79,6 +81,13 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+}
+
+/* Transition for table expansion */
+table tbody {
+    max-height: 300px; /* Show only a limited height initially */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
 }
 
 /* Header row styling */
