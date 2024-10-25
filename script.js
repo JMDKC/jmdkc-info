@@ -4,51 +4,72 @@ document.addEventListener('DOMContentLoaded', () => {
     const concertsTable = document.getElementById('concerts-table');
     const compResultsTable = document.getElementById('comp-results');
 
-    const maxRows = 10; // Limit the initial number of rows displayed
+    const maxRows = 10;
 
-    // Function to initialize the table with a 'See More' link
-    function initTable(table, data) {
+    // Initialize tables with a specific structure and 'See More' functionality
+    function initTable(table, data, isPairedRows = true) {
         const tbody = table.querySelector('tbody');
-        const seeMoreContainer = document.createElement('div');
-        seeMoreContainer.style.textAlign = 'center';
-        seeMoreContainer.style.marginTop = '10px';
-
         let expanded = false;
+        let seeMoreLink = table.parentNode.querySelector('.see-more');
 
+        // Remove existing 'See More' link to prevent duplicates
+        if (seeMoreLink) seeMoreLink.remove();
+
+        // Rendering rows function
         const renderTable = (rowsToShow) => {
             tbody.innerHTML = '';
             data.slice(0, rowsToShow).forEach((item) => {
-                let row = `
-                    <tr>
-                        <td>${item.Title || item['Composer(s)'] || item.Where || ''}</td>
-                        <td>${item.Gallery || item.Conductor || item.Date || ''}</td>
-                        <td>${item.Date || item.Venue || item['Name'] || ''}</td>
-                    </tr>
-                    <tr class="notes-row">
-                        <td colspan="3">${item.Notes || ''}</td>
-                    </tr>
-                `;
-                tbody.innerHTML += row;
+                if (isPairedRows) {
+                    let row = `
+                        <tr>
+                            <td>${item.Title || ''}</td>
+                            <td>${item.Gallery || item['Composer(s)'] || item.Conductor || ''}</td>
+                            <td>${item.Date || item.Venue || ''}</td>
+                        </tr>
+                        <tr class="notes-row">
+                            <td colspan="3">${item.Notes || ''}</td>
+                        </tr>
+                    `;
+                    tbody.innerHTML += row;
+                } else {
+                    let row = `
+                        <tr>
+                            <td>${item.Competition || ''}</td>
+                            <td>${item.Snatch || ''}</td>
+                            <td>${item['Clean & Jerk'] || ''}</td>
+                            <td>${item.Total || ''}</td>
+                            <td>${item.Date || ''}</td>
+                        </tr>
+                    `;
+                    tbody.innerHTML += row;
+                }
             });
         };
 
-        renderTable(maxRows); // Display the initial set of rows
+        renderTable(maxRows); // Show limited rows initially
 
-        // Create and append the 'See More' link
-        seeMoreContainer.innerHTML = `<a href="#" class="see-more">See More</a>`;
-        table.parentNode.appendChild(seeMoreContainer);
+        // Create 'See More' / 'See Less' link
+        seeMoreLink = document.createElement('a');
+        seeMoreLink.href = '#';
+        seeMoreLink.textContent = 'See More';
+        seeMoreLink.className = 'see-more';
+        seeMoreLink.style.display = 'block';
+        seeMoreLink.style.textAlign = 'center';
+        seeMoreLink.style.margin = '10px 0';
 
-        // Event listener for the 'See More' link
-        seeMoreContainer.querySelector('.see-more').addEventListener('click', (event) => {
+        table.parentNode.appendChild(seeMoreLink);
+
+        // Event listener to toggle "See More" and "See Less"
+        seeMoreLink.addEventListener('click', (event) => {
             event.preventDefault();
             expanded = !expanded;
 
             if (expanded) {
                 renderTable(data.length); // Show all rows
-                seeMoreContainer.innerHTML = `<a href="#" class="see-more">See Less</a>`;
+                seeMoreLink.textContent = 'See Less';
             } else {
-                renderTable(maxRows); // Show only the limited rows
-                seeMoreContainer.innerHTML = `<a href="#" class="see-more">See More</a>`;
+                renderTable(maxRows); // Show limited rows again
+                seeMoreLink.textContent = 'See More';
             }
 
             // Smooth expansion effect
@@ -57,25 +78,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Fetching data and initializing each table
-    const fetchData = async (url, table) => {
+    // Fetching data for each section and initializing tables
+    const fetchData = async (url, table, isPairedRows = true) => {
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const data = await response.json();
-            initTable(table, data);
+            initTable(table, data, isPairedRows);
         } catch (error) {
             console.error(`Error fetching data from ${url}: ${error}`);
         }
     };
 
-    // Fetching data for all the tables
+    // Fetch and initialize data for each specific table
     fetchData('art.json', artTable);
     fetchData('books.json', booksTable);
     fetchData('concerts.json', concertsTable);
-    fetchData('comp-results.json', compResultsTable);
+    fetchData('comp-results.json', compResultsTable, false); // No paired rows for competition results
 
-    // Function to fetch and display best lift data
+    // Handle Best Lift Data Retrieval
     const liftDropdown = document.getElementById('lift');
     const viewLiftBtn = document.getElementById('view-lift-btn');
     const resultDiv = document.getElementById('result');
