@@ -145,3 +145,28 @@ footer {
     color: white;
     margin-top: 20px;
 }
+
+/* Dropdown and button styling */
+#lift {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #2a4d69; /* Darker blue */
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+#view-lift-btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 4px;
+    background-color: #4ca1d9; /* Lighter blue */
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#view-lift-btn:hover {
+    background-color: #3585b8; /* Darker on hover */
+}
