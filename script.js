@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const maxRows = 10;
 
-    // Initialize tables with a specific structure and 'See More' functionality
-    function initTable(table, data, isPairedRows = true, addSeeMore = true) {
+    // Initialize tables with the correct structure and "See More" functionality
+    function initTable(table, data, isPairedRows = true, addSeeMore = true, fieldMap = {}) {
         const tbody = table.querySelector('tbody');
         let expanded = false;
 
@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (isPairedRows) {
                     tbody.innerHTML += `
                         <tr>
-                            <td>${item.Title || ''}</td>
-                            <td>${item.Gallery || item['Composer(s)'] || item.Conductor || ''}</td>
-                            <td>${item.Date || item.Venue || ''}</td>
+                            <td>${item[fieldMap.title] || ''}</td>
+                            <td>${item[fieldMap.col2] || ''}</td>
+                            <td>${item[fieldMap.col3] || ''}</td>
                         </tr>
                         <tr class="notes-row">
                             <td colspan="3">${item.Notes || ''}</td>
@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     tbody.innerHTML += `
                         <tr>
-                            <td>${item.Date || ''}</td>
-                            <td>${item.Competition || ''}</td>
-                            <td>${item.Snatch || ''}</td>
-                            <td>${item['Clean & Jerk'] || ''}</td>
-                            <td>${item.Total || ''}</td>
-                            <td>${item['My Weight'] || ''}</td>
-                            <td>${item.Sinclair || ''}</td>
+                            <td>${item[fieldMap.date] || ''}</td>
+                            <td>${item[fieldMap.competition] || ''}</td>
+                            <td>${item[fieldMap.snatch] || ''}</td>
+                            <td>${item[fieldMap.cleanJerk] || ''}</td>
+                            <td>${item[fieldMap.total] || ''}</td>
+                            <td>${item[fieldMap.myWeight] || ''}</td>
+                            <td>${item[fieldMap.sinclair] || ''}</td>
                         </tr>
                     `;
                 }
@@ -65,23 +65,31 @@ document.addEventListener('DOMContentLoaded', () => {
         renderTable(maxRows);
     }
 
-    // Fetch and initialize data
-    const fetchData = async (url, table, isPairedRows = true, addSeeMore = true) => {
+    // Fetch data and initialize tables
+    const fetchData = async (url, table, isPairedRows = true, addSeeMore = true, fieldMap = {}) => {
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const data = await response.json();
-            initTable(table, data, isPairedRows, addSeeMore);
+            initTable(table, data, isPairedRows, addSeeMore, fieldMap);
         } catch (error) {
             console.error(`Error fetching data from ${url}: ${error}`);
         }
     };
 
-    // Fetch data for each table
-    fetchData('art.json', artTable);
-    fetchData('books.json', booksTable);
-    fetchData('concerts.json', concertsTable);
-    fetchData('comp-results.json', compResultsTable, false, false); // No paired rows or "See More" for weightlifting results
+    // Define the field mappings for each table
+    const fieldMappings = {
+        art: { title: 'Title', col2: 'Gallery', col3: 'Date' },
+        books: { title: 'Title', col2: 'Author', col3: 'Date' },
+        concerts: { title: 'Title', col2: 'Composer(s)', col3: 'Conductor', col4: 'Cast/Soloist', col5: 'Venue', col6: 'Date' },
+        compResults: { date: 'Date', competition: 'Competition', snatch: 'Snatch', cleanJerk: 'Clean & Jerk', total: 'Total', myWeight: 'My Weight', sinclair: 'Sinclair' }
+    };
+
+    // Fetch and initialize data for each table with correct field mapping
+    fetchData('art.json', artTable, true, true, fieldMappings.art);
+    fetchData('books.json', booksTable, true, true, fieldMappings.books);
+    fetchData('concerts.json', concertsTable, true, true, fieldMappings.concerts);
+    fetchData('comp-results.json', compResultsTable, false, false, fieldMappings.compResults);
 
     // Handle Best Lift Dropdown and View Button
     const liftDropdown = document.getElementById('lift');
