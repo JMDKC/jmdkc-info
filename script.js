@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (addSeeMore) {
             let seeMoreLink = table.parentNode.querySelector('.see-more');
             if (seeMoreLink) seeMoreLink.remove();
-            
+
             seeMoreLink = document.createElement('a');
             seeMoreLink.href = '#';
             seeMoreLink.textContent = 'See More';
@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     tbody.innerHTML += `
                         <tr>
                             <td>${item[fieldMap.date] || ''}</td>
-                            <td>${item[fieldMap.competition] || ''}</td>
+                            <td>${item[fieldMap.where] || ''}</td>
+                            <td>${item[fieldMap.name] || ''}</td>
                             <td>${item[fieldMap.snatch] || ''}</td>
                             <td>${item[fieldMap.cleanJerk] || ''}</td>
                             <td>${item[fieldMap.total] || ''}</td>
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         art: { title: 'Title', col2: 'Gallery', col3: 'Date' },
         books: { title: 'Title', col2: 'Author', col3: 'Date' },
         concerts: { title: 'Title', col2: 'Composer(s)', col3: 'Conductor', col4: 'Cast/Soloist', col5: 'Venue', col6: 'Date' },
-        compResults: { date: 'Date', competition: 'Competition', snatch: 'Snatch', cleanJerk: 'Clean & Jerk', total: 'Total', myWeight: 'My Weight', sinclair: 'Sinclair' }
+        compResults: { date: 'Date', where: 'Where', name: 'Name', snatch: 'Snatch', cleanJerk: 'Clean & Jerk', total: 'Total', myWeight: 'My Weight', sinclair: 'Sinclair' }
     };
 
     // Fetch and initialize data for each table with correct field mapping
