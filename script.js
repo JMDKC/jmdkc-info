@@ -41,9 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>${item[fieldMap.title] || ''}</td>
                             <td>${item[fieldMap.col2] || ''}</td>
                             <td>${item[fieldMap.col3] || ''}</td>
+                            <td>${item[fieldMap.col4] || ''}</td>
+                            <td>${item[fieldMap.col5] || ''}</td>
+                            <td>${item[fieldMap.col6] || ''}</td>
                         </tr>
                         <tr class="notes-row">
-                            <td colspan="3">${item.Notes || ''}</td>
+                            <td colspan="6">${item.Notes || ''}</td>
                         </tr>
                     `;
                 } else {
