@@ -69,9 +69,11 @@ p {
 a.see-more {
     display: block;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #4ca1d9;
     text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* Base styling for all tables */
@@ -81,34 +83,31 @@ table {
     margin-bottom: 20px;
 }
 
+/* Transition for table expansion */
+table tbody {
+    max-height: 300px; /* Show only a limited height initially */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* Header row styling */
 table thead th {
-    background-color: #2a4d69;
+    background-color: #2a4d69; /* Darker blue */
     color: #fff;
     padding: 10px;
     text-align: left;
 }
 
-/* Specific column width adjustments for Art and Books tables */
-#art-table th:nth-child(1), #books-table th:nth-child(1) {
-    width: 50%; /* Title column */
-}
-
-#art-table th:nth-child(2), #books-table th:nth-child(2) {
-    width: 30%; /* Gallery/Author column */
-}
-
-#art-table th:nth-child(3), #books-table th:nth-child(3) {
-    width: 20%; /* Date column */
-}
-
 /* Even rows */
 table tbody tr:nth-child(even) {
-    background-color: #f0f8ff;
+    background-color: #4477aa; /* Stronger blue for better contrast */
+    color: white;
 }
 
 /* Odd rows */
 table tbody tr:nth-child(odd) {
-    background-color: #e0efff;
+    background-color: #335b87; /* Slightly darker blue for contrast */
+    color: white;
 }
 
 /* Styling for cells */
@@ -119,8 +118,9 @@ table tbody td {
 
 /* Full-width Notes row */
 table tbody tr.notes-row td {
-    background-color: #cce7ff;
+    background-color: #29476d; /* Dark blue shade for full-width Notes row */
     padding: 15px;
+    color: #e0e0e0;
 }
 
 #result {
@@ -144,4 +144,29 @@ footer {
     padding: 10px;
     color: white;
     margin-top: 20px;
+}
+
+/* Dropdown and button styling */
+#lift {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #2a4d69; /* Darker blue */
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+#view-lift-btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 4px;
+    background-color: #4ca1d9; /* Lighter blue */
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#view-lift-btn:hover {
+    background-color: #3585b8; /* Darker on hover */
 }
