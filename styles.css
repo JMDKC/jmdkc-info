@@ -49,7 +49,7 @@ nav ul li a {
 
 /* Section styling */
 section {
-    width: 80%;
+    width: 90%; /* Ensure consistent width for all sections */
     margin: 20px auto;
     padding: 20px;
     background-color: #333;
@@ -69,64 +69,57 @@ p {
 a.see-more {
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     color: #4ca1d9;
     text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-/* Base styling for all tables */
+/* Consistent styling for all tables */
 table {
-    width: 100%;
+    width: 100%; /* Full width of the section */
     border-collapse: collapse;
     margin-bottom: 20px;
-}
-
-/* Transition for table expansion */
-table tbody {
-    max-height: 300px; /* Show only a limited height initially */
+    background-color: #333; /* Consistent background color */
+    border-radius: 8px;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
 }
 
-/* Header row styling */
 table thead th {
-    background-color: #2a4d69; /* Darker blue */
+    background-color: #2a4d69; /* Darker blue for header */
     color: #fff;
-    padding: 10px;
+    padding: 12px; /* Consistent padding */
     text-align: left;
+    border-bottom: 2px solid #e0e0e0; /* Consistent border */
 }
 
-/* Even rows */
+table tbody tr {
+    border-bottom: 1px solid #555; /* Border between rows */
+}
+
 table tbody tr:nth-child(even) {
-    background-color: #4477aa; /* Stronger blue for better contrast */
-    color: white;
+    background-color: #3a5a80; /* Alternate row color */
 }
 
-/* Odd rows */
 table tbody tr:nth-child(odd) {
-    background-color: #335b87; /* Slightly darker blue for contrast */
-    color: white;
+    background-color: #46698e; /* Slightly different shade */
 }
 
-/* Styling for cells */
 table tbody td {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    padding: 12px; /* Consistent padding */
+    color: #e0e0e0; /* Text color */
 }
 
 /* Full-width Notes row */
 table tbody tr.notes-row td {
-    background-color: #29476d; /* Dark blue shade for full-width Notes row */
+    background-color: #54799e; /* Full-width row background */
     padding: 15px;
-    color: #e0e0e0;
+    border-bottom: 1px solid #555;
 }
 
 #result {
     margin-top: 20px;
     padding: 10px;
-    background-color: #333;
+    background-color: #2a4d69;
     color: white;
 }
 
@@ -144,29 +137,4 @@ footer {
     padding: 10px;
     color: white;
     margin-top: 20px;
-}
-
-/* Dropdown and button styling */
-#lift {
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #2a4d69; /* Darker blue */
-    color: white;
-    border: none;
-    font-size: 16px;
-}
-
-#view-lift-btn {
-    padding: 8px 16px;
-    margin-left: 10px;
-    border-radius: 4px;
-    background-color: #4ca1d9; /* Lighter blue */
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#view-lift-btn:hover {
-    background-color: #3585b8; /* Darker on hover */
 }
