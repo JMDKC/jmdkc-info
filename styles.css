@@ -90,6 +90,7 @@ table thead th {
     padding: 12px; /* Consistent padding */
     text-align: left;
     border-bottom: 2px solid #e0e0e0; /* Consistent border */
+    width: 100%;
 }
 
 table tbody tr {
