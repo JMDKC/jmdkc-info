@@ -39,10 +39,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:visited {
-    color: #ffffff; /* Light color for clicked state */
-}
-
 #intro-section {
     background-color: #1a3a5f;
     color: white;
@@ -53,21 +49,11 @@ nav ul li a:visited {
 
 /* Section styling */
 section {
-    width: 90%; /* Consistent section width */
+    width: 90%; /* Ensure consistent width for all sections */
     margin: 20px auto;
     padding: 20px;
     background-color: #333;
     border-radius: 8px;
-}
-
-/* Styling to make tables narrower */
-section table {
-    width: 90%; /* Make the tables narrower */
-    margin: 0 auto 20px; /* Center tables within the section */
-    border-collapse: collapse;
-    background-color: #333;
-    border-radius: 8px;
-    overflow: hidden;
 }
 
 h2 {
@@ -88,33 +74,49 @@ a.see-more {
     text-decoration: none;
 }
 
-/* Header row styling */
-table thead th {
-    background-color: #2a4d69;
-    color: #fff;
-    padding: 12px;
-    text-align: left;
-    border-bottom: 2px solid #e0e0e0;
+/* Consistent styling for all tables */
+table {
+    width: 100%; /* Full width of the section */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #333; /* Consistent background color */
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* Row background colors */
+table thead {
+    width: 100%; /* Ensure header spans full width */
+}
+
+table thead th {
+    background-color: #2a4d69; /* Darker blue for header */
+    color: #fff;
+    padding: 12px; /* Consistent padding */
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0; /* Consistent border */
+    width: auto; /* Adjust to distribute across the table */
+}
+
+table tbody tr {
+    border-bottom: 1px solid #555; /* Border between rows */
+}
+
 table tbody tr:nth-child(even) {
-    background-color: #3a5a80;
+    background-color: #3a5a80; /* Alternate row color */
 }
 
 table tbody tr:nth-child(odd) {
-    background-color: #46698e;
+    background-color: #46698e; /* Slightly different shade */
 }
 
-/* Styling for table cells */
 table tbody td {
-    padding: 12px;
-    color: #e0e0e0;
+    padding: 12px; /* Consistent padding */
+    color: #e0e0e0; /* Text color */
 }
 
 /* Full-width Notes row */
 table tbody tr.notes-row td {
-    background-color: #54799e;
+    background-color: #54799e; /* Full-width row background */
     padding: 15px;
     border-bottom: 1px solid #555;
 }
