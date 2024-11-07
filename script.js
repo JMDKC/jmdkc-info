@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fieldMappings = {
         art: { title: 'Title', col2: 'Gallery', col3: 'Date' },
         books: { title: 'Title', col2: 'Author', col3: 'Date' },
-        concerts: { title: 'Title', col2: 'Composer(s)', col3: 'Conductor', col4: 'Cast/Soloist', col5: 'Venue', col6: 'Date' },
+        concerts: { title: 'Title', col2: 'Composer(s)', col3: 'Conductor', col4: 'Venue', col5: 'Date' },
         compResults: { date: 'Date', where: 'Where', name: 'Name', snatch: 'Snatch', cleanJerk: 'Clean & Jerk', total: 'Total', myWeight: 'My Weight', sinclair: 'Sinclair' }
     };
 
