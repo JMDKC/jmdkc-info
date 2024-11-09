@@ -49,7 +49,7 @@ nav ul li a {
 
 /* Section styling */
 section {
-    width: 90%; /* Ensure consistent width for all sections */
+    width: 90%; /* Consistent section width */
     margin: 20px auto;
     padding: 20px;
     background-color: #333;
@@ -74,12 +74,12 @@ a.see-more {
     text-decoration: none;
 }
 
-/* Consistent styling for all tables */
+/* Consistent table styling */
 table {
-    width: 100%; /* Full width of the section */
+    width: 100%; /* Consistent width */
     border-collapse: collapse;
     margin-bottom: 20px;
-    background-color: #333; /* Consistent background color */
+    background-color: #333;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -89,38 +89,40 @@ table thead {
 }
 
 table thead th {
-    background-color: #2a4d69; /* Darker blue for header */
+    background-color: #2a4d69;
     color: #fff;
-    padding: 12px; /* Consistent padding */
+    padding: 12px;
     text-align: left;
-    border-bottom: 2px solid #e0e0e0; /* Consistent border */
-    width: auto; /* Adjust to distribute across the table */
+    border-bottom: 2px solid #e0e0e0;
 }
 
 table tbody tr {
-    border-bottom: 1px solid #555; /* Border between rows */
-}
-
-table tbody tr:nth-child(even) {
-    background-color: #3a5a80; /* Alternate row color */
-}
-
-table tbody tr:nth-child(odd) {
-    background-color: #46698e; /* Slightly different shade */
-}
-
-table tbody td {
-    padding: 12px; /* Consistent padding */
-    color: #e0e0e0; /* Text color */
-}
-
-/* Full-width Notes row */
-table tbody tr.notes-row td {
-    background-color: #54799e; /* Full-width row background */
-    padding: 15px;
     border-bottom: 1px solid #555;
 }
 
+table tbody tr:nth-child(even) {
+    background-color: #3a5a80;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #46698e;
+}
+
+table tbody td {
+    padding: 12px;
+    color: #e0e0e0;
+}
+
+/* Adjusted Full-width Notes row */
+table tbody tr.notes-row td {
+    background-color: #54799e;
+    padding: 15px;
+    border-bottom: 1px solid #555;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Result section styling */
 #result {
     margin-top: 20px;
     padding: 10px;
