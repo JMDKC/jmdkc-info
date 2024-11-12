@@ -33,10 +33,22 @@ nav ul li {
     margin: 0 15px;
 }
 
+/* Unvisited link styling */
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Visited link styling */
+nav ul li a:visited {
+    color: #e0e0e0; /* Light grey or change to white if preferred */
+}
+
+/* Hover and active styling */
+nav ul li a:hover,
+nav ul li a:active {
+    color: #4ca1d9; /* Light blue for hover */
 }
 
 #intro-section {
