@@ -22,6 +22,7 @@ header {
     margin: 0;
 }
 
+/* Navigation link styles */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -33,22 +34,21 @@ nav ul li {
     margin: 0 15px;
 }
 
-/* Unvisited link styling */
 nav ul li a {
-    color: white;
+    color: white;             /* Regular state */
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Visited link styling */
+/* Ensure visited links appear white for contrast */
 nav ul li a:visited {
-    color: #e0e0e0; /* Light grey or change to white if preferred */
+    color: #e0e0e0;            /* Light gray or white for better visibility */
 }
 
-/* Hover and active styling */
+/* Hover and active styles */
 nav ul li a:hover,
 nav ul li a:active {
-    color: #4ca1d9; /* Light blue for hover */
+    color: #4ca1d9;            /* Light blue for interactivity */
 }
 
 #intro-section {
@@ -61,13 +61,14 @@ nav ul li a:active {
 
 /* Section styling */
 section {
-    width: 90%; /* Consistent section width */
+    width: 90%;
     margin: 20px auto;
     padding: 20px;
     background-color: #333;
     border-radius: 8px;
 }
 
+/* Content headers */
 h2 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -86,18 +87,14 @@ a.see-more {
     text-decoration: none;
 }
 
-/* Consistent table styling */
+/* Consistent styling for all tables */
 table {
-    width: 100%; /* Consistent width */
+    width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: #333;
     border-radius: 8px;
     overflow: hidden;
-}
-
-table thead {
-    width: 100%; /* Ensure header spans full width */
 }
 
 table thead th {
@@ -125,16 +122,13 @@ table tbody td {
     color: #e0e0e0;
 }
 
-/* Adjusted Full-width Notes row */
+/* Notes row for full width */
 table tbody tr.notes-row td {
     background-color: #54799e;
     padding: 15px;
     border-bottom: 1px solid #555;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-/* Result section styling */
 #result {
     margin-top: 20px;
     padding: 10px;
@@ -156,4 +150,8 @@ footer {
     padding: 10px;
     color: white;
     margin-top: 20px;
+}
+
+footer a:visited {
+    color: #e0e0e0; /* Matches link color to make it lighter after visiting */
 }
