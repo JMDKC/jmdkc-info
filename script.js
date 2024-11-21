@@ -1,4 +1,4 @@
-// Example data structures for books, art, and concerts
+// Example data structures for books, art, concerts, and weightlifting results
 const booksData = [
     { title: "Book Title 1", author: "Author 1", dateStarted: "2024-01-01", dateFinished: "2024-01-15" },
     { title: "Book Title 2", author: "Author 2", dateStarted: "2024-02-01", dateFinished: "2024-02-20" },
@@ -27,6 +27,29 @@ const concertsData = [
         cast: "Soloist C",
         venue: "Venue B",
         date: "2024-05-15"
+    }
+];
+
+const weightliftingData = [
+    {
+        where: "Competition 1",
+        date: "2024-06-01",
+        name: "John Doe",
+        snatch: "100kg",
+        cleanAndJerk: "120kg",
+        total: "220kg",
+        myWeight: "75kg",
+        sinclair: "250.5"
+    },
+    {
+        where: "Competition 2",
+        date: "2024-06-15",
+        name: "Jane Smith",
+        snatch: "90kg",
+        cleanAndJerk: "110kg",
+        total: "200kg",
+        myWeight: "70kg",
+        sinclair: "240.3"
     }
 ];
 
@@ -79,6 +102,26 @@ function populateConcertsTable() {
     });
 }
 
+// Populate weightlifting results table
+function populateWeightliftingTable() {
+    const weightliftingTableBody = document.querySelector("#comp-results tbody");
+    weightliftingData.forEach((result) => {
+        const row = `
+            <tr>
+                <td>${result.where}</td>
+                <td>${result.date}</td>
+                <td>${result.name}</td>
+                <td>${result.snatch}</td>
+                <td>${result.cleanAndJerk}</td>
+                <td>${result.total}</td>
+                <td>${result.myWeight}</td>
+                <td>${result.sinclair}</td>
+            </tr>
+        `;
+        weightliftingTableBody.innerHTML += row;
+    });
+}
+
 // See More functionality
 document.querySelectorAll(".see-more").forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -100,4 +143,5 @@ document.addEventListener("DOMContentLoaded", () => {
     populateBooksTable();
     populateArtTable();
     populateConcertsTable();
+    populateWeightliftingTable(); // Initialize weightlifting data
 });
