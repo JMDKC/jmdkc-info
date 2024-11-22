@@ -80,13 +80,13 @@
         "Sinclair": 220.59
     },
     {
-        "Where": "Bethnal Green",
-        "Date": "2024-11-16",
-        "Name": "Southern Masters",
-        "Snatch": "67 71 75x",
-        "Clean & Jerk": "87 92x 92x",
-        "Total": 158,
-        "My Weight": 72.0,
-        "Sinclair": 214.8
+        "where": "Bethnal Green",
+        "date": "2024-11-16",
+        "name": "Southern Masters",
+        "snatch": "67 71 75x",
+        "cleanAndJerk": "87 92x 92x",
+        "total": 158,
+        "myWeight": 72.0,
+        "sinclair": 214.8
     }
 ]
