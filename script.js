@@ -104,22 +104,33 @@ function populateConcertsTable() {
 
 // Populate weightlifting results table
 function populateWeightliftingTable() {
-    const weightliftingTableBody = document.querySelector("#comp-results tbody");
-    weightliftingData.forEach((result) => {
-        const row = `
-            <tr>
-                <td>${result.where}</td>
-                <td>${result.date}</td>
-                <td>${result.name}</td>
-                <td>${result.snatch}</td>
-                <td>${result.cleanAndJerk}</td>
-                <td>${result.total}</td>
-                <td>${result.myWeight}</td>
-                <td>${result.sinclair}</td>
-            </tr>
-        `;
-        weightliftingTableBody.innerHTML += row;
-    });
+    fetch("data/weightlifting.json")
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to fetch JSON");
+            return response.json();
+        })
+        .then(data => {
+            const tableBody = document.querySelector("#comp-results tbody");
+            tableBody.innerHTML = ""; // Clear placeholder text
+            data.forEach(result => {
+                const row = `
+                    <tr>
+                        <td>${result.where}</td>
+                        <td>${result.date}</td>
+                        <td>${result.name}</td>
+                        <td>${result.snatch}</td>
+                        <td>${result.cleanAndJerk}</td>
+                        <td>${result.total}</td>
+                        <td>${result.myWeight}</td>
+                        <td>${result.sinclair}</td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+        })
+        .catch(error => {
+            console.error("Error loading weightlifting data:", error);
+        });
 }
 
 // See More functionality
