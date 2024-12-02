@@ -104,7 +104,7 @@ function populateConcertsTable() {
 
 // Populate weightlifting results table
 function populateWeightliftingTable() {
-    fetch("data/weightlifting.json")
+    fetch("comp-results.json")
         .then(response => {
             if (!response.ok) throw new Error("Failed to fetch JSON");
             return response.json();
