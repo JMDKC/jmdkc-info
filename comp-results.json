@@ -1,83 +1,83 @@
 [
     {
-        "Where": "Strength Ambassadors",
-        "Date": "2022-04-12",
-        "Name": "SA Spring Open",
-        "Snatch": "50 53 56x",
-        "Clean & Jerk": "60 65 70",
-        "Total": 123,
-        "My Weight": 75.3,
-        "Sinclair": 162.73
+        "where": "Strength Ambassadors",
+        "date": "2022-04-12",
+        "name": "SA Spring Open",
+        "snatch": "50 53 56x",
+        "cleanAndJerk": "60 65 70",
+        "total": 123,
+        "myWeight": 75.3,
+        "sinclair": 162.73
     },
     {
-        "Where": "Colchester",
-        "Date": "2022-12-04",
-        "Name": "Colchester Weightlifting Christmas Open",
-        "Snatch": "55x 55 60",
-        "Clean & Jerk": "70 75 80x",
-        "Total": 130,
-        "My Weight": 75.0,
-        "Sinclair": 172.40
+        "where": "Colchester",
+        "date": "2022-12-04",
+        "name": "Colchester Weightlifting Christmas Open",
+        "snatch": "55x 55 60",
+        "cleanAndJerk": "70 75 80x",
+        "total": 130,
+        "myWeight": 75.0,
+        "sinclair": 172.40
     },
     {
-        "Where": "Blackheath",
-        "Date": "2023-12-03",
-        "Name": "Blackheath Weightlifting Club Open",
-        "Snatch": "58 62 65x",
-        "Clean & Jerk": "73x 73 78",
-        "Total": 135,
-        "My Weight": 74.1,
-        "Sinclair": 180.33
+        "where": "Blackheath",
+        "date": "2023-12-03",
+        "name": "Blackheath Weightlifting Club Open",
+        "snatch": "58 62 65x",
+        "cleanAndJerk": "73x 73 78",
+        "total": 135,
+        "myWeight": 74.1,
+        "sinclair": 180.33
     },
     {
-        "Where": "Strength Ambassadors",
-        "Date": "2023-09-30",
-        "Name": "Unity Competition",
-        "Snatch": "62 65 67x",
-        "Clean & Jerk": "80 84 87x",
-        "Total": 149,
-        "My Weight": 75.0,
-        "Sinclair": 197.60
+        "where": "Strength Ambassadors",
+        "date": "2023-09-30",
+        "name": "Unity Competition",
+        "snatch": "62 65 67x",
+        "cleanAndJerk": "80 84 87x",
+        "total": 149,
+        "myWeight": 75.0,
+        "sinclair": 197.60
     },
     {
-        "Where": "LOWA",
-        "Date": "2023-10-08",
-        "Name": "October Invitational",
-        "Snatch": "62 66 70x",
-        "Clean & Jerk": "80 84 87",
-        "Total": 153,
-        "My Weight": 74.5,
-        "Sinclair": 203.72
-    },
-    {
-        "Where": "LOWA",
-        "Date": "2023-11-27",
-        "Name": "Winter Open",
-        "Snatch": "65 68 71x",
-        "Clean & Jerk": "82 86x 86x",
-        "Total": 150,
-        "My Weight": 75.1,
-        "Sinclair": 198.77
+        "where": "LOWA",
+        "date": "2023-10-08",
+        "name": "October Invitational",
+        "snatch": "62 66 70x",
+        "cleanAndJerk": "80 84 87",
+        "total": 153,
+        "myWeight": 74.5,
+        "sinclair": 203.72
     },
     {
         "Where": "LOWA",
-        "Date": "2024-04-07",
-        "Name": "Spring Open",
-        "Snatch": "65 69 73x",
-        "Clean & Jerk": "85 90 93x",
-        "Total": 159,
-        "My Weight": 74.7,
-        "Sinclair": 211.45
+        "date": "2023-11-27",
+        "name": "Winter Open",
+        "snatch": "65 68 71x",
+        "cleanAndJerk": "82 86x 86x",
+        "total": 150,
+        "myWeight": 75.1,
+        "sinclair": 198.77
     },
     {
-        "Where": "Crystal Palace",
-        "Date": "2024-05-20",
-        "Name": "Crystal Palace Spring Open",
-        "Snatch": "66 70 73x",
-        "Clean & Jerk": "88 92 95",
-        "Total": 165,
-        "My Weight": 74.0,
-        "Sinclair": 220.59
+        "where": "LOWA",
+        "date": "2024-04-07",
+        "name": "Spring Open",
+        "snatch": "65 69 73x",
+        "cleanAndJerk": "85 90 93x",
+        "total": 159,
+        "myWeight": 74.7,
+        "sinclair": 211.45
+    },
+    {
+        "where": "Crystal Palace",
+        "date": "2024-05-20",
+        "name": "Crystal Palace Spring Open",
+        "snatch": "66 70 73x",
+        "cleanAndJerk": "88 92 95",
+        "total": 165,
+        "myWeight": 74.0,
+        "sinclair": 220.59
     },
     {
         "where": "Bethnal Green",
@@ -88,5 +88,15 @@
         "total": 158,
         "myWeight": 72.0,
         "sinclair": 214.8
+    },
+    {
+        "where": "Birmingham NEC",
+        "date": "2024-12-07",
+        "name": "England Masters",
+        "snatch": "TBC",
+        "cleanAndJerk": "TBC",
+        "total": 0,
+        "myWeight": 0,
+        "sinclair": 0
     }
 ]
