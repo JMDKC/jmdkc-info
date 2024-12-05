@@ -53,53 +53,86 @@ const weightliftingData = [
     }
 ];
 
-// Populate books table
+// Populate books table from books.json
 function populateBooksTable() {
-    const booksTableBody = document.querySelector("#books-table tbody");
-    booksData.forEach((book) => {
-        const row = `
-            <tr>
-                <td>${book.title}</td>
-                <td>${book.author}</td>
-                <td>${book.dateStarted}</td>
-                <td>${book.dateFinished}</td>
-            </tr>
-        `;
-        booksTableBody.innerHTML += row;
-    });
+    fetch("books.json")
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to fetch books data");
+            return response.json();
+        })
+        .then(data => {
+            const booksTableBody = document.querySelector("#books-table tbody");
+            booksTableBody.innerHTML = ""; // Clear placeholder text
+            data.forEach(book => {
+                const row = `
+                    <tr>
+                        <td>${book.title}</td>
+                        <td>${book.author}</td>
+                        <td>${book.dateStarted}</td>
+                        <td>${book.dateFinished}</td>
+                    </tr>
+                `;
+                booksTableBody.innerHTML += row;
+            });
+        })
+        .catch(error => {
+            console.error("Error loading books data:", error);
+        });
 }
 
-// Populate art table
+// Populate art table from art.json
 function populateArtTable() {
-    const artTableBody = document.querySelector("#art-table tbody");
-    artData.forEach((art) => {
-        const row = `
-            <tr>
-                <td>${art.title}</td>
-                <td>${art.gallery}</td>
-                <td>${art.date}</td>
-            </tr>
-        `;
-        artTableBody.innerHTML += row;
-    });
+    fetch("art.json")
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to fetch art data");
+            return response.json();
+        })
+        .then(data => {
+            const artTableBody = document.querySelector("#art-table tbody");
+            artTableBody.innerHTML = ""; // Clear placeholder text
+            data.forEach(art => {
+                const row = `
+                    <tr>
+                        <td>${art.title}</td>
+                        <td>${art.gallery}</td>
+                        <td>${art.date}</td>
+                    </tr>
+                `;
+                artTableBody.innerHTML += row;
+            });
+        })
+        .catch(error => {
+            console.error("Error loading art data:", error);
+        });
 }
 
-// Populate concerts table
+// Populate concerts table from concerts.json
 function populateConcertsTable() {
-    const concertsTableBody = document.querySelector("#concerts-table tbody");
-    concertsData.forEach((concert) => {
-        const row = `
-            <tr>
-                <td>${concert.title}</td>
-                <td>${concert.composers}</td>
-                <td>${concert.conductor}</td>
-                <td>${concert.cast}</td>
-                <td>${concert.venue}</td>
-                <td>${concert.date}</td>
-            </tr>
-        `;
-        concertsTableBody.innerHTML += row;
-    });
+    fetch("concerts.json")
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to fetch concerts data");
+            return response.json();
+        })
+        .then(data => {
+            const concertsTableBody = document.querySelector("#concerts-table tbody");
+            concertsTableBody.innerHTML = ""; // Clear placeholder text
+            data.forEach(concert => {
+                const row = `
+                    <tr>
+                        <td>${concert.title}</td>
+                        <td>${concert.composers}</td>
+                        <td>${concert.conductor}</td>
+                        <td>${concert.cast}</td>
+                        <td>${concert.venue}</td>
+                        <td>${concert.date}</td>
+                    </tr>
+                `;
+                concertsTableBody.innerHTML += row;
+            });
+        })
+        .catch(error => {
+            console.error("Error loading concerts data:", error);
+        });
 }
 
 // Populate weightlifting results table
