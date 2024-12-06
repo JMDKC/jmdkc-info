@@ -1,14 +1,14 @@
 [
     {
-        "Title": "Mona Lisa",
-        "Gallery": "Louvre",
-        "Date": "2022-01-15",
-        "Notes": "Saw it during my trip to Paris."
+        "title": "Mona Lisa",
+        "gallery": "Louvre",
+        "date": "2022-01-15",
+        "notes": "Saw it during my trip to Paris."
     },
     {
-        "Title": "Starry Night",
-        "Gallery": "MoMA",
-        "Date": "2023-03-10",
-        "Notes": "A breathtaking piece by Van Gogh."
+        "title": "Starry Night",
+        "gallery": "MoMA",
+        "date": "2023-03-10",
+        "notes": "A breathtaking piece by Van Gogh."
     }
 ]
