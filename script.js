@@ -1,10 +1,4 @@
 // Example data structures for books, art, concerts, and weightlifting results
-const booksData = [
-    { title: "Book Title 1", author: "Author 1", dateStarted: "2024-01-01", dateFinished: "2024-01-15" },
-    { title: "Book Title 2", author: "Author 2", dateStarted: "2024-02-01", dateFinished: "2024-02-20" },
-    { title: "Book Title 3", author: "Author 3", dateStarted: "2024-03-01", dateFinished: "2024-03-15" }
-];
-
 const artData = [
     { title: "Art Exhibition 1", gallery: "Gallery A", date: "2024-03-01" },
     { title: "Art Exhibition 2", gallery: "Gallery B", date: "2024-03-15" },
@@ -68,8 +62,7 @@ function populateBooksTable() {
                     <tr>
                         <td>${book.title}</td>
                         <td>${book.author}</td>
-                        <td>${book.dateStarted}</td>
-                        <td>${book.dateFinished}</td>
+                        <td>${book.date}</td>
                     </tr>
                 `;
                 booksTableBody.innerHTML += row;
