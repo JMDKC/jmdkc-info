@@ -1,155 +1,155 @@
 [
     {
-        "Title": "Tosca",
-        "Composer(s)": "Giacomo Puccini",
-        "Conductor": "Leo Hussain",
-        "Cast/Soloist": "Christof Loy, Leo Hussain, Sin\u00e9ad Campbell-Wallace",
-        "Venue": "ENO",
-        "Date": "2022-11-04",
-        "Notes": "-"
+        "title": "Tosca",
+        "composers": "Giacomo Puccini",
+        "conductor": "Leo Hussain",
+        "cast": "Christof Loy, Leo Hussain, Sin\u00e9ad Campbell-Wallace",
+        "venue": "ENO",
+        "date": "2022-11-04",
+        "notes": "-"
     },
     {
-        "Title": "Alcina",
-        "Composer(s)": "Handel",
-        "Conductor": "Christian Curnyn",
-        "Cast/Soloist": "Emily D'Angelo, Lisette Oropesa, Mary Bevan, Varduhi Abrahamyan",
-        "Venue": "Royal Opera House",
-        "Date": "2022-11-14",
-        "Notes": "-"
+        "title": "Alcina",
+        "composers": "Handel",
+        "conductor": "Christian Curnyn",
+        "cast": "Emily D'Angelo, Lisette Oropesa, Mary Bevan, Varduhi Abrahamyan",
+        "venue": "Royal Opera House",
+        "date": "2022-11-14",
+        "notes": "-"
     },
     {
-        "Title": "Aida",
-        "Composer(s)": "Giuseppe Verdi",
-        "Conductor": "Mark Elder",
-        "Cast/Soloist": "Angel Blue, El\u012bna Garan\u010da, Ludovic T\u00e9zier, SeokJong Baek",
-        "Venue": "Royal Opera House",
-        "Date": "2023-05-08",
-        "Notes": "-"
+        "title": "Aida",
+        "composers": "Giuseppe Verdi",
+        "conductor": "Mark Elder",
+        "cast": "Angel Blue, El\u012bna Garan\u010da, Ludovic T\u00e9zier, SeokJong Baek",
+        "venue": "Royal Opera House",
+        "date": "2023-05-08",
+        "notes": "-"
     },
     {
-        "Title": "Wozzeck",
-        "Composer(s)": "Alban Berg",
-        "Conductor": "Antonio Pappano",
-        "Cast/Soloist": "Anja Kampe, Brindley Sherratt, Christian Gerhaher, Peter Hoare",
-        "Venue": "Royal Opera House",
-        "Date": "2023-05-25",
-        "Notes": "-"
+        "title": "Wozzeck",
+        "composers": "Alban Berg",
+        "conductor": "Antonio Pappano",
+        "cast": "Anja Kampe, Brindley Sherratt, Christian Gerhaher, Peter Hoare",
+        "venue": "Royal Opera House",
+        "date": "2023-05-25",
+        "notes": "-"
     },
     {
-        "Title": "Il Trovatore",
-        "Composer(s)": "Giuseppe Verdi",
-        "Conductor": "Antonio Pappano",
-        "Cast/Soloist": "Gregory Kunde, Jamie Barton, Ludovic T\u00e9zier, Rachel Willis-S\u00f8rensen",
-        "Venue": "Royal Opera House",
-        "Date": "2023-06-24",
-        "Notes": "-"
+        "title": "Il Trovatore",
+        "composers": "Giuseppe Verdi",
+        "conductor": "Antonio Pappano",
+        "cast": "Gregory Kunde, Jamie Barton, Ludovic T\u00e9zier, Rachel Willis-S\u00f8rensen",
+        "venue": "Royal Opera House",
+        "date": "2023-06-24",
+        "notes": "-"
     },
     {
-        "Title": "La Forza del Destino",
-        "Composer(s)": "Giuseppe Verdi",
-        "Conductor": "Mark Elder",
-        "Cast/Soloist": "Brian Jagde, Etienne Dupuis, Sondra Radvanovsky",
-        "Venue": "Royal Opera House",
-        "Date": "2023-09-24",
-        "Notes": "-"
+        "title": "La Forza del Destino",
+        "composers": "Giuseppe Verdi",
+        "conductor": "Mark Elder",
+        "cast": "Brian Jagde, Etienne Dupuis, Sondra Radvanovsky",
+        "venue": "Royal Opera House",
+        "date": "2023-09-24",
+        "notes": "-"
     },
     {
-        "Title": "Jephtha",
-        "Composer(s)": "Handel",
-        "Conductor": "Laurence Cummings",
-        "Cast/Soloist": "Alice Coote, Allan Clayton, Cameron Shahbazi",
-        "Venue": "Royal Opera House",
-        "Date": "2023-11-15",
-        "Notes": "-"
+        "title": "Jephtha",
+        "composers": "Handel",
+        "conductor": "Laurence Cummings",
+        "cast": "Alice Coote, Allan Clayton, Cameron Shahbazi",
+        "venue": "Royal Opera House",
+        "date": "2023-11-15",
+        "notes": "-"
     },
     {
-        "Title": "Rigoletto",
-        "Composer(s)": "Giuseppe Verdi",
-        "Conductor": "Renato Balsadonna",
-        "Cast/Soloist": "Elena Maximova, Erin Morley, Goderdzi Janelidze, Saimir Pirgu, Simon Keenlyside",
-        "Venue": "Royal Opera House",
-        "Date": "2023-11-20",
-        "Notes": "-"
+        "title": "Rigoletto",
+        "composers": "Giuseppe Verdi",
+        "conductor": "Renato Balsadonna",
+        "cast": "Elena Maximova, Erin Morley, Goderdzi Janelidze, Saimir Pirgu, Simon Keenlyside",
+        "venue": "Royal Opera House",
+        "date": "2023-11-20",
+        "notes": "-"
     },
     {
-        "Title": "Cavelliera Rusticana / I Pagliacci",
-        "Composer(s)": "Pietro Mascagni, Ruggero Leoncavallo",
-        "Conductor": "Daniel Oren",
-        "Cast/Soloist": "Aleksandra Kurzak, Anna Princeva, Dimitri Platanias, Elena Zilio, Jorge de Le\u00f3n, Roberto Alagna",
-        "Venue": "Royal Opera House",
-        "Date": "2023-12-15",
-        "Notes": "-"
+        "title": "Cavelliera Rusticana / I Pagliacci",
+        "composers": "Pietro Mascagni, Ruggero Leoncavallo",
+        "conductor": "Daniel Oren",
+        "cast": "Aleksandra Kurzak, Anna Princeva, Dimitri Platanias, Elena Zilio, Jorge de Le\u00f3n, Roberto Alagna",
+        "venue": "Royal Opera House",
+        "date": "2023-12-15",
+        "notes": "-"
     },
     {
-        "Title": "Elektra",
-        "Composer(s)": "Richard Strauss",
-        "Conductor": "Antonio Pappano",
-        "Cast/Soloist": "Karita Mattila, Nina Stemme, Sara Jakubiak, \u0141ukasz Goli\u0144ski",
-        "Venue": "Royal Opera House",
-        "Date": "2024-01-26",
-        "Notes": "-"
+        "title": "Elektra",
+        "composers": "Richard Strauss",
+        "conductor": "Antonio Pappano",
+        "cast": "Karita Mattila, Nina Stemme, Sara Jakubiak, \u0141ukasz Goli\u0144ski",
+        "venue": "Royal Opera House",
+        "date": "2024-01-26",
+        "notes": "-"
     },
     {
-        "Title": "La boh\u00e8me",
-        "Composer(s)": "Giacomo Puccini",
-        "Conductor": "Evelino Pid\u00f2",
-        "Cast/Soloist": "Andrey Zhilikhovsky,Angela Gheorghiu,Michael Mofidian,Simon Keenlyside,Simona Mihai,Stefan Pop,Zoltan Nagy",
-        "Venue": "Royal Opera House",
-        "Date": "2024-02-11",
-        "Notes": "-"
+        "title": "La boh\u00e8me",
+        "composers": "Giacomo Puccini",
+        "conductor": "Evelino Pid\u00f2",
+        "cast": "Andrey Zhilikhovsky,Angela Gheorghiu,Michael Mofidian,Simon Keenlyside,Simona Mihai,Stefan Pop,Zoltan Nagy",
+        "venue": "Royal Opera House",
+        "date": "2024-02-11",
+        "notes": "-"
     },
     {
-        "Title": "Der fliegende Holl\u00e4nder",
-        "Composer(s)": "Richard Wagner",
-        "Conductor": "Henrik N\u00e1n\u00e1si",
-        "Cast/Soloist": "Bryn Terfel,Elisabet Strid,Miles Mykkanen,Stephen Milling",
-        "Venue": "Royal Opera House",
-        "Date": "2024-03-11",
-        "Notes": "-"
+        "title": "Der fliegende Holl\u00e4nder",
+        "composers": "Richard Wagner",
+        "conductor": "Henrik N\u00e1n\u00e1si",
+        "cast": "Bryn Terfel,Elisabet Strid,Miles Mykkanen,Stephen Milling",
+        "venue": "Royal Opera House",
+        "date": "2024-03-11",
+        "notes": "-"
     },
     {
-        "Title": "Alexandre Kantorow plays Liszt",
-        "Composer(s)": "Franz Liszt, Anton Bruckner",
-        "Conductor": "Manfred Honeck",
-        "Cast/Soloist": "Alexandre Kantorow",
-        "Venue": "Southbank Centre",
-        "Date": "2024-05-09",
-        "Notes": "-"
+        "title": "Alexandre Kantorow plays Liszt",
+        "composers": "Franz Liszt, Anton Bruckner",
+        "conductor": "Manfred Honeck",
+        "cast": "Alexandre Kantorow",
+        "venue": "Southbank Centre",
+        "date": "2024-05-09",
+        "notes": "-"
     },
     {
-        "Title": "Lucia di Lammermoor",
-        "Composer(s)": "Gaetano Donizetti",
-        "Conductor": "Richard Hetherington",
-        "Cast/Soloist": "Andr\u00e9s Presno,Germ\u00e1n E. Alc\u00e1ntara,Liv Redpath,Marko Mimica,Michael Gibson,Xabier Anduaga",
-        "Venue": "Royal Opera House",
-        "Date": "2024-05-18",
-        "Notes": "-"
+        "title": "Lucia di Lammermoor",
+        "composers": "Gaetano Donizetti",
+        "conductor": "Richard Hetherington",
+        "cast": "Andr\u00e9s Presno,Germ\u00e1n E. Alc\u00e1ntara,Liv Redpath,Marko Mimica,Michael Gibson,Xabier Anduaga",
+        "venue": "Royal Opera House",
+        "date": "2024-05-18",
+        "notes": "-"
     },
     {
-        "Title": "The Merry Widow",
-        "Composer(s)": "Franz Leh\u00e1r",
-        "Conductor": "John Wilson",
-        "Cast/Soloist": "Alex Otterburn,Danielle de Niese,Germ\u00e1n Olvera,Thomas Allen",
-        "Venue": "Glyndebourne",
-        "Date": "2024-06-16",
-        "Notes": "-"
+        "title": "The Merry Widow",
+        "composers": "Franz Leh\u00e1r",
+        "conductor": "John Wilson",
+        "cast": "Alex Otterburn,Danielle de Niese,Germ\u00e1n Olvera,Thomas Allen",
+        "venue": "Glyndebourne",
+        "date": "2024-06-16",
+        "notes": "-"
     },
     {
-        "Title": "Cosi Fan Tutte",
-        "Composer(s)": "Wolfgang Amadeus Mozart",
-        "Conductor": "Alexander Soddy",
-        "Cast/Soloist": "Andr\u00e8 Schuen,Daniel Behle,Gerald Finley,Golda Schultz,Jennifer France,Samantha Hankey",
-        "Venue": "Royal Opera House",
-        "Date": "2024-07-06",
-        "Notes": "-"
+        "title": "Cosi Fan Tutte",
+        "composers": "Wolfgang Amadeus Mozart",
+        "conductor": "Alexander Soddy",
+        "cast": "Andr\u00e8 Schuen,Daniel Behle,Gerald Finley,Golda Schultz,Jennifer France,Samantha Hankey",
+        "venue": "Royal Opera House",
+        "date": "2024-07-06",
+        "notes": "-"
     },
     {
-        "Title": "Tosca",
-        "Composer(s)": "Giacomo Puccini",
-        "Conductor": "Andrea Battistoni",
-        "Cast/Soloist": "Aleksei Isaev,Germ\u00e1n E. Alc\u00e1ntara,Jeremy White,Sonya Yoncheva,Yusif Eyvazov",
-        "Venue": "Royal Opera House",
-        "Date": "2024-07-14",
-        "Notes": "-"
+        "title": "Tosca",
+        "composers": "Giacomo Puccini",
+        "conductor": "Andrea Battistoni",
+        "cast": "Aleksei Isaev,Germ\u00e1n E. Alc\u00e1ntara,Jeremy White,Sonya Yoncheva,Yusif Eyvazov",
+        "venue": "Royal Opera House",
+        "date": "2024-07-14",
+        "notes": "-"
     }
 ]
