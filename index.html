@@ -94,10 +94,11 @@
         <h2>Weightlifting</h2>
         <p>Here are the heaviest weights I've lifted so far:</p>
         <div class="combo-box-container">
-            <label for="lift">Choose a lift:</label>
-            <select id="lift"></select>
-            <button id="view-lift-btn">View Best Lift</button>
-            <div id="result" style="display:none;"></div>
+            <select id="choose-lift-dropdown">
+                <option value="" disabled selected>Select a lift</option>
+            </select>
+            <button id="view-best-lift-button">View Best Lift</button>
+            <div id="best-lift-display"></div>
         </div>
         <div class="reset-container">
             <a href="#" id="reset" class="reset-link">Reset</a>
