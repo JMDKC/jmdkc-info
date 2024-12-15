@@ -193,7 +193,7 @@ function loadLiftsDropdown() {
 // Find and display the best lift for the selected lift type
 function viewBestLift() {
     const selectedLift = document.querySelector("#choose-lift-dropdown").value;
-    const bestLiftDisplay = document.querySelector("#best-lift-display");
+    const bestLiftContainer = document.querySelector("#best-lift-container");
 
     fetch("lifts.json")
         .then(response => {
@@ -204,7 +204,7 @@ function viewBestLift() {
             // Filter lifts for the selected type and find the heaviest weight
             const liftsOfSelectedType = data.filter(lift => lift.lift === selectedLift);
             if (liftsOfSelectedType.length === 0) {
-                bestLiftDisplay.textContent = "No lifts recorded for this type.";
+                bestLiftContainer.innerHTML = "No lifts recorded for this type.";
                 return;
             }
 
@@ -212,13 +212,17 @@ function viewBestLift() {
                 return lift.weight > max.weight ? lift : max;
             }, liftsOfSelectedType[0]);
 
-            // Display the best lift
-            bestLiftDisplay.innerHTML = `
-                <p><strong>Best Lift:</strong> ${bestLift.lift}</p>
-                <p><strong>Weight:</strong> ${bestLift.weight} kg</p>
-                <p><strong>Reps:</strong> ${bestLift.reps}</p>
-                <p><strong>Date:</strong> ${new Date(bestLift.date).toLocaleDateString()}</p>
+            // Display the best lift in the required format
+            bestLiftContainer.innerHTML = `
+                ${bestLift.weight}kg (${bestLift.date}) 
+                <a href="#" id="reset-link" class="reset-link">(reset)</a>
             `;
+
+            // Add reset functionality
+            document.querySelector("#reset-link").addEventListener("click", (event) => {
+                event.preventDefault();
+                bestLiftContainer.innerHTML = ""; // Clear the result
+            });
         })
         .catch(error => {
             console.error("Error finding best lift:", error);
