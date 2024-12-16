@@ -167,13 +167,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Load the lifts data and populate the dropdown
 function loadLiftsDropdown() {
+    const dropdown = document.querySelector("#choose-lift-dropdown");
+    if (!dropdown) {
+        console.error("Dropdown element not found.");
+        return;
+    }
+
     fetch("lifts.json")
         .then(response => {
             if (!response.ok) throw new Error("Failed to fetch lifts data");
             return response.json();
         })
         .then(data => {
-            const dropdown = document.querySelector("#choose-lift-dropdown");
             const uniqueLifts = [...new Set(data.map(lift => lift.lift))]; // Extract unique lift names
 
             // Populate dropdown
@@ -192,8 +197,15 @@ function loadLiftsDropdown() {
 
 // Find and display the best lift for the selected lift type
 function viewBestLift() {
-    const selectedLift = document.querySelector("#choose-lift-dropdown").value;
+    const dropdown = document.querySelector("#choose-lift-dropdown");
     const bestLiftContainer = document.querySelector("#best-lift-container");
+
+    if (!dropdown || !bestLiftContainer) {
+        console.error("Required elements not found.");
+        return;
+    }
+
+    const selectedLift = dropdown.value;
 
     fetch("lifts.json")
         .then(response => {
@@ -201,8 +213,8 @@ function viewBestLift() {
             return response.json();
         })
         .then(data => {
-            // Filter lifts for the selected type and find the heaviest weight
             const liftsOfSelectedType = data.filter(lift => lift.lift === selectedLift);
+
             if (liftsOfSelectedType.length === 0) {
                 bestLiftContainer.innerHTML = "No lifts recorded for this type.";
                 return;
@@ -219,10 +231,13 @@ function viewBestLift() {
             `;
 
             // Add reset functionality
-            document.querySelector("#reset-link").addEventListener("click", (event) => {
-                event.preventDefault();
-                bestLiftContainer.innerHTML = ""; // Clear the result
-            });
+            const resetLink = document.querySelector("#reset-link");
+            if (resetLink) {
+                resetLink.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    bestLiftContainer.innerHTML = ""; // Clear the result
+                });
+            }
         })
         .catch(error => {
             console.error("Error finding best lift:", error);
@@ -230,9 +245,18 @@ function viewBestLift() {
 }
 
 // Add event listener to the "View Best Lift" button
-document.querySelector("#view-best-lift-button").addEventListener("click", (event) => {
-    event.preventDefault();
-    viewBestLift();
+document.addEventListener("DOMContentLoaded", () => {
+    const viewButton = document.querySelector("#view-best-lift-button");
+    if (viewButton) {
+        viewButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            viewBestLift();
+        });
+    } else {
+        console.error("View Best Lift button not found.");
+    }
+
+    loadLiftsDropdown();
 });
 
 // Initialize dropdown on page load
