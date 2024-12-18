@@ -195,7 +195,6 @@ function loadLiftsDropdown() {
         });
 }
 
-// Find and display the best lift for the selected lift type
 function viewBestLift() {
     const dropdown = document.querySelector("#choose-lift-dropdown");
     const bestLiftContainer = document.querySelector("#best-lift-container");
@@ -224,10 +223,10 @@ function viewBestLift() {
                 return lift.weight > max.weight ? lift : max;
             }, liftsOfSelectedType[0]);
 
-            // Display the best lift in the required format on one line
+            // Format the output as a single line
             bestLiftContainer.innerHTML = `
-                ${bestLift.weight}kg (${bestLift.date}) 
-                <a href="#" id="reset-link" class="reset-link" style="text-decoration: none; margin-left: 5px;">(reset)</a>
+                <span>${bestLift.weight}kg (${bestLift.date})</span>
+                <a href="#" id="reset-link" class="reset-link" style="margin-left: 5px; text-decoration: none;">(reset)</a>
             `;
 
             // Add reset functionality
