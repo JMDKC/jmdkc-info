@@ -223,10 +223,10 @@ function viewBestLift() {
                 return lift.weight > max.weight ? lift : max;
             }, liftsOfSelectedType[0]);
 
-            // Format the output as a single line
+            // Ensure the output is inline
             bestLiftContainer.innerHTML = `
                 <span>${bestLift.weight}kg (${bestLift.date})</span>
-                <a href="#" id="reset-link" class="reset-link" style="margin-left: 5px; text-decoration: none;">(reset)</a>
+                <a href="#" id="reset-link" style="text-decoration: none; margin-left: 5px;">(reset)</a>
             `;
 
             // Add reset functionality
