@@ -155,3 +155,41 @@ footer {
 footer a:visited {
     color: #e0e0e0; /* Matches link color to make it lighter after visiting */
 }
+
+.combo-box-container {
+    display: flex;
+    align-items: center;
+    background-color: #007bff; /* Blue background */
+    padding: 10px; /* Add some padding for better spacing */
+    border-radius: 5px; /* Rounded corners for a smoother look */
+    color: white; /* White text for contrast */
+}
+
+.combo-box-container label,
+.combo-box-container select,
+.combo-box-container button,
+.combo-box-container span {
+    margin-right: 10px; /* Space out elements */
+    background: none; /* Remove default styling for consistency */
+    border: none; /* Remove borders */
+    color: inherit; /* Inherit text color */
+}
+
+.combo-box-container select,
+.combo-box-container button {
+    padding: 5px; /* Add padding to inputs and button */
+    border-radius: 3px; /* Small rounded corners */
+    background-color: #0056b3; /* Slightly darker blue for inputs and button */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor for button and dropdown */
+}
+
+.combo-box-container span a {
+    text-decoration: none; /* Remove underline for the reset link */
+    color: #ffd700; /* Gold color for high contrast */
+    cursor: pointer; /* Pointer cursor for link */
+}
+
+.combo-box-container span a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
