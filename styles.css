@@ -159,37 +159,51 @@ footer a:visited {
 .combo-box-container {
     display: flex;
     align-items: center;
-    background-color: #007bff; /* Blue background */
-    padding: 10px; /* Add some padding for better spacing */
-    border-radius: 5px; /* Rounded corners for a smoother look */
+    background-color: #1e3a5f; /* A muted, darker blue for consistency with tables */
+    padding: 8px 12px; /* Add padding for spacing */
+    border-radius: 5px; /* Rounded corners for a cohesive look */
     color: white; /* White text for contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .combo-box-container label,
-.combo-box-container select,
-.combo-box-container button,
 .combo-box-container span {
-    margin-right: 10px; /* Space out elements */
-    background: none; /* Remove default styling for consistency */
-    border: none; /* Remove borders */
-    color: inherit; /* Inherit text color */
+    margin-right: 10px; /* Space between label and dropdown */
+    color: white; /* Ensure text is white */
 }
 
-.combo-box-container select,
+.combo-box-container select {
+    margin-right: 10px; /* Space out the dropdown */
+    padding: 5px; /* Add padding for dropdown */
+    border-radius: 3px; /* Slight rounding for dropdown */
+    border: none; /* Remove borders */
+    background-color: #2c4a70; /* Slightly darker muted blue */
+    color: white; /* White text for readability */
+    cursor: pointer; /* Pointer cursor on dropdown */
+}
+
 .combo-box-container button {
-    padding: 5px; /* Add padding to inputs and button */
+    margin-right: 10px; /* Space out the button */
+    padding: 5px 10px; /* Padding for size */
     border-radius: 3px; /* Small rounded corners */
-    background-color: #0056b3; /* Slightly darker blue for inputs and button */
+    background-color: #2c4a70; /* Same muted blue as dropdown */
+    border: none; /* Remove default borders */
     color: white; /* White text */
-    cursor: pointer; /* Pointer cursor for button and dropdown */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 14px; /* Match font size */
+}
+
+.combo-box-container button:hover {
+    background-color: #3d5a85; /* Slightly brighter blue on hover */
 }
 
 .combo-box-container span a {
-    text-decoration: none; /* Remove underline for the reset link */
-    color: #ffd700; /* Gold color for high contrast */
-    cursor: pointer; /* Pointer cursor for link */
+    text-decoration: none; /* No underline for reset link */
+    color: #ffd700; /* Gold for reset link */
+    cursor: pointer; /* Pointer cursor */
+    margin-left: 5px; /* Space between result and reset */
 }
 
 .combo-box-container span a:hover {
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline; /* Underline on hover */
 }
