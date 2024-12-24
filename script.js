@@ -96,7 +96,7 @@ function populateLiftsDropdown() {
     fetch("lifts.json")
         .then(response => response.json())
         .then(data => {
-            const liftDropdown = document.querySelector("#lift");
+            const liftDropdown = document.querySelector("#choose-lift-dropdown");
             liftDropdown.innerHTML = ""; // Clear placeholder text
             const uniqueLifts = [...new Set(data.map(lift => lift.lift))];
             uniqueLifts.forEach(lift => {
@@ -109,29 +109,36 @@ function populateLiftsDropdown() {
 
 // Show best lift
 function showBestLift() {
-    const liftDropdown = document.querySelector("#lift");
+    const liftDropdown = document.querySelector("#choose-lift-dropdown");
     const selectedLift = liftDropdown.value;
+    const bestLiftContainer = document.querySelector("#best-lift-container");
+
+    if (!selectedLift) {
+        alert("Please select a lift!");
+        return;
+    }
 
     fetch("lifts.json")
         .then(response => response.json())
         .then(data => {
             const bestLift = data
                 .filter(lift => lift.lift === selectedLift)
-                .reduce((max, current) => (current.weight > max.weight ? current : max), { weight: 0 });
+                .sort((a, b) => b.weight - a.weight)[0];
 
-            const resultDiv = document.querySelector("#result");
-            if (bestLift.weight > 0) {
-                resultDiv.style.display = "inline";
-                resultDiv.innerHTML = `${bestLift.weight}kg (${formatDate(bestLift.date)}) <a href="#" id="reset-link">(reset)</a>`;
-                
-                // Add reset link functionality
-                const resetLink = document.querySelector("#reset-link");
-                resetLink.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    resultDiv.style.display = "none";
+            if (bestLift) {
+                const { weight, date } = bestLift;
+                bestLiftContainer.innerHTML = `${weight}kg (${formatDate(date)}) <a href="#" id="reset-link">(reset)</a>`;
+                bestLiftContainer.classList.remove("hidden");
+
+                // Add reset functionality
+                document.getElementById("reset-link").addEventListener("click", (e) => {
+                    e.preventDefault();
+                    bestLiftContainer.innerHTML = "";
+                    bestLiftContainer.classList.add("hidden");
                 });
             } else {
-                resultDiv.style.display = "none";
+                bestLiftContainer.innerHTML = "No data available.";
+                bestLiftContainer.classList.remove("hidden");
             }
         })
         .catch(error => console.error("Error finding best lift:", error));
@@ -171,5 +178,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".see-more").forEach(addSeeMoreButton);
 
     // Add functionality to View Best Lift button
-    document.querySelector("#view-lift-btn").addEventListener("click", showBestLift);
+    document.querySelector("#view-best-lift-button").addEventListener("click", showBestLift);
 });

@@ -94,15 +94,15 @@
     <section id="weightlifting-section">
         <h2>Weightlifting</h2>
         <p>Here are the heaviest weights I've lifted so far:</p>
-        <div class="combo-box-container" style="display: flex; align-items: center;">
-            <label for="lift" style="margin-right: 10px;">My best</label>
-            <select id="lift" style="margin-right: 10px;">
+        <div class="combo-box-container">
+            <label for="choose-lift-dropdown">My best</label>
+            <select id="choose-lift-dropdown">
                 <option value="" disabled selected>Select a lift</option>
             </select>
-            <button id="view-lift-btn" style="margin-right: 10px;">is...</button>
-            <span id="result" style="white-space: nowrap;"></span>
+            <button id="view-best-lift-button">is...</button>
+            <span id="best-lift-container" class="hidden"></span>
         </div>
-
+        
         <h3>Here are my competition results:</h3>
         <table id="comp-results">
             <thead>
