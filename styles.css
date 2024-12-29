@@ -219,15 +219,15 @@ footer a:visited {
 
 /* Style for the "is..." button */
 .is-button {
-    text-transform: lowercase; /* Makes the text lowercase */
-    background-color: #0056b3; /* Higher contrast blue */
-    color: white; /* White text for better readability */
-    font-size: 1rem; /* Match the combo box font size */
-    font-weight: normal; /* Match the weight of the combo box text */
-    border: 1px solid #004080; /* Slightly darker border for definition */
-    border-radius: 4px; /* Rounded corners to match button style */
-    padding: 5px 10px; /* Padding to match button proportions */
-    cursor: pointer; /* Pointer cursor for interactivity */
+    text-transform: none !important;
+    background-color: #0056b3; /* High-contrast blue */
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    border: 1px solid #004080;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 .is-button:hover {
