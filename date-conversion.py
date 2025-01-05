@@ -13,18 +13,16 @@ def convert_date(date_str):
         return date_str
 
 # Load the JSON file
-input_file = "books.json"  # Replace with your actual file path
-output_file = "books_updated.json"
+input_file = "concerts.json"  # Replace with your actual file path
+output_file = "concerts_updated.json"
 
 with open(input_file, "r", encoding="utf-8") as file:
     books = json.load(file)
 
 # Process each book entry
 for book in books:
-    if "dateStarted" in book:
-        book["dateStarted"] = convert_date(book["dateStarted"])
-    if "dateFinished" in book:
-        book["dateFinished"] = convert_date(book["dateFinished"])
+    if "date" in book:
+        book["date"] = convert_date(book["date"])
 
 # Save the updated JSON
 with open(output_file, "w", encoding="utf-8") as file:
