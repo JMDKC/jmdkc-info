@@ -79,6 +79,29 @@ p {
     font-size: 16px;
 }
 
+/* Unvisited link */
+a:link {
+    color: #ffcc00;  /* High-contrast yellow */
+    text-decoration: underline;
+}
+
+/* Visited link */
+a:visited {
+    color: #ff9900;  /* High-contrast orange */
+    text-decoration: underline;
+}
+
+/* Hover effect */
+a:hover {
+    color: #ffffff;  /* White for better visibility */
+    background-color: #333333;
+}
+
+/* Active link */
+a:active {
+    color: #ff6600;
+}
+
 a.see-more {
     display: block;
     text-align: center;
