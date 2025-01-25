@@ -5,6 +5,7 @@ function populateBooksTable() {
         .then(data => {
             const booksTableBody = document.querySelector("#books-table tbody");
             booksTableBody.innerHTML = ""; // Clear placeholder text
+            data.sort((a, b) => new Date(b.dateFinished) - new Date(a.dateFinished));
             data.forEach(book => {
                 const row = `
                     <tr>
@@ -16,7 +17,6 @@ function populateBooksTable() {
                 `;
                 booksTableBody.innerHTML += row;
             });
-            limitTableRows("books");
         })
         .catch(error => console.error("Error loading books data:", error));
 }
@@ -28,6 +28,7 @@ function populateArtTable() {
         .then(data => {
             const artTableBody = document.querySelector("#art-table tbody");
             artTableBody.innerHTML = ""; // Clear placeholder text
+            data.sort((a, b) => new Date(b.date) - new Date(a.date));
             data.forEach(art => {
                 const row = `
                     <tr>
@@ -38,7 +39,6 @@ function populateArtTable() {
                 `;
                 artTableBody.innerHTML += row;
             });
-            limitTableRows("art");
         })
         .catch(error => console.error("Error loading art data:", error));
 }
@@ -50,6 +50,7 @@ function populateConcertsTable() {
         .then(data => {
             const concertsTableBody = document.querySelector("#concerts-table tbody");
             concertsTableBody.innerHTML = ""; // Clear placeholder text
+            data.sort((a, b) => new Date(b.date) - new Date(a.date));
             data.forEach(concert => {
                 const row = `
                     <tr>
@@ -63,7 +64,6 @@ function populateConcertsTable() {
                 `;
                 concertsTableBody.innerHTML += row;
             });
-            limitTableRows("concerts");
         })
         .catch(error => console.error("Error loading concerts data:", error));
 }
@@ -75,6 +75,7 @@ function populateWeightliftingTable() {
         .then(data => {
             const tableBody = document.querySelector("#comp-results tbody");
             tableBody.innerHTML = ""; // Clear placeholder text
+            data.sort((a, b) => new Date(b.date) - new Date(a.date));
             data.forEach(result => {
                 const row = `
                     <tr>
@@ -90,45 +91,61 @@ function populateWeightliftingTable() {
                 `;
                 tableBody.innerHTML += row;
             });
-            limitTableRows("comp-results");
         })
         .catch(error => console.error("Error loading weightlifting data:", error));
 }
 
-// See More functionality
-function addSeeMoreButton(button) {
-    button.addEventListener("click", (event) => {
-        event.preventDefault();
-        const section = button.dataset.section;
-        const table = document.querySelector(`#${section}-table tbody`);
-        const rows = table.querySelectorAll("tr");
-        const isExpanded = table.classList.contains("expanded");
-
-        if (!isExpanded) {
-            rows.forEach(row => row.style.display = "table-row");
-            button.textContent = "See Less";
-            table.classList.add("expanded");
-            table.scrollIntoView({ behavior: "smooth" });
-        } else {
-            rows.forEach((row, index) => {
-                row.style.display = index < 10 ? "table-row" : "none";
+// Populate lifts dropdown
+function populateLiftsDropdown() {
+    fetch("lifts.json")
+        .then(response => response.json())
+        .then(data => {
+            const liftDropdown = document.querySelector("#choose-lift-dropdown");
+            liftDropdown.innerHTML = ""; // Clear placeholder text
+            const uniqueLifts = [...new Set(data.map(lift => lift.lift))];
+            uniqueLifts.forEach(lift => {
+                const option = `<option value="${lift}">${lift}</option>`;
+                liftDropdown.innerHTML += option;
             });
-            button.textContent = "See More";
-            table.classList.remove("expanded");
-            table.scrollIntoView({ behavior: "smooth" });
-        }
-    });
+        })
+        .catch(error => console.error("Error loading lifts data:", error));
 }
 
-// Limit table rows to show only 10 initially
-function limitTableRows(section) {
-    const table = document.querySelector(`#${section}-table tbody`);
-    if (table) {
-        const rows = table.querySelectorAll("tr");
-        rows.forEach((row, index) => {
-            row.style.display = index < 10 ? "table-row" : "none";
-        });
+// Show best lift
+function showBestLift() {
+    const liftDropdown = document.querySelector("#choose-lift-dropdown");
+    const selectedLift = liftDropdown.value;
+    const bestLiftContainer = document.querySelector("#best-lift-container");
+
+    if (!selectedLift) {
+        alert("Please select a lift!");
+        return;
     }
+
+    fetch("lifts.json")
+        .then(response => response.json())
+        .then(data => {
+            const bestLift = data
+                .filter(lift => lift.lift === selectedLift)
+                .sort((a, b) => b.weight - a.weight)[0];
+
+            if (bestLift) {
+                const { weight, date } = bestLift;
+                bestLiftContainer.innerHTML = `${weight}kg (${formatDate(date)}) <a href="#" id="reset-link">(reset)</a>`;
+                bestLiftContainer.classList.remove("hidden");
+
+                // Add reset functionality
+                document.getElementById("reset-link").addEventListener("click", (e) => {
+                    e.preventDefault();
+                    bestLiftContainer.innerHTML = "";
+                    bestLiftContainer.classList.add("hidden");
+                });
+            } else {
+                bestLiftContainer.innerHTML = "No data available.";
+                bestLiftContainer.classList.remove("hidden");
+            }
+        })
+        .catch(error => console.error("Error finding best lift:", error));
 }
 
 // Format date to YYYY-MM-DD
@@ -147,11 +164,5 @@ document.addEventListener("DOMContentLoaded", () => {
     populateArtTable();
     populateConcertsTable();
     populateWeightliftingTable();
-
-    // Add See More functionality and limit table rows
-    document.querySelectorAll(".see-more").forEach(button => {
-        const section = button.dataset.section;
-        limitTableRows(section);
-        addSeeMoreButton(button);
-    });
+    populateLiftsDropdown();
 });
