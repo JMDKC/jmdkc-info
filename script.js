@@ -3,12 +3,12 @@ function populateBooksTable() {
     fetch("books.json")
         .then(response => response.json())
         .then(data => {
-            const booksTableBody = document.querySelector("#books-table tbody");
-            booksTableBody.innerHTML = ""; // Clear placeholder text
             data.sort((a, b) => new Date(b.dateFinished) - new Date(a.dateFinished));
-            data.forEach(book => {
+            const booksTableBody = document.querySelector("#books-table tbody");
+            booksTableBody.innerHTML = "";
+            data.forEach((book, index) => {
                 const row = `
-                    <tr>
+                    <tr class="${index >= 10 ? 'hidden' : ''}">
                         <td>${book.title}</td>
                         <td>${book.author}</td>
                         <td>${formatDate(book.dateStarted)}</td>
@@ -26,12 +26,12 @@ function populateArtTable() {
     fetch("art.json")
         .then(response => response.json())
         .then(data => {
-            const artTableBody = document.querySelector("#art-table tbody");
-            artTableBody.innerHTML = ""; // Clear placeholder text
             data.sort((a, b) => new Date(b.date) - new Date(a.date));
-            data.forEach(art => {
+            const artTableBody = document.querySelector("#art-table tbody");
+            artTableBody.innerHTML = "";
+            data.forEach((art, index) => {
                 const row = `
-                    <tr>
+                    <tr class="${index >= 10 ? 'hidden' : ''}">
                         <td>${art.title}</td>
                         <td>${art.gallery}</td>
                         <td>${formatDate(art.date)}</td>
@@ -48,12 +48,12 @@ function populateConcertsTable() {
     fetch("concerts.json")
         .then(response => response.json())
         .then(data => {
-            const concertsTableBody = document.querySelector("#concerts-table tbody");
-            concertsTableBody.innerHTML = ""; // Clear placeholder text
             data.sort((a, b) => new Date(b.date) - new Date(a.date));
-            data.forEach(concert => {
+            const concertsTableBody = document.querySelector("#concerts-table tbody");
+            concertsTableBody.innerHTML = "";
+            data.forEach((concert, index) => {
                 const row = `
-                    <tr>
+                    <tr class="${index >= 10 ? 'hidden' : ''}">
                         <td>${concert.title}</td>
                         <td>${concert.composers}</td>
                         <td>${concert.conductor}</td>
@@ -73,12 +73,12 @@ function populateWeightliftingTable() {
     fetch("comp-results.json")
         .then(response => response.json())
         .then(data => {
-            const tableBody = document.querySelector("#comp-results tbody");
-            tableBody.innerHTML = ""; // Clear placeholder text
             data.sort((a, b) => new Date(b.date) - new Date(a.date));
-            data.forEach(result => {
+            const tableBody = document.querySelector("#comp-results tbody");
+            tableBody.innerHTML = "";
+            data.forEach((result, index) => {
                 const row = `
-                    <tr>
+                    <tr class="${index >= 10 ? 'hidden' : ''}">
                         <td>${result.where}</td>
                         <td>${formatDate(result.date)}</td>
                         <td>${result.name}</td>
@@ -95,57 +95,24 @@ function populateWeightliftingTable() {
         .catch(error => console.error("Error loading weightlifting data:", error));
 }
 
-// Populate lifts dropdown
-function populateLiftsDropdown() {
-    fetch("lifts.json")
-        .then(response => response.json())
-        .then(data => {
-            const liftDropdown = document.querySelector("#choose-lift-dropdown");
-            liftDropdown.innerHTML = ""; // Clear placeholder text
-            const uniqueLifts = [...new Set(data.map(lift => lift.lift))];
-            uniqueLifts.forEach(lift => {
-                const option = `<option value="${lift}">${lift}</option>`;
-                liftDropdown.innerHTML += option;
-            });
-        })
-        .catch(error => console.error("Error loading lifts data:", error));
-}
+// See More functionality
+function addSeeMoreButton(button) {
+    button.addEventListener("click", (event) => {
+        event.preventDefault();
+        const section = button.dataset.section;
+        const tableRows = document.querySelectorAll(`#${section}-table tbody tr`);
+        tableRows.forEach((row, index) => {
+            if (index >= 10) row.classList.toggle("hidden");
+        });
 
-// Show best lift
-function showBestLift() {
-    const liftDropdown = document.querySelector("#choose-lift-dropdown");
-    const selectedLift = liftDropdown.value;
-    const bestLiftContainer = document.querySelector("#best-lift-container");
-
-    if (!selectedLift) {
-        alert("Please select a lift!");
-        return;
-    }
-
-    fetch("lifts.json")
-        .then(response => response.json())
-        .then(data => {
-            const bestLift = data
-                .filter(lift => lift.lift === selectedLift)
-                .sort((a, b) => b.weight - a.weight)[0];
-
-            if (bestLift) {
-                const { weight, date } = bestLift;
-                bestLiftContainer.innerHTML = `${weight}kg (${formatDate(date)}) <a href="#" id="reset-link">(reset)</a>`;
-                bestLiftContainer.classList.remove("hidden");
-
-                // Add reset functionality
-                document.getElementById("reset-link").addEventListener("click", (e) => {
-                    e.preventDefault();
-                    bestLiftContainer.innerHTML = "";
-                    bestLiftContainer.classList.add("hidden");
-                });
-            } else {
-                bestLiftContainer.innerHTML = "No data available.";
-                bestLiftContainer.classList.remove("hidden");
-            }
-        })
-        .catch(error => console.error("Error finding best lift:", error));
+        if (button.textContent === "See More") {
+            button.textContent = "See Less";
+            button.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+            button.textContent = "See More";
+            tableRows[0].scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    });
 }
 
 // Format date to YYYY-MM-DD
@@ -164,5 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
     populateArtTable();
     populateConcertsTable();
     populateWeightliftingTable();
-    populateLiftsDropdown();
+
+    document.querySelectorAll(".see-more").forEach(addSeeMoreButton);
 });
