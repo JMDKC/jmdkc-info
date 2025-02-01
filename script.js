@@ -19,7 +19,9 @@ function formatDate(date) {
   function toggleSeeMore(button, tableBody) {
     if (!button || !tableBody) return;
   
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent page jump
+  
       const rows = tableBody.querySelectorAll("tr");
       const isExpanded = button.classList.toggle("expanded");
   
