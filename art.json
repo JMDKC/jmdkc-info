@@ -106,5 +106,23 @@
         "gallery": "Royal Academy",
         "date": "2025-01-25",
         "notes": null
+    },
+    {
+        "title": "Virginia Overton: Paintings",
+        "gallery": "White Cube",
+        "date": "2025-01-28",
+        "notes": null
+    },
+    {
+        "title": "Bruno Zhu: License to Live",
+        "gallery": "Chisenhale Gallery",
+        "date": "2025-02-01",
+        "notes": null
+    },
+    {
+        "title": "Peter Hujar \u2013 Eyes Open in the Dark",
+        "gallery": "Raven Row",
+        "date": "2025-02-02",
+        "notes": null
     }
 ]
