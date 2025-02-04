@@ -31,137 +31,111 @@ function formatDate(date) {
         row.style.display = isExpanded || index < 10 ? "" : "none";
       });
   
-      // Scroll to the top of the table
-      tableBody.scrollIntoView({ behavior: "smooth" });
+      // Scroll to the button's position for smoother UX
+      button.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   }
   
-  // Populate Books Table
-  function populateBooksTable() {
-    fetch("books.json")
+  // Function to handle generic table population and row toggle
+  function populateTable(url, tableSelector, buttonSelector, rowMapper, sortCallback) {
+    fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        const booksTableBody = document.querySelector("#books-table tbody");
-        booksTableBody.innerHTML = "";
-  
-        data
-          .sort((a, b) => new Date(b.dateFinished) - new Date(a.dateFinished))
-          .forEach((book) => {
-            const row = `
-              <tr>
-                <td>${book.title}</td>
-                <td>${book.author}</td>
-                <td>${formatDate(book.dateStarted)}</td>
-                <td>${formatDate(book.dateFinished)}</td>
-              </tr>
-            `;
-            booksTableBody.innerHTML += row;
-          });
-  
-        limitTableRows(booksTableBody, 10);
-  
-        const seeMoreButton = document.querySelector("#see-more-books");
-        toggleSeeMore(seeMoreButton, booksTableBody);
-      })
-      .catch((error) => console.error("Error loading books data:", error));
-  }
-  
-  // Populate Art Table
-  function populateArtTable() {
-    fetch("art.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const artTableBody = document.querySelector("#art-table tbody");
-        artTableBody.innerHTML = "";
-  
-        data
-          .sort((a, b) => new Date(b.date) - new Date(a.date))
-          .forEach((art) => {
-            const row = `
-              <tr>
-                <td>${art.title}</td>
-                <td>${art.gallery}</td>
-                <td>${formatDate(art.date)}</td>
-              </tr>
-            `;
-            artTableBody.innerHTML += row;
-          });
-  
-        limitTableRows(artTableBody, 10);
-  
-        const seeMoreButton = document.querySelector("#see-more-art");
-        toggleSeeMore(seeMoreButton, artTableBody);
-      })
-      .catch((error) => console.error("Error loading art data:", error));
-  }
-  
-  // Populate Concerts Table
-  function populateConcertsTable() {
-    fetch("concerts.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const concertsTableBody = document.querySelector("#concerts-table tbody");
-        concertsTableBody.innerHTML = "";
-  
-        data
-          .sort((a, b) => new Date(b.date) - new Date(a.date))
-          .forEach((concert) => {
-            const row = `
-              <tr>
-                <td>${concert.title}</td>
-                <td>${concert.composers}</td>
-                <td>${concert.conductor}</td>
-                <td>${concert.cast}</td>
-                <td>${concert.venue}</td>
-                <td>${formatDate(concert.date)}</td>
-              </tr>
-            `;
-            concertsTableBody.innerHTML += row;
-          });
-  
-        limitTableRows(concertsTableBody, 10);
-  
-        const seeMoreButton = document.querySelector("#see-more-concerts");
-        toggleSeeMore(seeMoreButton, concertsTableBody);
-      })
-      .catch((error) => console.error("Error loading concerts data:", error));
-  }
-  
-  // Populate Weightlifting Table
-  function populateWeightliftingTable() {
-    fetch("comp-results.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const tableBody = document.querySelector("#comp-results tbody");
+        const tableBody = document.querySelector(tableSelector + " tbody");
         tableBody.innerHTML = "";
   
-        data
-          .sort((a, b) => new Date(b.date) - new Date(a.date))
-          .forEach((result) => {
-            const row = `
-              <tr>
-                <td>${result.where}</td>
-                <td>${formatDate(result.date)}</td>
-                <td>${result.name}</td>
-                <td>${result.snatch}</td>
-                <td>${result.cleanAndJerk}</td>
-                <td>${result.total}</td>
-                <td>${result.myWeight}</td>
-                <td>${result.sinclair}</td>
-              </tr>
-            `;
-            tableBody.innerHTML += row;
-          });
+        data.sort(sortCallback).forEach(rowMapper);
   
         limitTableRows(tableBody, 10);
   
-        const seeMoreButton = document.querySelector("#see-more-weightlifting");
+        const seeMoreButton = document.querySelector(buttonSelector);
         toggleSeeMore(seeMoreButton, tableBody);
       })
-      .catch((error) => console.error("Error loading weightlifting data:", error));
+      .catch((error) => console.error(`Error loading data for ${tableSelector}:`, error));
   }
   
-  // Populate Lifts Dropdown
+  // Table population functions
+  function populateBooksTable() {
+    populateTable(
+      "books.json",
+      "#books-table",
+      "#see-more-books",
+      (book) => {
+        document.querySelector("#books-table tbody").innerHTML += `
+          <tr>
+            <td>${book.title}</td>
+            <td>${book.author}</td>
+            <td>${formatDate(book.dateStarted)}</td>
+            <td>${formatDate(book.dateFinished)}</td>
+          </tr>
+        `;
+      },
+      (a, b) => new Date(b.dateFinished) - new Date(a.dateFinished)
+    );
+  }
+  
+  function populateArtTable() {
+    populateTable(
+      "art.json",
+      "#art-table",
+      "#see-more-art",
+      (art) => {
+        document.querySelector("#art-table tbody").innerHTML += `
+          <tr>
+            <td>${art.title}</td>
+            <td>${art.gallery}</td>
+            <td>${formatDate(art.date)}</td>
+          </tr>
+        `;
+      },
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
+  }
+  
+  function populateConcertsTable() {
+    populateTable(
+      "concerts.json",
+      "#concerts-table",
+      "#see-more-concerts",
+      (concert) => {
+        document.querySelector("#concerts-table tbody").innerHTML += `
+          <tr>
+            <td>${concert.title}</td>
+            <td>${concert.composers}</td>
+            <td>${concert.conductor}</td>
+            <td>${concert.cast}</td>
+            <td>${concert.venue}</td>
+            <td>${formatDate(concert.date)}</td>
+          </tr>
+        `;
+      },
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
+  }
+  
+  function populateWeightliftingTable() {
+    populateTable(
+      "comp-results.json",
+      "#comp-results",
+      "#see-more-weightlifting",
+      (result) => {
+        document.querySelector("#comp-results tbody").innerHTML += `
+          <tr>
+            <td>${result.where}</td>
+            <td>${formatDate(result.date)}</td>
+            <td>${result.name}</td>
+            <td>${result.snatch}</td>
+            <td>${result.cleanAndJerk}</td>
+            <td>${result.total}</td>
+            <td>${result.myWeight}</td>
+            <td>${result.sinclair}</td>
+          </tr>
+        `;
+      },
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
+  }
+  
   function populateLiftsDropdown() {
     fetch("lifts.json")
       .then((response) => response.json())
@@ -177,7 +151,6 @@ function formatDate(date) {
       .catch((error) => console.error("Error loading lifts data:", error));
   }
   
-  // Show Best Lift
   function showBestLift() {
     const liftDropdown = document.querySelector("#choose-lift-dropdown");
     const selectedLift = liftDropdown.value;
@@ -222,7 +195,6 @@ function formatDate(date) {
     populateWeightliftingTable();
     populateLiftsDropdown();
   
-    // Add functionality to View Best Lift button
     document.querySelector("#view-best-lift-button").addEventListener("click", showBestLift);
   });
   
