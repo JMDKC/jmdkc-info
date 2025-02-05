@@ -31,17 +31,19 @@ function formatDate(date) {
         row.style.display = isExpanded || index < 10 ? "" : "none";
       });
   
-      // Scroll to the button's position for smoother UX
+      // Scroll to the button for better UX
       button.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   }
   
-  // Function to handle generic table population and row toggle
+  // Table population helper
   function populateTable(url, tableSelector, buttonSelector, rowMapper, sortCallback) {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        const tableBody = document.querySelector(tableSelector + " tbody");
+        const tableBody = document.querySelector(`${tableSelector} tbody`);
+        if (!tableBody) return;
+  
         tableBody.innerHTML = "";
   
         data.sort(sortCallback).forEach(rowMapper);
@@ -49,7 +51,7 @@ function formatDate(date) {
         limitTableRows(tableBody, 10);
   
         const seeMoreButton = document.querySelector(buttonSelector);
-        toggleSeeMore(seeMoreButton, tableBody);
+        if (seeMoreButton) toggleSeeMore(seeMoreButton, tableBody);
       })
       .catch((error) => console.error(`Error loading data for ${tableSelector}:`, error));
   }
