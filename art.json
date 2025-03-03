@@ -126,24 +126,15 @@
         "notes": null
     },
     {
-        "title": "AUTODIDACT: Amadeo Luciano Lorenzato",
-        "gallery": " Heitor dos Prazeres",
-        "date": " Chico da Silva & Rubem Valentim",
-        "notes": "Almine Rech",
-        "null": [
-            "2025-02-06"
-        ]
+        "title": "AUTODIDACT: Amadeo Luciano Lorenzato Heitor dos Prazeres Chico da Silva & Rubem Valentim",
+        "gallery": "Almine Rech",
+        "date": "2025-02-06",
+        "notes": null
     },
     {
         "title": "Theaster Gates: 1965: Malcolm in Winter: A Translation Exercise",
         "gallery": "White Cube",
         "date": "2025-02-06",
-        "notes": null
-    },
-    {
-        "title": "Lost Victorian City: a London disappeared",
-        "gallery": "The London Archives",
-        "date": "2025-02-08",
         "notes": null
     },
     {
@@ -183,10 +174,10 @@
         "notes": null
     },
     {
-        "title": "Acaye Kerunen: Neena",
-        "gallery": " aan uthii",
-        "date": "PACE",
-        "notes": "2025-02-22"
+        "title": "Acaye Kerunen: Neena aan uthii",
+        "gallery": "PACE",
+        "date": "2025-02-22",
+        "notes": null
     },
     {
         "title": "Levitation: Nathalie Junod Ponsard and Hans Kotter",
@@ -198,6 +189,36 @@
         "title": "Angela Santana",
         "gallery": "Saatchi Yates",
         "date": "2025-02-18",
+        "notes": null
+    },
+    {
+        "title": "Heidrun Rathgeb: As we walked",
+        "gallery": "Gallery Sofie Van de Velde",
+        "date": "2025-03-01",
+        "notes": null
+    },
+    {
+        "title": "The Wall of She\tGallery Sofie Van de Velde",
+        "gallery": "2025-03-01",
+        "date": null,
+        "notes": null
+    },
+    {
+        "title": "To Live is to Fly",
+        "gallery": "Tim Van Laere Gallery",
+        "date": "2025-03-01",
+        "notes": null
+    },
+    {
+        "title": "Opening Vlaamse Kaai: Amber Geuns - Anthony Duffeleer - Tom Woestenborghs - Stefan Annerel - Greet Billet",
+        "gallery": "Rik Rosseels",
+        "date": "2025-03-01",
+        "notes": null
+    },
+    {
+        "title": "Permanent Collection",
+        "gallery": "KMSKA",
+        "date": "2025-02-28",
         "notes": null
     }
 ]
