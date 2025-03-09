@@ -144,9 +144,9 @@
         "notes": null
     },
     {
-        "title": "At Home: Alice Neel in the Queer World\tVictoria Miro",
-        "gallery": "2025-02-15",
-        "date": null,
+        "title": "At Home: Alice Neel in the Queer World",
+        "gallery": "Victoria Miro",
+        "date": "2025-02-15",
         "notes": null
     },
     {
@@ -198,9 +198,9 @@
         "notes": null
     },
     {
-        "title": "The Wall of She\tGallery Sofie Van de Velde",
-        "gallery": "2025-03-01",
-        "date": null,
+        "title": "The Wall of She",
+        "gallery": "Gallery Sofie Van de Velde",
+        "date": "2025-03-01",
         "notes": null
     },
     {
@@ -219,6 +219,24 @@
         "title": "Permanent Collection",
         "gallery": "KMSKA",
         "date": "2025-02-28",
+        "notes": null
+    },
+    {
+        "title": "California",
+        "gallery": "Timothy Taylor",
+        "date": "2025-03-06",
+        "notes": null
+    },
+    {
+        "title": "Massimo Bartolini: Sparse Steps",
+        "gallery": "Frith Street Gallery",
+        "date": "2025-03-05",
+        "notes": null
+    },
+    {
+        "title": "After Dusk: Recent Drawings by Ofer Josef",
+        "gallery": "Richard Nagy",
+        "date": "2025-03-04",
         "notes": null
     }
 ]
