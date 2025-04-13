@@ -1,555 +1,506 @@
 [
     {
-        "title": "A Helping Hand",
-        "author": "Celia Dale",
-        "dateStarted": "2024-08-16",
-        "dateFinished": "2024-08-20",
-        "notes": "-"
+        "Title": "The Sorrows of Young Werther",
+        "Author": "Johann Wolfgang von Goethe",
+        "Date": "25/07/2024",
+        "Notes": "-"
     },
     {
-        "title": "The Sorrows of Young Werther",
-        "author": "Johann Wolfgang von Goethe",
-        "dateStarted": "2024-07-12",
-        "dateFinished": "2024-07-25",
-        "notes": "-"
+        "Title": "Gulag",
+        "Author": "Anne Applebaum",
+        "Date": "10/07/2024",
+        "Notes": "-"
     },
     {
-        "title": "Gulag",
-        "author": "Anne Applebaum",
-        "dateStarted": "2018-02-20",
-        "dateFinished": "2024-07-10",
-        "notes": "-"
+        "Title": "Ring Resounding",
+        "Author": "John Culshaw",
+        "Date": "13/06/2024",
+        "Notes": "-"
     },
     {
-        "title": "Ring Resounding",
-        "author": "John Culshaw",
-        "dateStarted": "2024-05-17",
-        "dateFinished": "2024-06-13",
-        "notes": "-"
+        "Title": "Radical Focus",
+        "Author": "Christina R Wodtke",
+        "Date": "05/05/2024",
+        "Notes": "-"
     },
     {
-        "title": "Radical Focus",
-        "author": "Christina R Wodtke",
-        "dateStarted": "2024-05-05",
-        "dateFinished": "2024-05-05",
-        "notes": "-"
+        "Title": "If It Die",
+        "Author": "Andr\u00e9 Gide",
+        "Date": "04/05/2024",
+        "Notes": "-"
     },
     {
-        "title": "If It Die",
-        "author": "André Gide",
-        "dateStarted": "2022-11-10",
-        "dateFinished": "2024-05-04",
-        "notes": "-"
+        "Title": "Separate Rooms",
+        "Author": "Pier Vittorio Tondelli",
+        "Date": "19/04/2024",
+        "Notes": "-"
     },
     {
-        "title": "Separate Rooms",
-        "author": "Pier Vittorio Tondelli",
-        "dateStarted": "2024-04-05",
-        "dateFinished": "2024-04-19",
-        "notes": "-"
+        "Title": "The Young & Evil",
+        "Author": "Charles Ford & Parker Tyler",
+        "Date": "20/03/2024",
+        "Notes": "-"
     },
     {
-        "title": "The Young & Evil",
-        "author": "Charles Ford & Parker Tyler",
-        "dateStarted": "2024-02-28",
-        "dateFinished": "2024-03-20",
-        "notes": "-"
+        "Title": "The Bell",
+        "Author": "Iris Murdoch",
+        "Date": "28/02/2024",
+        "Notes": "-"
     },
     {
-        "title": "The Bell",
-        "author": "Iris Murdoch",
-        "dateStarted": "2024-02-20",
-        "dateFinished": "2024-02-28",
-        "notes": "-"
+        "Title": "Purity",
+        "Author": "Jonathan Franzen",
+        "Date": "14/02/2024",
+        "Notes": "-"
     },
     {
-        "title": "Purity",
-        "author": "Jonathan Franzen",
-        "dateStarted": "2018-02-20",
-        "dateFinished": "2024-02-14",
-        "notes": "-"
+        "Title": "Jan van Eyck",
+        "Author": "Alfred Acres",
+        "Date": "04/02/2024",
+        "Notes": "-"
     },
     {
-        "title": "Jan van Eyck",
-        "author": "Alfred Acres",
-        "dateStarted": "2023-12-27",
-        "dateFinished": "2024-02-04",
-        "notes": "-"
+        "Title": "The House of Mirth",
+        "Author": "Edith Wharton ",
+        "Date": "25/01/2024",
+        "Notes": "-"
     },
     {
-        "title": "The House of Mirth",
-        "author": "Edith Wharton",
-        "dateStarted": "2023-12-24",
-        "dateFinished": "2024-01-25",
-        "notes": "-"
+        "Title": "The Riviera Set",
+        "Author": "Mary S Lovell",
+        "Date": "15/11/2023",
+        "Notes": "-"
     },
     {
-        "title": "The Riviera Set",
-        "author": "Mary S Lovell",
-        "dateStarted": "2023-10-29",
-        "dateFinished": "2023-11-15",
-        "notes": "-"
+        "Title": "Bad Blood",
+        "Author": "John Carreyrou",
+        "Date": "09/11/2023",
+        "Notes": "-"
     },
     {
-        "title": "Bad Blood",
-        "author": "John Carreyrou",
-        "dateStarted": "2023-11-04",
-        "dateFinished": "2023-11-09",
-        "notes": "-"
+        "Title": "Chess",
+        "Author": "Stefan Zweig",
+        "Date": "25/10/2023",
+        "Notes": "-"
     },
     {
-        "title": "Chess",
-        "author": "Stefan Zweig",
-        "dateStarted": "2023-10-22",
-        "dateFinished": "2023-10-25",
-        "notes": "-"
+        "Title": "Care of Wooden Floors",
+        "Author": "Will Wiles",
+        "Date": "22/10/2023",
+        "Notes": "-"
     },
     {
-        "title": "Care of Wooden Floors",
-        "author": "Will Wiles",
-        "dateStarted": "2023-10-11",
-        "dateFinished": "2023-10-22",
-        "notes": "-"
+        "Title": "Trillion Dollar Coach",
+        "Author": "Eric Schmidt, Jonathan Rosenberg, Alan Eagle",
+        "Date": "19/10/2023",
+        "Notes": "-"
     },
     {
-        "title": "Trillion Dollar Coach",
-        "author": "Eric Schmidt, Jonathan Rosenberg, Alan Eagle",
-        "dateStarted": "2023-09-29",
-        "dateFinished": "2023-10-19",
-        "notes": "-"
+        "Title": "We Are All Completely Beside Ourselves",
+        "Author": "Karen Joy Fowler",
+        "Date": "11/10/2023",
+        "Notes": "-"
     },
     {
-        "title": "We Are All Completely Beside Ourselves",
-        "author": "Karen Joy Fowler",
-        "dateStarted": "2023-09-15",
-        "dateFinished": "2023-10-11",
-        "notes": "-"
+        "Title": "The Praise Singer",
+        "Author": "Mary Renault",
+        "Date": "29/09/2023",
+        "Notes": "-"
     },
     {
-        "title": "The Praise Singer",
-        "author": "Mary Renault",
-        "dateStarted": "2023-08-01",
-        "dateFinished": "2023-09-29",
-        "notes": "-"
+        "Title": "Team Topologies",
+        "Author": "Manuel Pais & Matthew Skelton",
+        "Date": "28/09/2023",
+        "Notes": "-"
     },
     {
-        "title": "Team Topologies",
-        "author": "Manuel Pais & Matthew Skelton",
-        "dateStarted": "2023-08-30",
-        "dateFinished": "2023-09-28",
-        "notes": "-"
+        "Title": "Excellent Women",
+        "Author": "Barbara Pym",
+        "Date": "04/09/2023",
+        "Notes": "-"
     },
     {
-        "title": "Excellent Women",
-        "author": "Barbara Pym",
-        "dateStarted": "2023-08-24",
-        "dateFinished": "2023-09-04",
-        "notes": "-"
+        "Title": "Khrushchev: The Man and his Era",
+        "Author": "William Taubman",
+        "Date": "29/08/2023",
+        "Notes": "-"
     },
     {
-        "title": "Khrushchev: The Man and his Era",
-        "author": "William Taubman",
-        "dateStarted": "2022-04-01",
-        "dateFinished": "2023-08-29",
-        "notes": "-"
+        "Title": "Ego",
+        "Author": "Tim Geary",
+        "Date": "05/08/2023",
+        "Notes": "-"
     },
     {
-        "title": "Ego",
-        "author": "Tim Geary",
-        "dateStarted": "2023-07-14",
-        "dateFinished": "2023-08-05",
-        "notes": "-"
+        "Title": "The Morbid Age",
+        "Author": "Richard Overy",
+        "Date": "02/04/2023",
+        "Notes": "-"
     },
     {
-        "title": "The Morbid Age",
-        "author": "Richard Overy",
-        "dateStarted": "2023-02-01",
-        "dateFinished": "2023-04-02",
-        "notes": "-"
+        "Title": "The Magic Mountain",
+        "Author": "Thomas Mann",
+        "Date": "02/04/2023",
+        "Notes": "-"
     },
     {
-        "title": "The Magic Mountain",
-        "author": "Thomas Mann",
-        "dateStarted": "2023-02-02",
-        "dateFinished": "2023-04-02",
-        "notes": "-"
+        "Title": "Spare",
+        "Author": "Prince Harry",
+        "Date": "09/02/2023",
+        "Notes": "-"
     },
     {
-        "title": "Spare",
-        "author": "Prince Harry",
-        "dateStarted": "2023-01-18",
-        "dateFinished": "2023-02-09",
-        "notes": "-"
+        "Title": "Devils",
+        "Author": "Fyodor Dostoevsky",
+        "Date": "17/01/2023",
+        "Notes": "-"
     },
     {
-        "title": "Devils",
-        "author": "Fyodor Dostoevsky",
-        "dateStarted": "2022-12-19",
-        "dateFinished": "2023-01-17",
-        "notes": "-"
+        "Title": "Brief Lives",
+        "Author": "Anita Brookner",
+        "Date": "01/01/2023",
+        "Notes": "-"
     },
     {
-        "title": "Brief Lives",
-        "author": "Anita Brookner",
-        "dateStarted": "2022-12-26",
-        "dateFinished": "2023-01-01",
-        "notes": "-"
+        "Title": "The Mirror and the Light",
+        "Author": "Hilary Mantel",
+        "Date": "14/12/2022",
+        "Notes": "-"
     },
     {
-        "title": "The Mirror and the Light",
-        "author": "Hilary Mantel",
-        "dateStarted": "2022-11-19",
-        "dateFinished": "2022-12-14",
-        "notes": "-"
+        "Title": "Bring Up The Bodies",
+        "Author": "Hilary Mantel",
+        "Date": "02/11/2022",
+        "Notes": "-"
     },
     {
-        "title": "Bring Up The Bodies",
-        "author": "Hilary Mantel",
-        "dateStarted": "2022-10-20",
-        "dateFinished": "2022-11-02",
-        "notes": "-"
+        "Title": "A Sicilian Romance",
+        "Author": "Ann Radcliffe",
+        "Date": "22/10/2022",
+        "Notes": "-"
     },
     {
-        "title": "A Sicilian Romance",
-        "author": "Ann Radcliffe",
-        "dateStarted": "2022-09-26",
-        "dateFinished": "2022-10-22",
-        "notes": "-"
+        "Title": "Wolf Hall",
+        "Author": "Hilary Mantel",
+        "Date": "02/10/2022",
+        "Notes": "-"
     },
     {
-        "title": "Wolf Hall",
-        "author": "Hilary Mantel",
-        "dateStarted": "2012-05-13",
-        "dateFinished": "2022-10-02",
-        "notes": "-"
+        "Title": "Northanger Abbey",
+        "Author": "Jane Austen",
+        "Date": "23/09/2022",
+        "Notes": "-"
     },
     {
-        "title": "Northanger Abbey",
-        "author": "Jane Austen",
-        "dateStarted": "2022-09-04",
-        "dateFinished": "2022-09-23",
-        "notes": "-"
+        "Title": "Dancer from the Dance",
+        "Author": "Andrew Holleran",
+        "Date": "29/08/2022",
+        "Notes": "-"
     },
     {
-        "title": "Dancer from the Dance",
-        "author": "Andrew Holleran",
-        "dateStarted": "2022-08-04",
-        "dateFinished": "2022-08-29",
-        "notes": "-"
+        "Title": "The Castle of Otranto",
+        "Author": "Horace Walpole",
+        "Date": "10/08/2022",
+        "Notes": "-"
     },
     {
-        "title": "The Castle of Otranto",
-        "author": "Horace Walpole",
-        "dateStarted": "2022-07-22",
-        "dateFinished": "2022-08-10",
-        "notes": "-"
+        "Title": "Cruising the Dead River: David Wojnarowicz and New York's Ruined Waterfront",
+        "Author": "Fiona Anderson",
+        "Date": "03/08/2022",
+        "Notes": "-"
     },
     {
-        "title": "Cruising the Dead River: David Wojnarowicz and New York's Ruined Waterfront",
-        "author": "Fiona Anderson",
-        "dateStarted": "2022-05-02",
-        "dateFinished": "2022-08-03",
-        "notes": "-"
+        "Title": "The Life and Times of Little Richard: The Authorised Biography",
+        "Author": "Charles White",
+        "Date": "23/07/2022",
+        "Notes": "-"
     },
     {
-        "title": "The Life and Times of Little Richard: The authorised Biography",
-        "author": "Charles White",
-        "dateStarted": "2022-05-18",
-        "dateFinished": "2022-07-23",
-        "notes": "-"
+        "Title": "Tiepolo Blue",
+        "Author": "James Cahill",
+        "Date": "15/06/2022",
+        "Notes": "-"
     },
     {
-        "title": "Tiepolo Blue",
-        "author": "James Cahill",
-        "dateStarted": "2022-06-29",
-        "dateFinished": "2022-06-15",
-        "notes": "-"
+        "Title": "Wisecracker",
+        "Author": "William J Mann",
+        "Date": "10/06/2022",
+        "Notes": "-"
     },
     {
-        "title": "Wisecracker",
-        "author": "William J Mann",
-        "dateStarted": "2022-03-03",
-        "dateFinished": "2022-06-10",
-        "notes": "-"
+        "Title": "The Driver's Seat",
+        "Author": "Muriel Spark",
+        "Date": "01/06/2022",
+        "Notes": "-"
     },
     {
-        "title": "The Driver's Seat",
-        "author": "Muriel Spark",
-        "dateStarted": "2022-04-15",
-        "dateFinished": "2022-06-01",
-        "notes": "-"
+        "Title": "Citizen Clem",
+        "Author": "John Bew",
+        "Date": "17/04/2022",
+        "Notes": "-"
     },
     {
-        "title": "Citizen Clem",
-        "author": "John Bew",
-        "dateStarted": "2021-10-12",
-        "dateFinished": "2022-04-17",
-        "notes": "-"
+        "Title": "Albert and the Whale",
+        "Author": "Philip Hoare",
+        "Date": "12/03/2022",
+        "Notes": "-"
     },
     {
-        "title": "Albert and the Whale",
-        "author": "Philip Hoare",
-        "dateStarted": "2021-07-20",
-        "dateFinished": "2022-03-12",
-        "notes": "-"
+        "Title": "On Queer Street: A Social History of British Homosexuality 1895-1995",
+        "Author": "Hugh David",
+        "Date": "02/02/2022",
+        "Notes": "-"
     },
     {
-        "title": "On Queer Street: A Social History of British Homosexuality 1895-1995",
-        "author": "Hugh David",
-        "dateStarted": "2021-10-23",
-        "dateFinished": "2022-02-02",
-        "notes": "-"
+        "Title": "The Hitler Myth",
+        "Author": "Ian Kershaw",
+        "Date": "02/01/2022",
+        "Notes": "-"
     },
     {
-        "title": "The Hitler Myth",
-        "author": "Ian Kershaw",
-        "dateStarted": "2018-02-20",
-        "dateFinished": "2022-01-02",
-        "notes": "-"
+        "Title": "London Triptych",
+        "Author": "Jonathan Kemp",
+        "Date": "24/12/2021",
+        "Notes": "-"
     },
     {
-        "title": "London Triptych",
-        "author": "Jonathan Kemp",
-        "dateStarted": "2021-12-01",
-        "dateFinished": "2021-12-24",
-        "notes": "-"
+        "Title": "Twopence Coloured",
+        "Author": "Patrick Hamilton",
+        "Date": "14/12/2021",
+        "Notes": "-"
     },
     {
-        "title": "Twopence Coloured",
-        "author": "Patrick Hamilton",
-        "dateStarted": "2021-10-09",
-        "dateFinished": "2021-12-14",
-        "notes": "-"
+        "Title": "Unbeaten",
+        "Author": "Kim Woodburn",
+        "Date": "02/10/2021",
+        "Notes": "-"
     },
     {
-        "title": "Unbeaten",
-        "author": "Kim Woodburn",
-        "dateStarted": "2021-09-18",
-        "dateFinished": "2021-10-02",
-        "notes": "-"
+        "Title": "Double Fault",
+        "Author": "Lionel Shriver",
+        "Date": "17/08/2021",
+        "Notes": "-"
     },
     {
-        "title": "Double Fault",
-        "author": "Lionel Shriver",
-        "dateStarted": "2021-08-14",
-        "dateFinished": "2021-08-17",
-        "notes": "-"
+        "Title": "Alkan",
+        "Author": "Ronald Hill",
+        "Date": "15/08/2021",
+        "Notes": "-"
     },
     {
-        "title": "Alkan",
-        "author": "Ronald Hill",
-        "dateStarted": "2021-08-03",
-        "dateFinished": "2021-08-15",
-        "notes": "-"
+        "Title": "An English Affair",
+        "Author": "Richard Davenport-Hines",
+        "Date": "05/08/2021",
+        "Notes": "-"
     },
     {
-        "title": "An English Affair",
-        "author": "Richard Davenport-Hines",
-        "dateStarted": "2021-07-28",
-        "dateFinished": "2021-08-05",
-        "notes": "-"
+        "Title": "The Power Broker",
+        "Author": "Robert A Caro",
+        "Date": "30/07/2021",
+        "Notes": "-"
     },
     {
-        "title": "The Power Broker",
-        "author": "Robert A Caro",
-        "dateStarted": "2018-01-04",
-        "dateFinished": "2021-07-30",
-        "notes": "-"
+        "Title": "The Tortoise and the Hare",
+        "Author": "Elizabeth Jenkins",
+        "Date": "03/05/2021",
+        "Notes": "-"
     },
     {
-        "title": "The Tortoise and the Hare",
-        "author": "Elizabeth Jenkins",
-        "dateStarted": "2021-04-16",
-        "dateFinished": "2021-05-03",
-        "notes": "-"
+        "Title": "Why the Allies Won",
+        "Author": "Richard Overy",
+        "Date": "11/04/2021",
+        "Notes": "-"
     },
     {
-        "title": "Why the Allies Won",
-        "author": "Richard Overy",
-        "dateStarted": "2020-01-30",
-        "dateFinished": "2021-04-11",
-        "notes": "-"
+        "Title": "The Kreutzer Sonata",
+        "Author": "Leo Tolstoy",
+        "Date": "31/03/2021",
+        "Notes": "-"
     },
     {
-        "title": "The Kreutzer Sonata",
-        "author": "Leo Tolstoy",
-        "dateStarted": "2021-01-05",
-        "dateFinished": "2021-03-31",
-        "notes": "-"
+        "Title": "Four Days in November",
+        "Author": "Vincent Bugliosi",
+        "Date": "14/02/2021",
+        "Notes": "-"
     },
     {
-        "title": "Four Days in November",
-        "author": "Vincent Bugliosi",
-        "dateStarted": "2020-12-02",
-        "dateFinished": "2021-02-14",
-        "notes": "-"
+        "Title": "Red Plenty",
+        "Author": "Francis Spufford",
+        "Date": "17/01/2021",
+        "Notes": "-"
     },
     {
-        "title": "Red Plenty",
-        "author": "Francis Spufford",
-        "dateStarted": "2020-01-14",
-        "dateFinished": "2021-01-17",
-        "notes": "-"
+        "Title": "Andy Warhol",
+        "Author": "Blake Gopnik",
+        "Date": "04/01/2021",
+        "Notes": "-"
     },
     {
-        "title": "Andy Warhol",
-        "author": "Blake Gopnik",
-        "dateStarted": "2020-11-15",
-        "dateFinished": "2021-01-04",
-        "notes": "-"
+        "Title": "Murder Underground",
+        "Author": "Mavis Doriel Hay",
+        "Date": "15/10/2020",
+        "Notes": "-"
     },
     {
-        "title": "Murder Underground",
-        "author": "Mavis Doriel Hay",
-        "dateStarted": "2020-07-11",
-        "dateFinished": "2020-10-15",
-        "notes": "-"
+        "Title": "The Devil: A Biography",
+        "Author": "Peter Stanford",
+        "Date": "28/09/2020",
+        "Notes": "-"
     },
     {
-        "title": "The Devil: A Biography",
-        "author": "Peter Stanford",
-        "dateStarted": "2013-10-06",
-        "dateFinished": "2020-09-28",
-        "notes": "-"
+        "Title": "Londinium: London in the Roman Empire",
+        "Author": "John Morris",
+        "Date": "20/08/2020",
+        "Notes": "-"
     },
     {
-        "title": "Londinium: London in the Roman Empire",
-        "author": "John Morris",
-        "dateStarted": "2013-03-30",
-        "dateFinished": "2020-08-20",
-        "notes": "-"
+        "Title": "Duveen: The Story of the Most Spectacular Art Dealer of All Time",
+        "Author": "SN Behrman",
+        "Date": "12/08/2020",
+        "Notes": "-"
     },
     {
-        "title": "Duveen: The Story of the Most Spectacular Art Dealer of All Time",
-        "author": "SN Behrman",
-        "dateStarted": "2020-02-02",
-        "dateFinished": "2020-08-12",
-        "notes": "-"
+        "Title": "Maigret and the Hundred Gibbets",
+        "Author": "Georges Simenon",
+        "Date": "27/07/2020",
+        "Notes": "-"
     },
     {
-        "title": "Maigret and the Hundred Gibbets",
-        "author": "Georges Simenon",
-        "dateStarted": "2020-07-18",
-        "dateFinished": "2020-07-27",
-        "notes": "-"
+        "Title": "The Shining",
+        "Author": "Stephen King",
+        "Date": "11/07/2020",
+        "Notes": "-"
     },
     {
-        "title": "The Shining",
-        "author": "Stephen King",
-        "dateStarted": "2020-06-21",
-        "dateFinished": "2020-07-11",
-        "notes": "-"
+        "Title": "The Man in the Glass House",
+        "Author": "Mark Lamster",
+        "Date": "20/06/2020",
+        "Notes": "-"
     },
     {
-        "title": "The Man in the Glass House",
-        "author": "Mark Lamster",
-        "dateStarted": "2020-05-31",
-        "dateFinished": "2020-06-20",
-        "notes": "-"
+        "Title": "Queer City",
+        "Author": "Peter Ackroyd",
+        "Date": "24/05/2020",
+        "Notes": "-"
     },
     {
-        "title": "Queer City",
-        "author": "Peter Ackroyd",
-        "dateStarted": "2020-01-10",
-        "dateFinished": "2020-05-24",
-        "notes": "-"
+        "Title": "American Eve: Evelyn Nesbit, Stanford White, The Birth of the 'It' Girl and the Crime of the Century",
+        "Author": "Paula Uruburu",
+        "Date": "10/05/2020",
+        "Notes": "-"
     },
     {
-        "title": "American Eve: Evelyn Nesbit, Stanford White, The Birth of the 'It' Girl and the Crime of the Century",
-        "author": "Paula Uruburu",
-        "dateStarted": "2020-02-18",
-        "dateFinished": "2020-05-10",
-        "notes": "-"
+        "Title": "Of Walking in Ice",
+        "Author": "Werner Herzog",
+        "Date": "07/05/2020",
+        "Notes": "-"
     },
     {
-        "title": "Of Walking in Ice",
-        "author": "Werner Herzog",
-        "dateStarted": "2020-05-04",
-        "dateFinished": "2020-05-07",
-        "notes": "-"
+        "Title": "The Secret History",
+        "Author": "Procopius",
+        "Date": "03/05/2020",
+        "Notes": "-"
     },
     {
-        "title": "The Secret History",
-        "author": "Procopius",
-        "dateStarted": "2020-02-22",
-        "dateFinished": "2020-05-03",
-        "notes": "-"
+        "Title": "Zhukov: The Conqueror of Berlin",
+        "Author": "John Colvin",
+        "Date": "30/04/2020",
+        "Notes": "-"
     },
     {
-        "title": "Zhukov: The Conqueror of Berlin",
-        "author": "John Colvin",
-        "dateStarted": "2020-02-19",
-        "dateFinished": "2020-04-30",
-        "notes": "-"
+        "Title": "The Five",
+        "Author": "Hallie Rubenhold",
+        "Date": "10/04/2020",
+        "Notes": "-"
     },
     {
-        "title": "The Five",
-        "author": "Hallie Rubenhold",
-        "dateStarted": "2020-03-25",
-        "dateFinished": "2020-04-10",
-        "notes": "-"
+        "Title": "Peggy Guggenheim: The Life of an Art Addict",
+        "Author": "Anton Gill",
+        "Date": "05/04/2020",
+        "Notes": "-"
     },
     {
-        "title": "Peggy Guggenheim: The Life of an Art Addict",
-        "author": "Anton Gill",
-        "dateStarted": "2019-02-12",
-        "dateFinished": "2020-04-05",
-        "notes": "-"
+        "Title": "A Month in Siena",
+        "Author": "Hisham Matar",
+        "Date": "05/04/2020",
+        "Notes": "-"
     },
     {
-        "title": "A Month in Siena",
-        "author": "Hisham Matar",
-        "dateStarted": "2020-04-01",
-        "dateFinished": "2020-04-05",
-        "notes": "-"
+        "Title": "Outsider II",
+        "Author": "Brian Sewell",
+        "Date": "22/03/2020",
+        "Notes": "-"
     },
     {
-        "title": "Outsider II",
-        "author": "Brian Sewell",
-        "dateStarted": "2020-02-01",
-        "dateFinished": "2020-03-22",
-        "notes": "-"
+        "Title": "Rebel Prince",
+        "Author": "Tom Bower",
+        "Date": "10/03/2020",
+        "Notes": "-"
     },
     {
-        "title": "Rebel Prince",
-        "author": "Tom Bower",
-        "dateStarted": "2020-03-08",
-        "dateFinished": "2020-03-10",
-        "notes": "-"
+        "Title": "Bad Blood",
+        "Author": "John Carreyou",
+        "Date": "29/01/2020",
+        "Notes": "-"
     },
     {
-        "title": "Bad Blood",
-        "author": "John Carreyou",
-        "dateStarted": "2020-01-27",
-        "dateFinished": "2020-01-29",
-        "notes": "-"
+        "Title": "Teleny, or the Reverse of the Medal",
+        "Author": "Anonymous",
+        "Date": "19/01/2020",
+        "Notes": "-"
     },
     {
-        "title": "Teleny, or the Reverse of the Medal",
-        "author": "Anonymous",
-        "dateStarted": "2020-01-18",
-        "dateFinished": "2020-01-19",
-        "notes": "-"
+        "Title": "Offshore",
+        "Author": "Penelope Fitzgerald",
+        "Date": "10/01/2020",
+        "Notes": "-"
     },
     {
-        "title": "Offshore",
-        "author": "Penelope Fitzgerald",
-        "dateStarted": "2014-10-15",
-        "dateFinished": "2020-01-10",
-        "notes": "-"
+        "Title": "The Little Virtues",
+        "Author": "Natalia Ginzburg",
+        "Date": "06/01/2020",
+        "Notes": "-"
     },
     {
-        "title": "The Little Virtues",
-        "author": "Natalia Ginzburg",
-        "dateStarted": "2019-12-01",
-        "dateFinished": "2020-01-06",
-        "notes": "-"
+        "Title": "Travels",
+        "Author": "Stefan Zweig",
+        "Date": "06/01/2020",
+        "Notes": "-"
     },
     {
-        "title": "Travels",
-        "author": "Stefan Zweig",
-        "dateStarted": "2019-12-02",
-        "dateFinished": "2020-01-06",
-        "notes": "-"
+        "Title": "A Helping Hand",
+        "Author": "Celia Dale",
+        "Date": "2024-08-21",
+        "Notes": "-"
+    },
+    {
+        "Title": "Yellowface",
+        "Author": "Rebecca Kuang",
+        "Date": "2024-10-13",
+        "Notes": "-"
+    },
+    {
+        "Title": "Courtesans and Fishcakes: The Consuming Passions of Classical Athens",
+        "Author": "James N Davidson",
+        "Date": "2024-10-19",
+        "Notes": "-"
+    },
+    {
+        "Title": "The Basque History of the World",
+        "Author": "Mark Kurlansky",
+        "Date": "2024-12-15",
+        "Notes": "-"
+    },
+    {
+        "Title": "Wolf's Clothing",
+        "Author": "Celia Dale",
+        "Date": "2024-12-27",
+        "Notes": "-"
+    },
+    {
+        "Title": "Seasons in the Sun",
+        "Author": "Dominic Sandbrooke",
+        "Date": "2025-03-30",
+        "Notes": "-"
     }
 ]
