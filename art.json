@@ -1144,5 +1144,41 @@
         "gallery": "October Gallery",
         "date": "2025-07-26",
         "notes": null
+    },
+    {
+        "title": "Summer Exhibition",
+        "gallery": "Royal Academy",
+        "date": "2025-07-27",
+        "notes": null
+    },
+    {
+        "title": "The System is Alive",
+        "gallery": "Perrotin",
+        "date": "2025-07-31",
+        "notes": null
+    },
+    {
+        "title": "Ed Atkins",
+        "gallery": "Tate Britain",
+        "date": "2025-08-02",
+        "notes": null
+    },
+    {
+        "title": "Edward Burra \u2013 Ithell Colquhoun",
+        "gallery": "Tate Britain",
+        "date": "2025-08-02",
+        "notes": null
+    },
+    {
+        "title": "Do Ho Suh: Walk the House",
+        "gallery": "Tate Modern",
+        "date": "2025-08-03",
+        "notes": null
+    },
+    {
+        "title": "Eyes open - I breathe again",
+        "gallery": "Alice Amati",
+        "date": "2025-08-07",
+        "notes": null
     }
 ]
